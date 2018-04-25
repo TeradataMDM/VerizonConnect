@@ -1,0 +1,16 @@
+ADDR_TYPE_CD  --- Different Address Types as per Industry CDI model.
+ADDR_SUBTYPE_CD  --- Different Address SubTypes as per Industry CDI model.
+CURR_ADDR_STS_CD  ---- Maintain Address Status Values as per Industry CDI model.
+CURR_ADDR_STS_SRC_CD --- Maintain Different Source Address Status Values.
+ELEC_ADDR_SBTYPE_CD ---  Maintain Different Electronic Address SubTypes as per Industry CDI model.
+ST_OR_PROV_CD  --- Maintain Different State Values.
+CNTRY_CD --- Maintain Different Country Values as per ISO standards.
+ACCT_TYPE_CD --- Customer Account Types.
+PRTNR_PRG_CD --- Partner Programs.
+CUST_MKTG_ROLE_CD -  Customer Marketing Roles.
+LOB_NUM - Maintain Different Line Of Business Values.
+CUST_PRSNA_ROLE_CD --- Customer or Persona Roles.
+GNDR_type_CD  --- Gender Values.
+CUST_ADDR_USG_type_CD - Customer Address Usage Types.
+CUST_ACCT_ADDR_USG_CD -- Customer Account Address Usage Types.
+CHNL_TYPE_CD -- Channel Types
