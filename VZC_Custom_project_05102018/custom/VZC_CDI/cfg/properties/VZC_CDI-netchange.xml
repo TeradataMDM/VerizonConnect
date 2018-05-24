@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dom-config>
+  <service-config Name="BCM_NET_CHANGE" TransactionCache="false" Register="false">
+    <register-handlers>
+      <handler TagName="MDM" ClassName="com.teradata.platform.services.mdmservices.util.MDMPreInitHandler"/>
+      <handler TagName="validationSpecFiles" ClassName="com.teradata.platform.core.validation.ValidationSpecsHandler"/>
+    </register-handlers>
+    <MDM/>
+    <docDefnFiles>
+      <docDefnFile Name="xservice/VZC_CDI/staging/netchange/documents/nc_xdoc.xml"/>
+    </docDefnFiles>
+    <logger>
+      <file Name="../log/VZC_CDI_netchange.log"/>
+      <logLevels>
+        <logLevel Value="Exception"/>
+        <logLevel Value="Error"/>
+      </logLevels>
+      <brief-console Value="false"/>
+    </logger>
+    <service-params>
+      <param Value="1000" Name="DEFAULT_MAX_ROWS_FETCH"/>
+    </service-params>
+    <schemaGenerate Value="true">
+      <file Value="../db/BCM_netchange.sql"/>
+      <generateTables Value="true"/>
+      <viewSqlDir Value="xservice/VZC_CDI/staging/netchange/viewsql"/>
+      <dbname Value="MDM41_NC"/>
+      <maxTableNameLength Value="128"/>
+      <maxColumnNameLength Value="128"/>
+    </schemaGenerate>
+    <extensionFiles/>
+    <ruleDefnFiles/>
+    <workflow>
+      <workflowDefnFiles/>
+      <uiWorkflowDefnFiles/>
+    </workflow>
+    <eventDefnFiles/>
+    <statetransition>
+      <stateTransitionFiles/>
+      <stateMappingFiles/>
+    </statetransition>
+    <messaging>
+      <messageTemplateFiles/>
+      <messageRecipientGroupFiles/>
+      <messagingEventDefFiles/>
+      <messagingEventFiles/>
+    </messaging>
+    <validationSpecFiles/>
+    <dataPersistSpec/>
+    <modules/>
+  </service-config>
+</dom-config>

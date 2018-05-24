@@ -1,0 +1,42 @@
+<document>
+  <properties>
+    <property Name="ACCT_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_ID" />
+    </property>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>LOB_NUM</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CUST_ACCT_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_STRT_DT" />
+    </property>
+    <property Name="CUST_ACCT_ROLE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_ROLE_CD" />
+    </property>
+    <property Name="CUST_ACCT_USG_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_USG_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCUSTOMER_ACCOUNT" PhysicalName="XPKCUSTOMER_ACCOUNT" Kind="PRIMARY">
+      <property Name="ACCT_ID" />
+      <property Name="CUST_ID" />
+      <property Name="LOB" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_ACCT" MasterTable="M_CUST_ACCT" />
+    <miscFacet PhysicalName="CUST_ACCT" DisplayName="Customer Account" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

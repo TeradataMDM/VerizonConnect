@@ -1,0 +1,82 @@
+<document>
+  <properties>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="ENGN_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_NAME" />
+    </property>
+    <property Name="ENGN_BLCK_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_BLCK_CD" />
+    </property>
+    <property Name="ENGN_Cylinders">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_CYLINDERS" />
+    </property>
+    <property Name="ENGN_Valves">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_Valves" />
+    </property>
+    <property Name="ENGN_INDUCTN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_INDUCTN" />
+    </property>
+    <property Name="ENGN_SIZE">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_SIZE" />
+    </property>
+    <property Name="WHEL_BASE">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="WHEL_BASE" />
+    </property>
+    <property Name="GRS_WT_RNG_LOW_VAL">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GRS_WT_RNG_LOW_VAL" />
+    </property>
+    <property Name="GRS_WT_RNG_HIGH_VAL">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GRS_WT_RNG_HIGH_VAL" />
+    </property>
+    <property Name="RSTRNT_type">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="RSTRNT_type" />
+    </property>
+    <property Name="BRAK_SYS">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BRAK_SYS" />
+    </property>
+    <property Name="DRV_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DRV_type_CD" />
+    </property>
+    <property Name="Rear_AXLE">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Rear_AXLE" />
+    </property>
+    <property Name="BODY_SUB_type">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BODY_SUB_TYPE" />
+    </property>
+    <property Name="BD_LGTH">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BD_LGTH" />
+    </property>
+    <property Name="XMISN_SPEED_LOW_VAL">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="XMISN_SPEED_LOW_VAL" />
+    </property>
+    <property Name="MFGR_PKG_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGR_PKG_CD" />
+    </property>
+    <property Name="MFGNG_CTRY">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGNG_CTRY" />
+    </property>
+    <property Name="PLT_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PLT_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKVEHICLE_BASE_SPECIFICATION" PhysicalName="XPKVEHICLE_BASE_SPECIFICATION" Kind="PRIMARY">
+      <property Name="VEH_ID" />
+    </key>
+    <key Active="true" Name="ENGN_NAME_PI_8617127" PhysicalName="ENGN_NAME_PI_8617127" Kind="NUPI">
+      <property Name="ENGN_NAME" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_BASE_SPEC" MasterTable="M_VEH_BASE_SPEC" />
+    <miscFacet PhysicalName="VEH_BASE_SPEC" DisplayName="Vehicle Base Specification" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

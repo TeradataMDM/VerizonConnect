@@ -1,0 +1,56 @@
+<document>
+  <properties>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="ACCT_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_ID" />
+    </property>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="LOB_NUM" PhysicalName="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="ACCT_VEH_EFF_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_VEH_EFF_STRT_DT" />
+    </property>
+    <property Name="ACCT_VEH_EFF_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_VEH_EFF_END_DT" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+    <property Name="FRST_OWNR_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FRST_OWNR_IND" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1CUSTOMER_ACCOUNT_VEHICLE" PhysicalName="XIE1CUSTOMER_ACCOUNT_VEHICLE" Kind="NUPI">
+      <property Name="CUST_ID" />
+    </key>
+    <key Active="true" Name="XPKCUSTOMER_ACCOUNT_VEHICLE" PhysicalName="XPKCUSTOMER_ACCOUNT_VEHICLE" Kind="PRIMARY">
+      <property Name="ACCT_VEH_EFF_STRT_DT" />
+      <property Name="VEH_ID" />
+      <property Name="ACCT_ID" />
+      <property Name="CUST_ID" />
+      <property Name="LOB" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_TMAT_ACCT_VEH" MasterTable="M_TMAT_ACCT_VEH" />
+    <miscFacet PhysicalName="TMAT_ACCT_VEH" DisplayName="Customer Account Vehicle" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

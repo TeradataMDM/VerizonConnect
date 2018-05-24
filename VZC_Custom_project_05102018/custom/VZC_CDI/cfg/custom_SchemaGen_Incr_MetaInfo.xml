@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SchemGenMetaInfo>
+  <SchemaGenType Value="INCREMENTAL"/>
+  <XserverInfo FileName="xserver.xml"/>
+  <Services>
+    <Service Value="platform.xml" Skip="false"/>
+    <Service Value="mdmservices.xml" Skip="false"/>
+    <Service Value="toolkit.xml" Skip="false"/>
+    <Service Value="toolkit-input.xml" Skip="false"/>
+    <Service Value="toolkit-netchange.xml" Skip="false"/>
+    <Service Value="toolkit-output.xml" Skip="true"/>
+    <Service Value="toolkit-version.xml" Skip="false"/>
+    <Service Value="VZC_CDI.xml" Skip="false"/>
+    <Service Value="VZC_CDI-input.xml" Skip="false"/>
+    <Service Value="VZC_CDI-output.xml" Skip="false"/>
+    <Service Value="VZC_CDI-netchange.xml" Skip="false"/>
+    <Service Value="VZC_CDI-version.xml" Skip="false"/>
+  </Services>
+  <CompileStoredProcedures Skip="false">
+    <Arguments>
+      <Argument Value="xserver.xml"/>
+      <Argument Value="../../../cfg/MDMBaseSPList.txt"/>
+    </Arguments>
+  </CompileStoredProcedures>
+  <GeneratePublicationObjects Skip="true"/>
+  <ServicesStaticFileData IsIncremental="true" Skip="false">
+    <FacetDir Value="../cfg/xservice/VZC_CDI/mdm_setup/facets"/>
+    <PreLoad>
+      <File FileName="xservice/mdmservices/modules/common/staticdata/isg/metadataCleanup.xml" ServiceName="MDMServices"/>
+    </PreLoad>
+    <StaticFiles>
+      <File FileName="xservice/mdmservices/modules/common/staticdata/isg/tk_incr_userActivities.xml" ServiceName="PLATFORM"/>
+      <File FileName="xservice/toolkit/staticdata/outputStagingServiceStaticData.xml" ServiceName="BCM_MASTER" Skip="true"/>
+      <File FileName="xservice/toolkit/staticdata/PopulateSysTableColMap.xml" ServiceName="BCM_MASTER"/>
+      <File FileName="mdm_setup/entity_templates.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/dataupload/staticdata/LRDM_entity_templates.xml" ServiceName="MDMServices"/>
+      <File FileName="mdm_setup/correlation.xml" ServiceName="MDMServices"/>
+      <File FileName="mdm_setup/docViews.xml" ServiceName="MDMServices"/>
+      <File FileName="mdm_setup/nativeDocuments.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/common/staticdata/isg/modelBuilder_Req.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/platform/modules/common/staticdata/refreshSysDBC.xml" ServiceName="PLATFORM"/>
+      <File FileName="xservice/mdmservices/modules/common/staticdata/isg/populateNCSQLs.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/common/staticdata/isg/createGTT.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/extendedattributes/staticdata/MigrateExtAttrBusniessRules.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/extendedattributes/staticdata/migrateExtendedAttrs.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/platform/modules/common/staticdata/refreshSysDBC.xml" ServiceName="PLATFORM"/>
+      <File FileName="xservice/mdmservices/modules/businessrules/staticdata/refreshDefaultRules.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/configurableworkflow/staticdata/configUI_AutoGen_Req.xml" ServiceName="MDMServices"/>
+      <File FileName="xservice/mdmservices/modules/businessrules/staticdata/BusinessRuleSeedData.xml" ServiceName="MDMServices"/>
+    </StaticFiles>
+    <PopulateSysViewMap Skip="false"/>
+  </ServicesStaticFileData>
+</SchemGenMetaInfo>

@@ -1,0 +1,5 @@
+<config>
+  <prop Key="Name">[VZC_CDI]</prop>
+  <prop Key="ModelInstance">true</prop>
+  <prop Key="Base">VZC_CDI</prop>
+</config>

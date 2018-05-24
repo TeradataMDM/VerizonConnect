@@ -1,0 +1,44 @@
+/***********************************************************************************************************
+SCRIPT:              updateStageTargetCustIds.btqt 
+DESCRIPTION:         This script update stage persona table with target cust ids
+DEPENDENCY:           
+INPUT:               SURVIVORSHIP INTERIM Tables 
+OUTPUT:              UPDATE STAGE PRSNA TABLE, TGT_CUST_ID and INSERT_UPDATE_FLAG ATTRIBUTES FROM SURVIVORSHIP INTERIM Tables 
+ERRORS:
+SPECIAL INSTRUCTIONS:
+
+CHANGE LOG:
+VERSION              DATE                 AUTHOR                          CHANGES
+1.00                05/08/2018           CA186004                        CREATED
+***********************************************************************************************************/
+.LOGON 10.25.132.9/MDM41,MDM41
+--.SET ERROROUT STDOUT;
+--.SET SESSION CHARSET 'UTF8';
+
+--------------------------------------------------------------------------------------------------------------------
+-- UPDATE STAGE PRSNA_ADDR TABLE, TGT_ADDR_ID and INSERT_UPDATE_FLAG ATTRIBUTES FROM SURVIVORSHIP INTERIM Tables --
+--------------------------------------------------------------------------------------------------------------------
+UPDATE TRG
+from MDM41_STG.PRSNA_STG TRG,
+(
+		SELECT	TRGT_CUST_ID, PRSNA_ID,
+			INSERT_UPDATE_FLAG
+	FROM	MDM41_STG.CUST_NAME_XREF_FWD
+		
+) SRC
+SET TGT_CUST_ID = SRC.TRGT_CUST_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG
+WHERE	TRG.PRSNA_ID = SRC.PRSNA_ID
+;
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
+
+.LABEL EXIT
+
+.IF ERRORLEVEL <= 4 THEN .GOTO WARN;
+.IF ERRORLEVEL > 4 THEN .GOTO ERR ;
+
+.LABEL WARN
+.QUIT 0
+
+.LABEL ERR
+.QUIT 1

@@ -1,0 +1,49 @@
+<document>
+  <properties>
+    <property Name="TEL_NUM_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_NUM_ID" />
+    </property>
+    <property Name="TEL_CTRY_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_CTRY_CD_NUM" />
+    </property>
+    <property Name="TEL_AREA_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_AREA_CD_NUM" />
+    </property>
+    <property Name="TEL_EXCH_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXCH_NUM" />
+    </property>
+    <property Name="TEL_LINE_NUM" PhysicalName="TEL_LINE_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_LINE_NUM" />
+    </property>
+    <property Name="TEL_EXTN_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXTN_NUM" />
+    </property>
+    <property Name="TEL_E164_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_E164_NUM" />
+    </property>
+    <property Name="TEL_SRC_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SRC_NUM" />
+    </property>
+    <property Name="TEL_SUB_TYPE_CD" PhysicalName="TEL_SUB_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SUB_TYPE_CD" />
+    </property>
+    <property Name="SMS_CPBL_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SMS_CPBL_IND" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKTELEPHONE_NUMBER" PhysicalName="XPKTELEPHONE_NUMBER" Kind="PRIMARY">
+      <property Name="TEL_NUM_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_TEL_NUM" MasterTable="M_TEL_NUM" />
+    <miscFacet PhysicalName="TEL_NUM" DisplayName="Telephone Number" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

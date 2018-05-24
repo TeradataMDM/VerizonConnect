@@ -1,0 +1,52 @@
+<document>
+  <properties>
+    <property Name="TEL_NUM_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_NUM_RQST_ID" />
+    </property>
+    <property Name="PRSNA_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="TEL_CTRY_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_CTRY_CD_NUM" />
+    </property>
+    <property Name="TEL_AREA_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_AREA_CD_NUM" />
+    </property>
+    <property Name="TEL_EXCH_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXCH_NUM" />
+    </property>
+    <property Name="TEL_LINE_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_LINE_NUM" />
+    </property>
+    <property Name="TEL_EXTN_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXTN_NUM" />
+    </property>
+    <property Name="TEL_E164_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_E164_NUM" />
+    </property>
+    <property Name="TEL_SRC_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SRC_NUM" />
+    </property>
+    <property Name="TEL_SUB_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SUB_TYPE_CD" />
+    </property>
+    <property Name="LOB_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKTELEPHONE_NUMBER_REQUEST" PhysicalName="XPKTELEPHONE_NUMBER_REQUEST" Kind="PRIMARY">
+      <property Name="TEL_NUM_RQST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_TEL_NUM_RQST" MasterTable="TEL_NUM_RQST" />
+    <miscFacet PhysicalName="TEL_NUM_RQST" DisplayName="Telephone Number Request" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

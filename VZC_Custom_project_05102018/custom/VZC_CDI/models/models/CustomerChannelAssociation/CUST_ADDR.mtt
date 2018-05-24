@@ -1,0 +1,53 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>LOB_NUM</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CUST_ADDR_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ADDR_STRT_DT" />
+    </property>
+    <property Name="CUST_ADDR_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ADDR_END_DT" />
+    </property>
+    <property Name="CUST_ADDR_USG_type_CD" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_ADDR_USG_type_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ADDR_USG_type_CD" />
+    </property>
+    <property Name="DFLT_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DFLT_IND" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1CUSTOMER_ADDRESS" PhysicalName="XIE1CUSTOMER_ADDRESS" Kind="NUPI">
+      <property Name="CUST_ID" />
+    </key>
+    <key Active="true" Name="XPKCUSTOMER_ADDRESS" PhysicalName="XPKCUSTOMER_ADDRESS" Kind="PRIMARY">
+      <property Name="ADDR_ID" />
+      <property Name="CUST_ADDR_STRT_DT" />
+      <property Name="CUST_ADDR_USG_type_CD" />
+      <property Name="CUST_ID" />
+      <property Name="LOB" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_ADDR" MasterTable="M_CUST_ADDR" />
+    <miscFacet PhysicalName="CUST_ADDR" DisplayName="Customer Address" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

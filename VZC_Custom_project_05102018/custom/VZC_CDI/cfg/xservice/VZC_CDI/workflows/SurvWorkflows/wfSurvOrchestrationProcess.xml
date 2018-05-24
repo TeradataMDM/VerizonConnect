@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow mgcCount="21" ShowInBreadCrumbs="true" Version="1.0" Name="wfSurvOrchestrationProcess" Description="" Type="" PrimaryDocument="" IsStartAllowed="Yes">
+  <variables Name="wfSurvOrchestrationProcess">
+    <variable Name="pStep" Type="int" Comment=""/>
+    <variable Name="pStatus" Type="string" Comment=""/>
+    <variable Name="pMessage" Type="string" Comment=""/>
+    <variable Name="pIsError" Type="boolean" Comment=""/>
+    <variable Name="checkPointResult" Type="string" Comment=""/>
+    <variable Name="errorConcat" Type="string" Comment=""/>
+  </variables>
+  <nodes>
+    <start Name="start">
+      <actions>
+        <action>
+          <SET Var="pStep" FromValue="0"/>
+          <SET Var="pStatus" FromValue=""/>
+          <SET Var="pMessage" FromValue=""/>
+          <SET Var="pIsError" FromValue="false"/>
+          <SET Var="pRunId" FromValue="0"/>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkRecordsToProcess"/>
+      </next_nodes>
+    </start>
+    <decision Name="checkRecordsToProcess" Description="This node checks if there are records in Matching Output Stage Tables to process.">
+      <actions>
+        <action>
+          <!--<REQUEST Name="checkRecordsToProcess" AssignToVar="result" HandleException="true">
+			</REQUEST>-->
+          <!-- <SET Var="checkPointResult" FromValue="{$result/checkPointResult/@Value}"/>
+			<SET Var="countMtchInputRecords" FromValue="{$result/countMtchInputRecords/@Value}"/>
+			<SET Var="errorConcat" FromValue="&lt;br/> * "/>-->
+          <SET Var="checkPointResult" FromValue="True"/>
+          <SET Var="countMtchInputRecords" FromValue="10"/>
+          <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+        </action>
+      </actions>
+      <condition Value="$countMtchInputRecords>0"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="procSurvOrch"/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="procSurvOrch">
+      <actions>
+        <action>
+          <REQUEST Name="procSurvOrch" AssignToVar="result" HandleException="true">
+            <GROUP_NAME Value="{$thisParam/GROUP_NAME/@Value}"/>
+            <EXEC_MODE Value="{$thisParam/EXEC_MODE/@Value}"/>
+          </REQUEST>
+          <IF_TEST Test="$result/@Status='Error'">
+            <THEN>
+              <SET Var="pIsError" FromValue="true"/>
+              <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=procSurvOrch]: ', $result/@Description)}"/>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="postSurvStatus"/>
+      </next_nodes>
+    </task>
+    <done Name="done">
+      <actions>
+        <action>
+          <IF_TEST Test="$checkPointResult = 'true'">
+            <THEN>
+              <IF_TEST Test="$pIsError!=true()">
+                <THEN>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <SuccessMessage Value="Processing completed"/>
+                    </ROOT>
+                  </TO_DOCVAR>
+                </THEN>
+                <ELSE>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <_ERRORS>
+                        <_ERROR Value="{concat('ERROR: ', $pMessage)}"/>
+                      </_ERRORS>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <EXCEPTION Value="{$pMessage}"/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+            <ELSE>
+              <IF_TEST Test="$checkPointResult = 'preRunError'">
+                <THEN>
+                  <SET Var="pMessage" FromValue="Error in prerun process."/>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <_ERRORS>
+                        <_ERROR Value="{$pMessage}"/>
+                      </_ERRORS>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <EXCEPTION Value="Error in prerun process."/>
+                </THEN>
+                <ELSE>
+                  <IF_TEST Test="$checkPointResult = 'sndbxError'">
+                    <THEN>
+                      <SET Var="pMessage" FromValue="Stage table not created."/>
+                      <TO_DOCVAR AssignToVar="pMessageReturn">
+                        <ROOT>
+                          <_ERRORS>
+                            <_ERROR Value="{$pMessage}"/>
+                          </_ERRORS>
+                        </ROOT>
+                      </TO_DOCVAR>
+                      <EXCEPTION Value="Stage table not created."/>
+                    </THEN>
+                    <ELSE>
+                      <SET Var="pMessage" FromValue="There are no records to process."/>
+                      <TO_DOCVAR AssignToVar="pMessageReturn">
+                        <ROOT>
+                          <SuccessMessage Value="{$pMessage}"/>
+                        </ROOT>
+                      </TO_DOCVAR>
+                    </ELSE>
+                  </IF_TEST>
+                </ELSE>
+              </IF_TEST>
+            </ELSE>
+          </IF_TEST>
+          <TO_DOCVAR AssignToVar="thisReturn">
+            <ROOT>
+              <TO_XML SelectList="$pMessageReturn/*"/>
+            </ROOT>
+          </TO_DOCVAR>
+        </action>
+      </actions>
+      <next_nodes/>
+    </done>
+    <task Name="postSurvStatus">
+      <actions>
+        <action/>
+      </actions>
+      <next_nodes>
+        <next_node Name="done"/>
+      </next_nodes>
+    </task>
+  </nodes>
+  <mgcview>
+    <mgcdashboard location="4,8"/>
+    <mgcnodes>
+      <start font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="33,212" size="732,526">
+        <iconProps iconfile="z1start.gif"/>
+      </start>
+      <checkRecordsToProcess font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="149,211" size="732,600">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkRecordsToProcess>
+      <procSurvOrch font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="333,211" size="897,552">
+        <iconProps iconfile="z1task.gif"/>
+      </procSurvOrch>
+      <done font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="731,206" size="732,526">
+        <iconProps iconfile="z1end.gif"/>
+      </done>
+      <postSurvStatus font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="536,208" size="744,627">
+        <iconProps iconfile="z1task.gif"/>
+      </postSurvStatus>
+    </mgcnodes>
+    <mgcconnectors>
+      <start>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="78,234" endpoint="149,233" ctrlRect1="128,232,4,4" ctrlRect2="93,231,4,4"/>
+      </start>
+      <checkRecordsToProcess>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="171,256" endpoint="753,251" ctrlRect1="180,306,4,4" ctrlRect2="500,496,4,4" textRect="338,399,8,8" ctrlRect1Dirty="true" ctrlRect2Dirty="true">
+          <textProps text="End"/>
+        </nextNodeView>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="194,233" endpoint="333,233" ctrlRect1="229,229,4,4" ctrlRect2="280,230,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true" textRect="250,227,12,8">
+          <textProps text="Proceed"/>
+        </nextNodeView>
+      </checkRecordsToProcess>
+      <procSurvOrch>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="378,233" endpoint="536,230" ctrlRect1="494,231,4,4" ctrlRect2="415,228,4,4"/>
+      </procSurvOrch>
+      <postSurvStatus>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="581,230" endpoint="731,228" ctrlRect1="631,236,4,4" ctrlRect2="616,226,4,4" ctrlRect1Dirty="true"/>
+      </postSurvStatus>
+    </mgcconnectors>
+    <mgctexts/>
+  </mgcview>
+  <shutdown_handler>
+    <pre_actions>
+      <action/>
+    </pre_actions>
+    <post_actions>
+      <action/>
+    </post_actions>
+    <checkcondition Value=""/>
+  </shutdown_handler>
+</workflow>

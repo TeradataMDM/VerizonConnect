@@ -1,0 +1,120 @@
+<document IsDocView="true">
+  <properties>
+    <property Name="STREET_ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="STREET_ADDR_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_SUBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_SUBTYPE_CD" />
+    </property>
+    <property Name="ADDR_LINE_1_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_LINE_1_TXT" />
+    </property>
+    <property Name="ADDR_LINE_2_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_LINE_2_TXT" />
+    </property>
+    <property Name="ADDR_LINE_3_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_LINE_3_TXT" />
+    </property>
+    <property Name="ADDR_LINE_4_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_LINE_4_TXT" />
+    </property>
+    <property Name="ST_OR_PROV_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ST_OR_PROV_CD" />
+    </property>
+    <property Name="CITY_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CITY_NAME" />
+    </property>
+    <property Name="COUNTY" PhysicalName="COUNTY">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTY_NAME" />
+    </property>
+    <property Name="CNTRY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTRY_CD" />
+    </property>
+    <property Name="POSTL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="POSTL_CD" />
+    </property>
+    <property Name="LAT_MEAS">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LAT_MEAS" />
+    </property>
+    <property Name="LNGTD_MEAS">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LNGTD_MEAS" />
+    </property>
+    <property Name="GEO_ACRCY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GEO_ACRCY_CD" />
+    </property>
+    <property Name="ORG_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORG_CD" />
+    </property>
+    <property Name="BLDG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BLDG_ID" />
+    </property>
+    <property Name="SUB_BLDG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SUB_BLDG_ID" />
+    </property>
+    <property Name="PREMS_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PREMS_CD" />
+    </property>
+    <property Name="Thoroughfare_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Thoroughfare_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="PKREF_STR_ADDR" PhysicalName="PKREF_STR_ADDR" Kind="PRIMARY">
+      <property Name="ADDR_TYPE_CD" />
+      <property Name="STREET_ADDR_ID" />
+      <property Name="ADDR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <miscFacet PhysicalName="REF_STREET_ADDR_V" Active="true" />
+    <mdmConfigFacet SchemaGen="false" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql OnMDMTables="true" IsSimpleView="true">REPLACE VIEW MDM41.REF_STREET_ADDR_V&#xD;
+AS&#xD;
+LOCKING ROW FOR ACCESS SELECT&#xD;
+STR_ADDR.STREET_ADDR_ID,&#xD;
+ADDR.ADDR_ID, &#xD;
+ADDR.ADDR_TYPE_CD, &#xD;
+ADDR.ADDR_SUBTYPE_CD, &#xD;
+STR_ADDR.ADDR_LINE_1_TXT, &#xD;
+STR_ADDR.ADDR_LINE_2_TXT, &#xD;
+STR_ADDR.ADDR_LINE_3_TXT,&#xD;
+STR_ADDR.ADDR_LINE_4_TXT,&#xD;
+STR_ADDR.ST_OR_PROV_CD,&#xD;
+STR_ADDR.CITY_NAME,&#xD;
+STR_ADDR.COUNTY,&#xD;
+STR_ADDR.CNTRY_CD,&#xD;
+STR_ADDR.POSTL_CD,&#xD;
+STR_ADDR.LAT_MEAS,&#xD;
+STR_ADDR.LNGTD_MEAS,&#xD;
+STR_ADDR.GEO_ACRCY_CD,&#xD;
+STR_ADDR.ORG_CD,&#xD;
+STR_ADDR.BLDG_ID,&#xD;
+STR_ADDR.SUB_BLDG_ID,&#xD;
+STR_ADDR.PREMS_CD,&#xD;
+STR_ADDR.THOROUGHFARE_CD,&#xD;
+STR_ADDR.SYS_TARGET_ID,&#xD;
+STR_ADDR.SYS_AUTH_ID,&#xD;
+STR_ADDR.SYS_SOURCE,&#xD;
+STR_ADDR.SYS_CREATED_BY,&#xD;
+STR_ADDR.SYS_CREATION_DATE,&#xD;
+STR_ADDR.SYS_ENT_STATE,&#xD;
+STR_ADDR.SYS_LAST_MODIFIED_BY,&#xD;
+STR_ADDR.SYS_LAST_MODIFIED_DATE,&#xD;
+STR_ADDR.SYS_NC_TYPE,&#xD;
+STR_ADDR.SYS_ERR_CODE,&#xD;
+STR_ADDR.SYS_ERR_SVRTY&#xD;
+FROM	MDM41_MST.M_STREET_ADDR STR_ADDR&#xD;
+INNER JOIN MDM41_MST.M_ADDR ADDR&#xD;
+ON STR_ADDR.STREET_ADDR_ID = ADDR.ADDR_ID&#xD;
+WHERE STR_ADDR.SYS_ENT_STATE='ACTIVE';</viewsql>
+</document>
+

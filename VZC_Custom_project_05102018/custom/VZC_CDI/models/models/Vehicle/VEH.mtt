@@ -1,0 +1,94 @@
+<document>
+  <properties>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+    <property Name="VEH_YR">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_YR" />
+    </property>
+    <property Name="VEH_COLOR">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_COLOR" />
+    </property>
+    <property Name="MODL_Trim">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MODL_Trim" />
+    </property>
+    <property Name="SHPG_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SHPG_DT" />
+    </property>
+    <property Name="ORIGNL_SLS_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORIGNL_SLS_DT" />
+    </property>
+    <property Name="MFGNG_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGNG_DT" />
+    </property>
+    <property Name="EURO_FIN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="EURO_FIN" />
+    </property>
+    <property Name="BODY_STYL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BODY_STYL_CD" />
+    </property>
+    <property Name="OEM_MODL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="OEM_MODL_NAME" />
+    </property>
+    <property Name="ENGN_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENGN_CD" />
+    </property>
+    <property Name="DOOR_STYL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DOOR_STYL_CD" />
+    </property>
+    <property Name="FUEL_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FUEL_type_CD" />
+    </property>
+    <property Name="NVGTN_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NVGTN_CD" />
+    </property>
+    <property Name="Telematics_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Telematics_CD" />
+    </property>
+    <property Name="HD_UNIT_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="HD_UNIT_type_CD" />
+    </property>
+    <property Name="HD_UNIT_SER_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="HD_UNIT_SER_NUM" />
+    </property>
+    <property Name="XMISN_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="XMISN_type_CD" />
+    </property>
+    <property Name="HD_UNIT_MODL_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="HD_UNIT_MODL_NUM" />
+    </property>
+    <property Name="VEH_CTGY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_CTGY_CD" />
+    </property>
+    <property Name="LOB_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKVEHICLE" PhysicalName="XPKVEHICLE" Kind="PRIMARY">
+      <property Name="VEH_ID" />
+    </key>
+    <key Active="true" Name="CURR_PREV_IND_PI_5595976" PhysicalName="CURR_PREV_IND_PI_5595976" Kind="NUPI">
+      <property Name="CURR_PREV_IND" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH" MasterTable="M_VEH" />
+    <miscFacet PhysicalName="VEH" DisplayName="Vehicle" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

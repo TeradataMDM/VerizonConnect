@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SchemGenMetaInfo>
+  <SchemaGenType Value="SQL_ONLY"/>
+  <XserverInfo FileName="xserver.xml"/>
+  <Services>
+    <Service Value="platform.xml" Skip="false"/>
+    <Service Value="toolkit-input.xml" Skip="false"/>
+    <Service Value="VZC_CDI-input.xml" Skip="false"/>
+    <Service Value="toolkit-netchange.xml" Skip="false"/>
+    <Service Value="VZC_CDI-netchange.xml" Skip="false"/>
+    <Service Value="mdmservices.xml" Skip="false"/>
+    <Service Value="toolkit.xml" Skip="false"/>
+    <Service Value="VZC_CDI.xml" Skip="false"/>
+    <Service Value="toolkit-output.xml" Skip="false"/>
+    <Service Value="VZC_CDI-output.xml" Skip="false"/>
+    <Service Value="toolkit-version.xml" Skip="false"/>
+    <Service Value="VZC_CDI-version.xml" Skip="false"/>
+  </Services>
+  <CompileStoredProcedures>
+    <Arguments>
+      <Argument Value="xserver.xml"/>
+      <Argument Value="../../../cfg/MDMBaseSPList.txt"/>
+    </Arguments>
+  </CompileStoredProcedures>
+  <GeneratePublicationObjects Skip="true"/>
+  <ServicesStaticFileData Skip="true"/>
+</SchemGenMetaInfo>

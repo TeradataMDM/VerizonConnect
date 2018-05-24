@@ -1,0 +1,842 @@
+<?xml version="1.0" standalone="yes"?>
+<DOCUMENTS>
+	<DEFINE_METHOD Name="addDocSmart">
+		<API_DOC>
+			<INPUT>
+				<REQUEST DocumentName="Item" Action="INSERT"
+					isBulkRequest="false" Name="addDocSmart">
+					<searchAllAlternatesFirst Value="false" />
+					<locationSpecificIndicator Value="2" />
+					<consumeEndItemATPFirst Value="false" />
+					<searchSameTimeBucket Value="false" />
+					<isVirtual Value="false" />
+					<isKanbanPart Value="false" />
+					<itemID Value="test" />
+					<isDiscrete Value="false" />
+					<name Value="test" />
+					<isCapacity Value="false" />
+					<isShelfLifeItem Value="false" />
+					<isSellable Value="false" />
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSE>
+						<SCENARIO_ID Value="0" />
+						<itemID Value="test" />
+					</RESPONSE>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<SET Var="docName"
+					FromSelect="$thisParam/@DocumentName" />
+				<TO_DOCVAR AssignToVar="addDoc" IsLiteral="true">
+					<ADD_DOC_SMART>
+						<TO_XML SelectList="$thisParam/*" />
+					</ADD_DOC_SMART>
+				</TO_DOCVAR>
+				<SET DocVar="addDoc" Attribute="Name" FromVar="docName" />
+				<EVAL_XOPERATION DocVar="addDoc" AssignToVar="res" />
+				<APPEND_CHILDREN DocVar="thisReturn" FromDocVar="res" />
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>  
+	<DEFINE_METHOD Name="removeDocLogical">
+		<API_DOC>
+			<INPUT>
+				<REQUEST Name="removeDocLogical"
+					DocumentName="PACKAGE">
+					<PACKAGE_NUMBER Value="1" />
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSES Status="Success">
+						<RESPONSE Status="Success" />
+					</RESPONSES>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<SET Var="docName"
+					FromSelect="$thisParam/@DocumentName" />
+				<SET Var="lastModBy"
+					FromSelect="$thisParam/@LAST_MODIFIED_BY" />
+				<TO_DOCVAR AssignToVar="remDoc" IsLiteral="true">
+					<REMOVE_DOC_LOGICAL ApplyDeleteRule="yes">
+						<TO_XML SelectList="$thisParam/*" />
+					</REMOVE_DOC_LOGICAL>
+				</TO_DOCVAR>
+				<SET DocVar="remDoc" Attribute="Name" FromVar="docName" />
+				<SET DocVar="remDoc" Attribute="LAST_MODIFIED_BY" FromVar="lastModBy" />
+				<EVAL_XOPERATION DocVar="remDoc" AssignToVar="res" />
+				<APPEND_CHILDREN DocVar="thisReturn" FromDocVar="res" />
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+	<DEFINE_METHOD Name="modifyDocSmart">
+		<API_DOC>
+			<INPUT>
+				<REQUEST DocumentName="Level" Action="UPDATE"
+					isBulkRequest="false" Name="modifyDocSmart">
+					<DOCUMENT_CONTEXT>
+						<Id Value="PL-Level1" />
+					</DOCUMENT_CONTEXT>
+					<UPDATE_PROPERTIES>
+						<Name Value="Planner Code Admin Level" />
+						<Description Value="Planner Code Admin Level" />
+						<DimensionId Value="PL-DIM" />
+						<levelCode />
+						<LevelWidth Value="43" />
+						<singularDescription />
+						<pluralDescription />
+						<LogicalTableName Value="Member" />
+						<LogicalColumnName Value="Id" />
+						<columnNamePrefix />
+						<SOURCE Value="BackEnd" />
+						<LAST_MODIFIED_BY />
+						<CREATED_BY />
+						<SYS_TARGET_ID />
+						<SYS_AUTH_ID />
+					</UPDATE_PROPERTIES>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSE Status="Success" />
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<SET Var="prefix"
+					FromSelect="$thisParam/DOCUMENT_CONTEXT/@Prefix" />
+				<TO_DOCVAR AssignToVar="ctxDoc" IsLiteral="true">
+					<DOCUMENT_CONTEXT>
+						<TO_XML
+							SelectList="$thisParam/DOCUMENT_CONTEXT/*" />
+					</DOCUMENT_CONTEXT>
+				</TO_DOCVAR>
+				<TO_DOCVAR AssignToVar="rootDoc" IsLiteral="true">
+					<DOCUMENT_CONTEXT>
+						<TO_XML
+							SelectList="$thisParam/DOCUMENT_CONTEXT/*" />
+					</DOCUMENT_CONTEXT>
+				</TO_DOCVAR>
+				<REMOVE_CHILDREN DocVar="rootDoc"
+					ChildName="FILTER_DETAILS" />
+				<SET Var="exprId"
+					FromSelect="$ctxDoc/FILTER_DETAILS/ID/@Value" />
+				<IF_TEST Test="$ctxDoc/FILTER_DETAILS/* != null">
+					<THEN>
+						<IF_TEST Test="$exprId = null">
+							<!-- use logical tag -->
+							<THEN>
+								<REQUEST Name="getExprAttribute"
+									AssignToVar="exprForLogical">
+									<TO_XML
+										SelectList="$ctxDoc/FILTER_DETAILS/LOGICAL" />
+								</REQUEST>
+								<SET DocVar="rootDoc"
+									Attribute="Expression"
+									FromSelect="$exprForLogical/EXPR/@Value" />
+							</THEN>
+							<ELSE>
+								<SET Var="filterDocName"
+									FromValue="{$thisParam/@FilterTable}" />
+								<IF_TEST Test="$filterDocName = null">
+									<THEN>
+										<SET Var="filterDocName"
+											FromValue="SEARCH_FILTER" />
+									</THEN>
+								</IF_TEST>
+								<REQUEST Name="getFilters"
+									FilterTable="{$filterDocName}" AssignToVar="filtersDoc">
+									<ID Value="{$exprId}" />
+								</REQUEST>
+								<GET_FIRST_CHILD DocVar="filtersDoc"
+									AssignToVar="fltDoc" />
+								<REQUEST Name="getExprAttribute"
+									AssignToVar="exprForLogical">
+									<TO_XML
+										SelectList="$fltDoc/FILTER_DETAILS/LOGICAL" />
+								</REQUEST>
+								<SET DocVar="rootDoc"
+									Attribute="Expression"
+									FromSelect="$exprForLogical/EXPR/@Value" />
+								<FOR_EACH
+									SelectList="$fltDoc/FILTER_DETAILS/FILTERS/FILTER"
+									CurrentElement="fltDoc">
+									<APPEND_CHILDREN DocVar="rootDoc"
+										FromDocVar="fltDoc" />
+								</FOR_EACH>
+							</ELSE>
+						</IF_TEST>
+					</THEN>
+				</IF_TEST>
+				<SET Var="docName"
+					FromSelect="$thisParam/@DocumentName" />
+				<IF_TEST Test="$prefix != null">
+					<THEN>
+						<PRINTLN Value="PREFIX IS NOT NULL" />
+						<SET DocVar="rootDoc" Attribute="Prefix"
+							FromVar="prefix" />
+					</THEN>
+					<ELSE>
+						<IF_TEST
+							Test="strlen($rootDoc/@Expression) > 0">
+							<THEN>
+								<PRINTLN Value="EXPR DOC IS NOT NULL" />
+								<SET DocVar="rootDoc" Attribute="Prefix"
+									FromVar="docName" />
+							</THEN>
+						</IF_TEST>
+					</ELSE>
+				</IF_TEST>
+				<!-- if auth is not present then call modify doc smart -->
+				<IF_TEST Test="$rootDoc/AUTH_SCOPE/* = null">
+					<THEN>
+						<REMOVE_CHILDREN DocVar="rootDoc"
+							ChildName="AUTH_SCOPE" />
+						<TO_DOCVAR AssignToVar="modDoc"
+							IsLiteral="true">
+							<MODIFY_DOC_SMART>
+								<TO_XML
+									SelectList="$thisParam/UPDATE_PROPERTIES" />
+								<TO_XML SelectList="$rootDoc" />
+							</MODIFY_DOC_SMART>
+						</TO_DOCVAR>
+						<SET DocVar="modDoc" Attribute="Name"
+							FromVar="docName" />
+						<EVAL_XOPERATION DocVar="modDoc"
+							AssignToVar="res" />
+						<SET DocVar="thisReturn" Attribute="RowCount"
+							FromValue="{$res/@RowCount}" />
+						<APPEND_CHILDREN DocVar="thisReturn"
+							FromDocVar="res" />
+					</THEN>
+					<ELSE>
+						<!-- if auth is present then call update data. which will create inner query because there is join required -->
+						<TO_DOCVAR AssignToVar="updateData"
+							IsLiteral="true">
+							<UPDATE_DATA AddSysProps="yes">
+								<TO_XML
+									SelectList="$thisParam/UPDATE_PROPERTIES" />
+								<TO_XML SelectList="$rootDoc" />
+							</UPDATE_DATA>
+						</TO_DOCVAR>
+						<SET DocVar="updateData" Attribute="Name"
+							FromVar="docName" />
+						<EVAL_XOPERATION DocVar="updateData"
+							AssignToVar="res" />
+						<SET DocVar="thisReturn" Attribute="RowCount"
+							FromValue="{$res/@RowCount}" />
+						<APPEND_CHILDREN DocVar="thisReturn"
+							FromDocVar="res" />
+					</ELSE>
+				</IF_TEST>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+	<DEFINE_METHOD Name="getExprAttribute">
+		<API_DOC>
+			<INPUT>
+				<REQUEST Name="getExprAttribute">
+					<DISPLAY>
+						<STEP Value="2" Sequence="2" />
+						<STEP Value="1" Sequence="1" />
+						<STEP Value="3" Sequence="3" />
+					</DISPLAY>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSE>
+						<EXPR Value="1 2 3" />
+					</RESPONSE>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<GET_FIRST_CHILD DocVar="thisParam"
+					AssignToVar="rootDoc" />
+				<XML_SORT SortKey="@Sequence" DataType="int"
+					AssignToVar="result">
+					<TO_XML SelectList="$rootDoc/*" />
+				</XML_SORT>
+				<!--
+					<FOR_EACH SelectList="$result/STEP" CurrentElement="stepDoc">
+					<PRINT Select="$stepDoc/@Value" ToVar="expr"/>
+					<PRINT Value=" " ToVar="expr"/>
+					</FOR_EACH> -->
+				<INSTANCE_FUNCTION
+					ClassName="com.teradata.platform.services.mdmservices.util.filter.FilterNative"
+					MethodName="makeExpr" AssignToVar="expr">
+					<PARAM Var="result" />
+					<PARAM Value="true" />
+				</INSTANCE_FUNCTION>
+				<SET DocVar="thisReturn" Property="EXPR" FromVar="expr" />
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+	<DEFINE_METHOD Name="getFilters">
+		<API_DOC>
+			<INPUT>
+				<REQUEST Name="getFilters" FilterTable="SEARCH_FILTER"
+					StartAtRow="0" MaxRows="10" ReturnRowCount="yes" Distinct="no">
+					<DOC_TYPE Value="DOCUMENT|FORM" />
+					<DOC_ID Value="FORM1" />
+					<CREATED_BY Value="otherUser" />
+					<NAME Value="FLTNAME" />
+					<ID Value="FLT-1" />
+					<OWNER Value="loginName" />
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSE Status="Success">
+						<SEARCH_FILTER ExistingDocument="yes">
+							<ID Value="1" />
+							<DOC_ID Value="1" />
+							<DOC_TYPE Value="FORM" />
+							<NAME Value="a1" />
+							<SERVICE_NAME Value="BCM" />
+							<FILTER_DETAILS>
+
+							</FILTER_DETAILS>
+						</SEARCH_FILTER>
+						<SEARCH_FILTER ExistingDocument="yes">
+							<ID Value="2" />
+							<DOC_ID Value="1" />
+							<DOC_TYPE Value="FORM" />
+							<NAME Value="b1" />
+							<SERVICE_NAME Value="BCM" />
+							<FILTER_DETAILS>
+
+								<DISPLAY>
+									<STEP Value="PARENT.NAME = pn2"
+										Sequence="1" />
+									<STEP Value="or " Sequence="2" />
+									<STEP Value="(" Sequence="3" />
+									<STEP Value="PARENT.ID = 2"
+										Sequence="4" />
+									<STEP Value=")" Sequence="5" />
+								</DISPLAY>
+
+								<LOGICAL>
+									<STEP
+										Value="#|L_PARENT.L_NAME|# = #[pn2^string]#" Sequence="1" />
+									<STEP Value="or " Sequence="2" />
+									<STEP Value="(" Sequence="3" />
+									<STEP
+										Value="#|L_PARENT.ID|# = #[2^string]#" Sequence="4" />
+									<STEP Value=")" Sequence="5" />
+								</LOGICAL>
+								<FILTERS>
+									<FILTER Name="ENTITY_STATE"
+										Document="L_PARENT">
+										<ENTITY_STATE Value="DELETED"
+											MatchBy="NOT_EQUAL" />
+									</FILTER>
+								</FILTERS>
+							</FILTER_DETAILS>
+						</SEARCH_FILTER>
+					</RESPONSE>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<!--IMP: if id is not present only then retrive user's local and other users global filters.
+					Also retrieve filters based on other given criteria too. This API may not behave exactly as GET_DOCUMENT
+					behaves. Meaning it may not perform correctrly with different OR and AND clauses-->
+				<IF_TEST Test="$thisParam/ID/@Value = null">
+					<THEN>
+						<TO_DOCVAR IsLiteral="true"
+							AssignToVar="andDoc">
+							<AND />
+						</TO_DOCVAR>
+						<!-- add created_by filter if it is present. Global filters for provided user
+							will be returned.
+						-->
+						<!--
+							<IF_TEST Test="$thisParam/CREATED_BY/@Value != null">
+							<THEN>
+							<TO_DOCVAR IsLiteral="true" AssignToVar="cbyDoc">
+							<TO_XML Select="$thisParam/CREATED_BY"/>
+							</TO_DOCVAR>
+							
+							<ADD_CHILD DocVar="andDoc" ChildDocVar="cbyDoc"/>
+							<REMOVE_CHILDREN DocVar="thisParam" ChildName="CREATED_BY"/>
+							</THEN>
+							</IF_TEST>
+						-->
+						<TO_DOCVAR AssignToVar="userFilterDoc">
+							<OR>
+								<FILTER_SCOPE Value="GLOBAL" />
+							</OR>
+						</TO_DOCVAR>
+						<IF_TEST
+							Test="$thisParam/OWNER/@Value != null">
+							<THEN>
+								<TO_DOCVAR AssignToVar="rootDoc">
+									<ROOT>
+										<CREATED_BY
+											Value="{$thisParam/OWNER/@Value}" />
+										<FILTER_SCOPE Value="LOCAL" />
+									</ROOT>
+								</TO_DOCVAR>
+								<APPEND_CHILDREN DocVar="andDoc"
+									FromDocVar="rootDoc" />
+								<REMOVE_CHILDREN DocVar="thisParam"
+									ChildName="OWNER" />
+							</THEN>
+						</IF_TEST>
+						<IF_TEST Test="$andDoc/* != null">
+							<THEN>
+								<ADD_CHILD DocVar="userFilterDoc"
+									ChildDocVar="andDoc" />
+							</THEN>
+						</IF_TEST>
+						<ADD_CHILD DocVar="thisParam"
+							ChildDocVar="userFilterDoc" />
+						<IF_TEST Test="$andDoc/* != null">
+							<THEN>
+								<ADD_CHILD DocVar="userFilterDoc"
+									ChildDocVar="andDoc" />
+							</THEN>
+						</IF_TEST>
+						<ADD_CHILD DocVar="thisParam"
+							ChildDocVar="userFilterDoc" />
+					</THEN>
+					<ELSE>
+						<!-- if id is present then do normal query. meaning just pass all given filter to get Document -->
+						<!-- do nothing -->
+					</ELSE>
+				</IF_TEST>
+				<INSTANCE_FUNCTION
+					ClassName="com.teradata.platform.services.mdmservices.util.filter.FilterNative"
+					MethodName="getFilters" AssignToVar="res">
+					<PARAM Var="thisContext" />
+					<PARAM Var="thisParam" />
+					<PARAM Var="thisReturn" />
+				</INSTANCE_FUNCTION>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+    
+<DEFINE_METHOD Name="removeFilters">
+		<API_DOC>
+			<INPUT>
+				<REQUEST Name="removeFilters"
+					FilterTable="SEARCH_FILTER">
+					<OR>
+						<ID Value="F1" />
+					</OR>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSES Status="Success">
+						<RESPONSE Status="Success" />
+					</RESPONSES>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<GET_FIRST_CHILD DocVar="thisParam" AssignToVar="orDoc" />
+				<!-- there should be atleast one ID other it will remove all data -->
+				<IF_TEST Test="$orDoc/* = null">
+					<THEN>
+						<EXIT />
+					</THEN>
+				</IF_TEST>
+				<SET Var="fltTableName"
+					FromValue="{$thisParam/@FilterTable}" />
+				<IF_TEST Test="$fltTableName = null">
+					<THEN>
+						<SET Var="fltTableName"
+							FromValue="SEARCH_FILTER" />
+					</THEN>
+				</IF_TEST>
+				<REMOVE_DOCUMENT Name="{$fltTableName}">
+					<TO_XML SelectList="$thisParam/*" />
+				</REMOVE_DOCUMENT>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+
+	<DEFINE_METHOD Name="saveFilter">
+		<API_DOC>
+			<INPUT>
+				<REQUEST Name="saveFilter" UserId="user1"
+					FilterTable="SEARCH_FILTER">
+					{
+					<ID Value="FLT1" />
+					}
+					<NAME Value="FLT_NAME" />
+					<DOC_TYPE Value="FORM|DOCUMENT" />
+					<DOC_ID Value="FORM1|DOC1" />
+					<CREATED_BY Value="userName" />
+					<FILTER_SCOPE Value="GLOBAL|LOCAL" />
+					<FILTER_DETAILS>
+
+						<DISPLAY>
+							<STEP Value="PARENT.NAME = pn2"
+								Sequence="1" />
+							<STEP Value="or " Sequence="2" />
+							<STEP Value="(" Sequence="3" />
+							<STEP Value="PARENT.ID = 2" Sequence="4" />
+							<STEP Value=")" Sequence="5" />
+						</DISPLAY>
+
+						<LOGICAL>
+							<STEP
+								Value="#|L_PARENT.L_NAME|# = #[pn2^string]#" Sequence="1" />
+							<STEP Value="or " Sequence="2" />
+							<STEP Value="(" Sequence="3" />
+							<STEP Value="#|L_PARENT.ID|# = #[2^string]#"
+								Sequence="4" />
+							<STEP Value=")" Sequence="5" />
+						</LOGICAL>
+						<FILTERS>
+							<FILTER Name="ENTITY_STATE"
+								Document="L_PARENT">
+								<ENTITY_STATE Value="DELETED"
+									MatchBy="NOT_EQUAL" />
+							</FILTER>
+						</FILTERS>
+					</FILTER_DETAILS>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSES Status="Success">
+						<RESPONSE Status="Success">
+							<ID Value="FLT1" />
+						</RESPONSE>
+					</RESPONSES>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<GET_FIRST_CHILD DocVar="thisParam" AssignToVar="dtls"
+					ChildName="FILTER_DETAILS" />
+				<GET_FIRST_CHILD DocVar="dtls" AssignToVar="dispDoc"
+					ChildName="DISPLAY" />
+				<GET_FIRST_CHILD DocVar="dtls" AssignToVar="logicalDoc"
+					ChildName="LOGICAL" />
+				<SET DocVar="thisParam" Property="ENTITY_STATE"
+					FromValue="ACTIVE" />
+				<!-- add Expr to display by calculating from steps -->
+				<!-- <REQUEST Name="getExprAttribute" AssignToVar="exprForDisp">
+					<TO_XML SelectList="$dispDoc"/>
+					</REQUEST>
+					
+					<SET DocVar="dispDoc" Attribute="Expr" FromSelect="$exprForDisp/EXPR/@Value"/> -->
+				<!-- add Expr to logical by calculating from steps -->
+				<!--  <REQUEST Name="getExprAttribute" AssignToVar="exprForLogical">
+					<TO_XML SelectList="$logicalDoc"/>
+					</REQUEST>
+					<SET DocVar="logicalDoc" Attribute="Expr" FromSelect="$exprForLogical/EXPR/@Value"/>
+				-->
+				<SET Var="fltId" FromSelect="$thisParam/ID/@Value" />
+				<IF_TEST Test="$fltId = null">
+					<!-- if add -->
+					<THEN>
+						<INSTANCE_FUNCTION
+							ClassName="com.teradata.platform.services.mdmservices.util.filter.FilterNative"
+							MethodName="saveFilters" AssignToVar="res">
+							<PARAM Var="thisContext" />
+							<PARAM Var="thisParam" />
+							<PARAM Var="thisReturn" />
+							<PARAM Value="false" />
+							<!-- update flag -->
+						</INSTANCE_FUNCTION>
+					</THEN>
+					<ELSE>
+						<!-- if edit -->
+						<INSTANCE_FUNCTION
+							ClassName="com.teradata.platform.services.mdmservices.util.filter.FilterNative"
+							MethodName="saveFilters" AssignToVar="res">
+							<PARAM Var="thisContext" />
+							<PARAM Var="thisParam" />
+							<PARAM Var="thisReturn" />
+							<PARAM Value="true" />
+							<!-- update flag -->
+						</INSTANCE_FUNCTION>
+					</ELSE>
+				</IF_TEST>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+    
+	<DEFINE_METHOD Name="modifyDocSmartActivate">
+		<API_DOC>
+			<INPUT>
+				<REQUEST ExistingDocument="yes"
+					DocumentService="BCM_NET_CHANGE" DocumentName="Item"
+					PersistTo="BCM_MASTER" Action="ACTIVATE" ServiceName="BCM_MASTER"
+					Name="modifyDocSmartActivate">
+					<DOCUMENT_CONTEXT>
+						<SCENARIO_ID Value="0" />
+						<itemID Value="ITEM-1" />
+					</DOCUMENT_CONTEXT>
+					<UPDATE_PROPERTIES>
+						<SYS_READ_STATE Value="UNREAD" />
+						<SYS_STATE Value="VALID" />
+						<SYS_TYPE Value="ACTIVATE" />
+						<name Value="ITEM-1" />
+						<status Value="ACTIVE" />
+						<subCategory />
+						<creationDate />
+						<isSellable />
+						<description />
+						<lifeCycleStage />
+						<category />
+						<presp />
+						<UOM />
+					</UPDATE_PROPERTIES>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSES Status="Success">
+						<RESPONSE Status="Success" />
+					</RESPONSES>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<!--
+					<PRINTLN Value="PRINTING THISPARAM INSIDE modifyDocSmartActivate"/>
+					<PRINTLN Var="thisParam"/>
+				-->
+				<SET Var="temp"
+					FromSelect="$thisParam/UPDATE_PROPERTIES" />
+				<SET DocVar="temp" Property="ENTITY_STATE"
+					FromValue="ACTIVE" />
+				<REQUEST Name="modifyDocSmart"
+					DocumentName="{$thisParam/@DocumentName}">
+					<TO_XML SelectList="$thisParam/*" />
+				</REQUEST>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+	<DEFINE_METHOD Name="modifyDocSmartDeactivate">
+		<API_DOC>
+			<INPUT>
+				<REQUEST ExistingDocument="yes"
+					DocumentService="BCM_NET_CHANGE" DocumentName="Item"
+					PersistTo="BCM_MASTER" Action="DEACTIVATE" ServiceName="BCM_MASTER"
+					Name="modifyDocSmartDeactivate">
+					<DOCUMENT_CONTEXT>
+						<SCENARIO_ID Value="0" />
+						<itemID Value="ITEM-1" />
+					</DOCUMENT_CONTEXT>
+					<UPDATE_PROPERTIES>
+						<SYS_READ_STATE Value="UNREAD" />
+						<SYS_STATE Value="VALID" />
+						<SYS_TYPE Value="DEACTIVATE" />
+						<name Value="ITEM-1" />
+						<status Value="INACTIVE" />
+						<subCategory />
+						<creationDate />
+						<isSellable />
+						<description />
+						<lifeCycleStage />
+						<category />
+						<presp />
+						<UOM />
+					</UPDATE_PROPERTIES>
+				</REQUEST>
+			</INPUT>
+			<OUTPUT>
+				<ON_SUCCESS>
+					<RESPONSES Status="Success">
+						<RESPONSE Status="Success" />
+					</RESPONSES>
+				</ON_SUCCESS>
+			</OUTPUT>
+		</API_DOC>
+		<RULE>
+			<ACTION>
+				<!--
+					<PRINTLN Value="PRINTING THISPARAM INSIDE modifyDocSmartActivate"/>
+					<PRINTLN Var="thisParam"/>
+				-->
+				<SET Var="temp"
+					FromSelect="$thisParam/UPDATE_PROPERTIES" />
+				<SET DocVar="temp" Property="ENTITY_STATE"
+					FromValue="INACTIVE" />
+				<REQUEST Name="modifyDocSmart"
+					DocumentName="{$thisParam/@DocumentName}">
+					<TO_XML SelectList="$thisParam/*" />
+				</REQUEST>
+			</ACTION>
+		</RULE>
+	</DEFINE_METHOD>
+	  <DEFINE_METHOD Name="doDBPersist">
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="$thisParam/@Action= 'DELETE'">
+          <THEN>
+            <REQUEST Name="formatXml_Delete" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/@Action= 'UPDATE'">
+          <THEN>
+            <REQUEST Name="formatXml_Update" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/@Action= 'INSERT'">
+          <THEN>
+            <REQUEST Name="formatXml_Insert" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/@Action= 'MASS_UPDATE'">
+          <THEN>
+            <REQUEST Name="formatXml_MassUpdate" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+            <SET DocVar="thisParam" Attribute="Action" FromValue="MASS_UPDATE"/>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/@Action= 'ACTIVATE'">
+          <THEN>
+            <REQUEST Name="formatXml_Activate" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+            <SET DocVar="thisParam" Attribute="Action" FromValue="ACTIVATE"/>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/@Action= 'DEACTIVATE'">
+          <THEN>
+            <REQUEST Name="formatXml_MassUpdate" ServiceName="BCM_MASTER" AssignToVar="formattedDoc">
+              <TO_XML SelectList="$thisParam"/>
+            </REQUEST>
+            <SET DocVar="thisParam" Attribute="Action" FromValue="MASS_UPDATE"/>
+          </THEN>
+        </IF_TEST>
+        <FOR_EACH SelectList="$formattedDoc/*" CurrentElement="currRecord">
+          <SET_NAME DocVar="currRecord" FromValue="{$thisParam/@DocumentName}"/>
+        </FOR_EACH>
+        <TO_DOCVAR AssignToVar="doDBPersistDocVar" IsLiteral="true">
+          <DO_DB_PERSIST>
+          </DO_DB_PERSIST>
+        </TO_DOCVAR>
+        <ADD_CHILDREN DocVar="doDBPersistDocVar" FromSelectList="$formattedDoc/*"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="ReqWfName" FromValue="{$thisParam/@ALCR_Details}"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="DocumentName" FromValue="{$thisParam/@DocumentName}"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="Action" FromValue="{$thisParam/@Action}"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="Source" FromValue="{$thisParam/@Source}"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="isBulkRequest" FromValue="{$thisParam/@isBulkRequest}"/>
+        <SET DocVar="doDBPersistDocVar" Attribute="skipBusinessRule" FromValue="{$thisParam/@skipBusinessRule}"/>
+        <IF_TEST Test="$thisParam/@ServiceName != null">
+          <THEN>
+            <SET DocVar="doDBPersistDocVar" Attribute="ServiceName" FromValue="{$thisParam/@ServiceName}"/>
+          </THEN>
+        </IF_TEST>
+        <EVAL_XOPERATION DocVar="doDBPersistDocVar" AssignToVar="res"/>
+        <APPEND_CHILDREN DocVar="thisReturn" FromDocVar="res"/>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="formatXml_Delete">
+    <RULE>
+      <ACTION>
+        <FOR_EACH SelectList="$thisParam/*/OR/AND" CurrentElement="currDoc">
+          <TO_DOCVAR AssignToVar="tempDocDoPersist">
+            <EACH_RECORD>
+              <TO_XML SelectList="$currDoc/*"/>
+              <!--LAST_MODIFIED_BY Value="{$thisParam/REQUEST/@UserId}"/-->
+            </EACH_RECORD>
+          </TO_DOCVAR>
+          <ADD_CHILDREN DocVar="thisReturn" FromDocVar="tempDocDoPersist"/>
+        </FOR_EACH>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="formatXml_Insert">
+    <RULE>
+      <ACTION>
+        <APPEND_TO_XML DocVar="thisReturn">
+          <EACH_RECORD>
+            <TO_XML SelectList="$thisParam/*/*"/>
+            <!--CREATED_BY Value="{$thisParam/REQUEST/@UserId}"/-->
+            <SOURCE Value="{$thisParam/REQUEST/@SysSource}"/>
+          </EACH_RECORD>
+        </APPEND_TO_XML>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="formatXml_Update">
+    <RULE>
+      <ACTION>
+        <!--SET_PROPS SelectList="$thisParam/*/UPDATE_PROPERTIES">
+<LAST_MODIFIED_BY Value="{$thisParam/REQUEST/@UserId}" Overwrite="true"/>
+</SET_PROPS-->
+        <APPEND_TO_XML DocVar="thisReturn">
+          <EACH_RECORD>
+            <TO_XML SelectList="$thisParam/*/*"/>
+          </EACH_RECORD>
+        </APPEND_TO_XML>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="formatXml_Activate">
+    <RULE>
+      <ACTION>
+        <APPEND_TO_XML DocVar="thisReturn">
+          <EACH_RECORD>
+            <TO_XML SelectList="$thisParam/*/*"/>
+          </EACH_RECORD>
+        </APPEND_TO_XML>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="formatXml_MassUpdate">
+    <RULE>
+      <ACTION>
+        <TO_DOCVAR AssignToVar="tempVar">
+          <ROOT>
+          </ROOT>
+        </TO_DOCVAR>
+        <TO_DOCVAR AssignToVar="withUpdateProp">
+          <TO_XML SelectList="$thisParam/REQUEST/UPDATE_PROPERTIES"/>
+          <!--SET_PROPS SelectList="$thisParam/*/UPDATE_PROPERTIES">
+<LAST_MODIFIED_BY Value="{$thisParam/REQUEST/@UserId}" Overwrite="true"/>
+</SET_PROPS-->
+        </TO_DOCVAR>
+        <FOR_EACH SelectList="$thisParam/REQUEST/*/OR/AND" CurrentElement="currDoc">
+          <TO_DOCVAR AssignToVar="toDocName">
+            <EACH_RECORD>
+            </EACH_RECORD>
+          </TO_DOCVAR>
+          <TO_DOCVAR AssignToVar="tempDocDoPersist">
+            <DOCUMENT_CONTEXT>
+              <TO_XML SelectList="$currDoc/*"/>
+            </DOCUMENT_CONTEXT>
+          </TO_DOCVAR>
+          <ADD_CHILDREN DocVar="toDocName" FromDocVar="tempDocDoPersist"/>
+          <ADD_CHILDREN DocVar="toDocName" FromDocVar="withUpdateProp"/>
+          <ADD_CHILDREN DocVar="tempVar" FromDocVar="toDocName"/>
+        </FOR_EACH>
+        <ADD_CHILDREN DocVar="thisReturn" FromSelectList="$tempVar/*"/>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+</DOCUMENTS>

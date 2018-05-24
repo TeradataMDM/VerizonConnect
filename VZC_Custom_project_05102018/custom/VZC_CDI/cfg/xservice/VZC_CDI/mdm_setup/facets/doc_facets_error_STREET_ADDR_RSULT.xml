@@ -1,0 +1,1659 @@
+<REQUESTS ServiceName="MDMServices" >
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154515">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <TABLE_CLASS Value="TRANSACTION" />
+      <SOURCE Value="MASTER" />
+      <INPUT_TABLE_NAME Value="IN_STREET_ADDR_RSULT" />
+      <VIEW_NAME Value="STREET_ADDR_RSULTX" />
+      <PARENT_VIEW_NAME Value="NULL" />
+      <ERROR_TABLE_NAME Value="E_STREET_ADDR_RSULT" />
+      <ERROR_DOCUMENT_NAME Value="error_STREET_ADDR_RSULT" />
+      <MASTER_TABLE_NAME Value="STREET_ADDR_RSULT" />
+      <OUTPUT_TABLE_NAME Value="OUT_STREET_ADDR_RSULT" />
+      <VERSION_TABLE_NAME Value="VER_STREET_ADDR_RSULT" />
+      <NET_CHANGE_TABLE_NAME Value="NC_STREET_ADDR_RSULT" />
+      <IS_NATIVE Value="false" />
+      <HAS_DATA_SOURCES Value="false" />
+      <SCHEMA_GEN_REQUIRED Value="true" />
+      <HARD_DELETE Value="false" />
+      <IS_APPENDABLE Value="false" />
+      <TEMPORAL_TYPE Value="" />
+      <DEFAULT_AUTHORIZATION Value="false" />
+      <RLS_ENABLE Value="false" />
+      <CLS_ENABLE Value="false" />
+      <TABLE_FOLDER Value="models/TransactionModels/" />
+      <PROFILING_ALLOWED Value="false" />
+      <DATA_STEWARD Value="admin" />
+      <IS_EXTENDABLE Value="false" />
+      <IS_DOC_VIEW Value="false" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154512">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Street Address Result" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="STREET_ADDR_RQST_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="STREET_ADDR_RQST_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="STREET_ADDR_RQST_ID" />
+      <SEQUENCE Value="0" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="PRSNA_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="PRSNA_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="PRSNA_ID" />
+      <SEQUENCE Value="18" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_1_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_1_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ADDR_LINE_1_TXT" />
+      <SEQUENCE Value="1" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_2_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_2_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ADDR_LINE_2_TXT" />
+      <SEQUENCE Value="2" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_3_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_3_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ADDR_LINE_3_TXT" />
+      <SEQUENCE Value="3" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_4_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_LINE_4_TXT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ADDR_LINE_4_TXT" />
+      <SEQUENCE Value="4" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ST_OR_PROV_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ST_OR_PROV_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ST_OR_PROV_CD" />
+      <SEQUENCE Value="19" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CITY_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CITY_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="CITY_NAME" />
+      <SEQUENCE Value="7" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="POSTL_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="POSTL_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="POSTL_CD" />
+      <SEQUENCE Value="16" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LAT_MEAS" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LAT_MEAS" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="LAT_MEAS" />
+      <SEQUENCE Value="12" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+      <DECIMALS Value="4" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LNGTD_MEAS" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LNGTD_MEAS" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="LNGTD_MEAS" />
+      <SEQUENCE Value="13" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+      <DECIMALS Value="4" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CNTRY_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CNTRY_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="CNTRY_CD" />
+      <SEQUENCE Value="8" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="GEO_ACRCY_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="GEO_ACRCY_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="GEO_ACRCY_CD" />
+      <SEQUENCE Value="11" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ORG_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ORG_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ORG_CD" />
+      <SEQUENCE Value="15" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="BLDG_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="BLDG_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="BLDG_ID" />
+      <SEQUENCE Value="6" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SUB_BLDG_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SUB_BLDG_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="SUB_BLDG_ID" />
+      <SEQUENCE Value="20" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="PREMS_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="PREMS_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="PREMS_CD" />
+      <SEQUENCE Value="17" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="THOROUGHFARE_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="THOROUGHFARE_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="THOROUGHFARE_CD" />
+      <SEQUENCE Value="21" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_RSULT_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ADDR_RSULT_CD" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ADDR_RSULT_CD" />
+      <SEQUENCE Value="5" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LOB_NUM" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LOB_NUM" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="LOB_NUM" />
+      <SEQUENCE Value="14" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="DSTRCT_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="DSTRCT_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="DSTRCT_NAME" />
+      <SEQUENCE Value="10" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CNTY_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CNTY_NAME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="CNTY_NAME" />
+      <SEQUENCE Value="9" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154513">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="CONFIGURATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ZIP_EXTN" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <CONFIGURATION>
+      <SOURCE Value="MASTER" />
+    </CONFIGURATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ZIP_EXTN" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="ZIP_EXTN" />
+      <SEQUENCE Value="22" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+      <I18NIZE Value="false" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_AUTH_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Authorization" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SOURCE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Source" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_TARGET_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Target Id" />
+      <EDITABLE Value="true" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CREATED_BY" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Created By" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="CREATION_DATE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Creation Date" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ENTITY_STATE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Entity State" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LAST_MODIFIED_BY" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Last Modified By" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="LAST_MODIFIED_DATE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Last Modified Date" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="WORKFLOW_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Workflow ID" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_TYPE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="System Type" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="false" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154511">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="DATASOURCE" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ENTITY_STATE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <DATASOURCE>
+      <ENUMERATION ValidValues="ACTIVE|INACTIVE|NEW|DELETED" />
+    </DATASOURCE>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154511">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="DATASOURCE" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_TYPE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <DATASOURCE>
+      <ENUMERATION ValidValues="INSERT|DELETE|UPDATE|ACTIVATE" />
+    </DATASOURCE>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_ERR_CODE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Code" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_ERR_SEVERITY" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Severity" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154511">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="DATASOURCE" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_ERR_SEVERITY" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <DATASOURCE>
+      <ENUMERATION ValidValues="ERROR|SEVERE_ERROR|WARNING" />
+    </DATASOURCE>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="verId" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Version Id" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_DOCUMENT" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Document" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="true" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="false" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_FILTER" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Filter" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ERROR_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Id" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ERROR_MESSAGE" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Message" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ERROR_UPDATED" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Updated" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ERROR_TIME" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Time" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="ERROR_SEVERITY" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Error Severity" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+<REQUEST Name="putFacetInfo">
+  <FACET_CATEGORY ID="8361288183154510">
+    <SEGMENT Value="MDM" />
+    <SEGMENT Value="PRESENTATION" />
+    <SEGMENT Value="DOCUMENT" />
+    <SEGMENT Value="FIELD" />
+  </FACET_CATEGORY>
+  <FACET_OF>
+    <SEGMENT Value="error_STREET_ADDR_RSULT" />
+    <SEGMENT Value="SYS_LOAD_ID" />
+  </FACET_OF>
+  <FACET_CONTENT>
+    <PRESENTATION>
+      <DISPLAY_NAME Value="Load Id" />
+      <EDITABLE Value="false" />
+      <HIDDEN Value="false" />
+      <SORTABLE Value="true" />
+      <SEARCHABLE Value="true" />
+      <NO_WRAP Value="true" />
+    </PRESENTATION>
+  </FACET_CONTENT>
+</REQUEST>
+
+
+</REQUESTS>
+

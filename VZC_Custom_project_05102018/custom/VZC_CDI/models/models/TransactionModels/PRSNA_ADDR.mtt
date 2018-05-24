@@ -1,0 +1,72 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="ADDR_SUBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_SUBTYPE_CD" />
+    </property>
+    <property Name="ADDR_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_RQST_ID" />
+    </property>
+    <property Name="ADDR_STDZD_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_STDZD_TXT" />
+    </property>
+    <property Name="CHNL_ID" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHNL_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="CNTCT_OPT_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_OPT_IND" />
+    </property>
+    <property Name="UAL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="UAL_CD" />
+    </property>
+    <property Name="ADDR_Ignore_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_Ignore_FLG" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="PRSNA_ADDR_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ADDR_STRT_DT" />
+    </property>
+    <property Name="PRSNA_ADDR_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ADDR_END_DT" />
+    </property>
+    <property Name="ADDR_STS_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_STS_CD" />
+    </property>
+    <property Name="SMS_ALLWD_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SMS_ALLWD_CD" />
+    </property>
+    <property Name="TGT_ADDR_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TGT_ADDR_ID" />
+    </property>
+    <property Name="INSERT_UPDATE_FLAG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INSERT_UPDATE_FLAG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA_ADDRESS" PhysicalName="XPKPRSNA_ADDRESS" Kind="PRIMARY">
+      <property Name="ADDR_RQST_ID" />
+      <property Name="PRSNA_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+    <key Active="true" Name="XIE1PRSNA_ADDRESS" PhysicalName="XIE1PRSNA_ADDRESS" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_ADDR" MasterTable="PRSNA_ADDR" />
+    <miscFacet PhysicalName="PRSNA_ADDR" DisplayName="Persona Address" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

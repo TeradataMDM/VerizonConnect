@@ -1,0 +1,42 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="MKTG_PRG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MKTG_PRG_ID" />
+    </property>
+    <property Name="CHNL_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHNL_ID" />
+    </property>
+    <property Name="BRND_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BRND_CD" />
+    </property>
+    <property Name="PROD_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PROD_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA_PRODUCT" PhysicalName="XPKPRSNA_PRODUCT" Kind="PRIMARY">
+      <property Name="PRSNA_ID" />
+      <property Name="PROD_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+    <key Active="true" Name="XIE1PRSNA_PRODUCT" PhysicalName="XIE1PRSNA_PRODUCT" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_PROD" MasterTable="PRSNA_PROD" />
+    <miscFacet PhysicalName="PRSNA_PROD" DisplayName="Persona Product" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

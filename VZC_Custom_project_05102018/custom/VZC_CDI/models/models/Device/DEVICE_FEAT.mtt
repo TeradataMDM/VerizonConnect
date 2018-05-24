@@ -1,0 +1,44 @@
+<document>
+  <properties>
+    <property Name="DEVICE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_ID" />
+    </property>
+    <property Name="FEAT_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FEAT_CD" />
+    </property>
+    <property Name="FEAT_SETUP_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FEAT_SETUP_STRT_DT" />
+    </property>
+    <property Name="FEAT_SETUP_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FEAT_SETUP_END_DT" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1DEVICE_FEATURE" PhysicalName="XIE1DEVICE_FEATURE" Kind="NUPI">
+      <property Name="DEVICE_ID" />
+    </key>
+    <key Active="true" Name="XPKDEVICE_FEATURE" PhysicalName="XPKDEVICE_FEATURE" Kind="PRIMARY">
+      <property Name="FEAT_CD" />
+      <property Name="DEVICE_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_DEVICE_FEAT" MasterTable="M_DEVICE_FEAT" />
+    <miscFacet PhysicalName="DEVICE_FEAT" DisplayName="Device Feature" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

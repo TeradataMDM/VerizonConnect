@@ -1,0 +1,25 @@
+<document>
+  <properties>
+    <property Name="VEH_MAKE" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_MAKE" />
+    </property>
+    <property Name="VEH_MAKE_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_MAKE_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKVEHICLE_MAKE" PhysicalName="XPKVEHICLE_MAKE" Kind="PRIMARY">
+      <property Name="VEH_MAKE" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_MAKE" MasterTable="M_VEH_MAKE" />
+    <miscFacet PhysicalName="VEH_MAKE" DisplayName="Vehicle Make" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

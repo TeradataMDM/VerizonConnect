@@ -1,0 +1,37 @@
+<document>
+  <properties>
+    <property Name="ELEC_ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_ID" />
+    </property>
+    <property Name="ELEC_ADDR_SBTYPE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>ELEC_ADDR_SBTYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_SBTYPE_CD" />
+    </property>
+    <property Name="DMN_ROOT_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DMN_ROOT_CD" />
+    </property>
+    <property Name="ELEC_ADDR_TXT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_TXT" />
+    </property>
+    <property Name="ELEC_ADDR_DMN_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_DMN_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKELECTRONIC_ADDRESS" PhysicalName="XPKELECTRONIC_ADDRESS" Kind="PRIMARY">
+      <property Name="ELEC_ADDR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_ELEC_ADDR" MasterTable="M_ELEC_ADDR" />
+    <miscFacet PhysicalName="ELEC_ADDR" DisplayName="Electronic Address" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

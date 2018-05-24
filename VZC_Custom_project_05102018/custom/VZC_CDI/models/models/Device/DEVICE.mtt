@@ -1,0 +1,91 @@
+<document>
+  <properties>
+    <property Name="DEVICE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_ID" />
+    </property>
+    <property Name="EQUIP_SER_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="EQUIP_SER_NUM" />
+    </property>
+    <property Name="DEVICE_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_type_CD" />
+    </property>
+    <property Name="IMEI">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="IMEI" />
+    </property>
+    <property Name="MFGR_SER_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGR_SER_NUM" />
+    </property>
+    <property Name="MOB_EQUIP_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MOB_EQUIP_ID" />
+    </property>
+    <property Name="Visor_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Visor_NUM" />
+    </property>
+    <property Name="TELEMATICS_CNTRL_UNIT_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TELEMATICS_CNTRL_UNIT_NUM" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+    <property Name="ICCID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ICCID" />
+    </property>
+    <property Name="MSISDN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MSISDN" />
+    </property>
+    <property Name="SFTWR_VERS">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SFTWR_VERS" />
+    </property>
+    <property Name="SFTWR_UPD_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SFTWR_UPD_DT" />
+    </property>
+    <property Name="DEACT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEACT_DT" />
+    </property>
+    <property Name="DEVICE_PRVSN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_PRVSN_DT" />
+    </property>
+    <property Name="DEVICE_DSTRBR_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_DSTRBR_NAME" />
+    </property>
+    <property Name="INIT_ACTVTN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INIT_ACTVTN_DT" />
+    </property>
+    <property Name="MFGR_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGR_ID" />
+    </property>
+    <property Name="MFGNG_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGNG_DT" />
+    </property>
+    <property Name="DEVICE_STS_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_STS_CD" />
+    </property>
+    <property Name="LOB_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1DEVICE" PhysicalName="XIE1DEVICE" Kind="NUPI">
+      <property Name="EQUIP_SER_NUM" />
+    </key>
+    <key Active="true" Name="XPKDEVICE" PhysicalName="XPKDEVICE" Kind="PRIMARY">
+      <property Name="DEVICE_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_DEVICE" MasterTable="M_DEVICE" />
+    <miscFacet PhysicalName="DEVICE" DisplayName="DEVICE" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

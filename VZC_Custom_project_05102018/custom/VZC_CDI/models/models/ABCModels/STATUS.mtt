@@ -1,0 +1,25 @@
+<document>
+  <properties>
+    <property Name="STATUS_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="STATUS_ID" />
+    </property>
+    <property Name="STATUS_NM" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="STATUS_NM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="STATUS_ID_PI_6175668" PhysicalName="STATUS_ID_PI_6175668" Kind="PRIMARY">
+      <property Name="STATUS_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_STATUS" MasterTable="M_STATUS" />
+    <miscFacet PhysicalName="STATUS" DisplayName="STATUS" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

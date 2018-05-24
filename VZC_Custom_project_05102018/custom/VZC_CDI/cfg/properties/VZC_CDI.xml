@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dom-config>
+  <service-config Name="BCM_MASTER" TransactionCache="false" Register="false">
+    <register-handlers>
+      <handler TagName="MDM" ClassName="com.teradata.platform.services.mdmservices.util.MDMPreInitHandler"/>
+      <handler TagName="idgen" ClassName="com.teradata.platform.core.idgen.IdGenConfigHandler"/>
+      <handler TagName="dataPersistSpec" ClassName="com.teradata.platform.services.mdmservices.modules.dodbpersist.DataPersistConfigSpecHandler"/>
+      <handler TagName="workflow" ClassName="com.teradata.platform.core.workflow.WorkflowConfigHandler"/>
+      <handler TagName="validationSpecFiles" ClassName="com.teradata.platform.core.validation.ValidationSpecsHandler"/>
+    </register-handlers>
+    <MDM/>
+    <dataPersistSpec>
+      <dataPersistSpecFile Name="xservice/toolkit/dataPersist/DefaultDocPersistConfig.xml"/>
+    </dataPersistSpec>
+    <extensionFiles>
+      <extensionFile Name="com/teradata/platform/services/mdmservices/modules/dodbpersist/ruleextension/dodbpersistRuleExtension.xml"/>
+    </extensionFiles>
+    <docDefnFiles>
+      <docDefnFile Name="xservice/VZC_CDI/documents/mst_xdoc.xml"/>
+      <docDefnFile Name="xservice/VZC_CDI/documents/err_xdoc.xml"/>
+    </docDefnFiles>
+    <ruleDefnFiles>
+      <ruleDefnFile Name="xservice/VZC_CDI/rules/bcm_xrule.xml"/>
+      <ruleDefnFile Name="xservice/VZC_CDI/rules/default_ws_rules.xml"/>
+      <ruleDefnFile Name="xservice/VZC_CDI/rules/MatchingRules/ruleMatchOrchestration.xml"/>
+      <ruleDefnFile Name="xservice/VZC_CDI/rules/SurvivorshipRules/ruleSurvOrchestration.xml"/>
+    </ruleDefnFiles>
+    <validationSpecFiles>
+      <validationSpecFile Name="xservice/VZC_CDI/validations/mst_validation.xml"/>
+    </validationSpecFiles>
+    <logger>
+      <file Name="../log/VZC_CDI_master.log"/>
+      <logLevels>
+        <logLevel Value="Exception"/>
+        <logLevel Value="Error"/>
+      </logLevels>
+      <brief-console Value="false"/>
+    </logger>
+    <idgen>
+      <document Name="SystemProperties" prefix="SYS" delimiter="-" sequenceName="SYS_SEQ" handler="com.teradata.platform.core.idgen.BlockTableIdGenerator" blockSize="100"/>
+    </idgen>
+    <service-params>
+      <param Value="NO" Name="isCacheEnabled"/>
+      <param Value="false" Name="PartitionRequired"/>
+      <param Value="YES" Name="isDataAuthorizationEnabled"/>
+      <param Value="YES" Name="DataSourceValidationEnabled"/>
+      <param Value="1000" Name="DEFAULT_MAX_ROWS_FETCH"/>
+    </service-params>
+    <schemaGenerate Value="true">
+      <file Value="../db/BCM_master.sql"/>
+      <generateTables Value="true"/>
+      <viewSqlDir Value="xservice/VZC_CDI/viewsql"/>
+      <dbname Value="MDM41_MST"/>
+      <maxTableNameLength Value="128"/>
+      <maxColumnNameLength Value="128"/>
+    </schemaGenerate>
+    <dd-instance Value="../../xservice/VZC_CDI/model-instance"/>
+    <workflow>
+      <workflowDefnFiles>
+        <workflowDefnFile Name="xservice/VZC_CDI/workflows/SurvWorkflows/wfSurvOrchestrationProcess.xml"/>
+        <workflowDefnFile Name="xservice/VZC_CDI/workflows/wfCRDMOrchestrationProcess.xml"/>
+      </workflowDefnFiles>
+      <uiWorkflowDefnFiles/>
+      <nodeHandlers/>
+    </workflow>
+    <eventDefnFiles/>
+    <statetransition>
+      <stateTransitionFiles/>
+      <stateMappingFiles/>
+    </statetransition>
+    <messaging>
+      <messageTemplateFiles/>
+      <messageRecipientGroupFiles/>
+      <messagingEventDefFiles/>
+      <messagingEventFiles/>
+    </messaging>
+    <modules/>
+  </service-config>
+</dom-config>

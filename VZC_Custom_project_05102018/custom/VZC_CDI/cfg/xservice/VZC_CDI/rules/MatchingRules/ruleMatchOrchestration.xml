@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENTS>
+  <!--
+ 	 Copyright (c) 2016 by Teradata Corporation. 
+	 All Rights Reserved. 
+	 Teradata CONFIDENTIAL AND TRADE SECRET 
+ -->
+  <DEFINE_METHOD Name="executeCRDMWorkflow">
+    <RULE>
+      <ACTION>
+        <TO_DOCVAR AssignToVar="thisReturn">
+          <ROOT/>
+        </TO_DOCVAR>
+        <REQUEST Name="ExecuteWorkflowProcess" AssignToVar="response">
+          <ProcessId Value="{$thisParam/ProcessId/@Value}"/>
+          <USER_ID Value="{$thisParam/USER_ID/@Value}"/>
+          <INSTANCE_PARAMS/>
+        </REQUEST>
+        <IF_TEST Test="$response/@Status='Success'">
+          <THEN>
+            <GET_DOCUMENT Name="SYS_WKFLW_LOG" DirtyRead="true" ServiceName="BPE_META" AssignToVar="checkStatus">
+              <SELECT>
+                <Status/>
+              </SELECT>
+              <InstanceID Value="{$response/WORKFLOW_ID/@Value}"/>
+            </GET_DOCUMENT>
+            <IF_TEST Test="$checkStatus/SYS_WKFLW_LOG/Status/@Value='Halted due to Exceptions' or $checkStatus/SYS_WKFLW_LOG/Status/@Value='Aborted'">
+              <THEN>
+                <DO_TRANSACTION>
+                  <EXEC_PROC Name="ABC_JOB_RUN_STATUS" AssignToVar="response1">
+                    <V_JOB_ID Type="IN" DataType="int" Value="3111"/>
+                    <V_STATUS_ID Type="IN" DataType="int" Value="2"/>
+                  </EXEC_PROC>
+                </DO_TRANSACTION>
+                <RAISE_EXCEPTION Value="Error"/>
+              </THEN>
+              <ELSE>
+                <APPEND_TO_XML DocVar="thisReturn">
+                  <STATUS Value="0"/>
+                </APPEND_TO_XML>
+              </ELSE>
+            </IF_TEST>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="getCRDMMatchProfiles">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="getCRDMMatchProfiles">
+          <GROUP_NAME Value="CHNL_MTCH"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <EXECUTE_SQL_QUERY Value="LOCKING ROW FOR ACCESS SELECT A.PROFILE_ID,A.PROFILE_NAME, B.SEQUENCE_ID FROM FM_PROFILE A, (SELECT GRP.GROUP_ID,GRP.GROUP_NM,JG.JOB_ID,JM.JOB_NM,JG.SEQUENCE_ID FROM M_GROUP GRP INNER JOIN M_JOB_GROUP JG ON GRP.GROUP_ID=JG.GROUP_ID AND GRP.GROUP_NM='{$thisParam/GROUP_NAME/@Value}' INNER JOIN M_JOB_MASTER JM ON JM.JOB_ID=JG.JOB_ID) B WHERE A.PROFILE_NAME=B.JOB_NM  ORDER BY B.SEQUENCE_ID;" AssignToVar="result" ReturnRowCount="yes"/>
+        <SET DocVar="thisReturn" FromDocVar="result"/>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="execCRDMMatchProfiles">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="execCRDMMatchProfiles">
+          <GROUP_NAME Value="CHNL_MTCH"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="strlen($thisParam/GROUP_NAME/@Value) > 0">
+          <THEN>
+            <REQUEST Name="getCRDMMatchProfiles" AssignToVar="Profile_IdQuery">
+              <GROUP_NAME Value="{$thisParam/GROUP_NAME/@Value}"/>
+            </REQUEST>
+          </THEN>
+          <ELSE>
+            <TO_DOCVAR AssignToVar="Profile_IdQuery">
+              <RESPONSE>
+                <TO_XML SelectList="$thisParam/SQL_RESULT"/>
+              </RESPONSE>
+            </TO_DOCVAR>
+          </ELSE>
+        </IF_TEST>
+        <FOR_EACH SelectList="$Profile_IdQuery/SQL_RESULT" CurrentElement="curProfileId">
+          <REQUEST Name="executeMatchProfile" ServiceName="MDMServices" AssignToVar="result" Comment="This API executes a match profile.">
+            <Profile_Id Value="{$curProfileId/PROFILE_ID/@Value}"/>
+            <UserName Value="Data Steward"/>
+          </REQUEST>
+          <SET FromDocVar="result" DocVar="thisReturn"/>
+        </FOR_EACH>  
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+ <DEFINE_METHOD Name="execNameMatchReconciliation">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="execNameMatchReconciliation">
+          <GROUP_NAME Value="CUST_NAME_RECON"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="strlen($thisParam/GROUP_NAME/@Value) > 0">
+          <THEN>
+            <EXECUTE_SHELL_COMMAND Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\batch\CRDM\scripts\bat\custNameRecon.bat" AssignToVar="custNameReconResp"/>
+            <SET FromDocVar="custNameReconResp" DocVar="thisReturn"/>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+</DOCUMENTS>

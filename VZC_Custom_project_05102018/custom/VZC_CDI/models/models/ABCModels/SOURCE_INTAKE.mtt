@@ -1,0 +1,41 @@
+<document>
+  <properties>
+    <property Name="SOURCE_INTAKE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_INTAKE_ID" />
+    </property>
+    <property Name="SOURCE_TYPE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_TYPE_CD" />
+    </property>
+    <property Name="SOURCE_TYPE_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_TYPE_DESC" />
+    </property>
+    <property Name="SOURCE_TYPE_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_TYPE_NAME" />
+    </property>
+    <property Name="SOURCE_PROVIDER_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_PROVIDER_CD" />
+    </property>
+    <property Name="SOURCE_FOLDER_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_FOLDER_TXT" />
+    </property>
+    <property Name="SFTP_FLAG">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SFTP_FLAG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKSOURCE_INTAKE" PhysicalName="XPKSOURCE_INTAKE" Kind="PRIMARY">
+      <property Name="SOURCE_INTAKE_ID" />
+      <property Name="Source_Intake_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_SOURCE_INTAKE" MasterTable="M_SOURCE_INTAKE" />
+    <miscFacet PhysicalName="SOURCE_INTAKE" DisplayName="SourceIntake" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

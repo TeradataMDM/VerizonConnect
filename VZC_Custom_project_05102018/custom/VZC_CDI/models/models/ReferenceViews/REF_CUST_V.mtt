@@ -1,0 +1,95 @@
+<document IsDocView="true">
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="GOLDEN_CUST_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GOLDEN_CUST_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_TYPE_STREET" PhysicalName="ADDR_TYPE_STREET">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_TYPE_PHONE" PhysicalName="ADDR_TYPE_PHONE">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_TYPE_EMAIL" PhysicalName="ADDR_TYPE_EMAIL">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="CUST_TYPE_CD" PhysicalName="CUST_TYPE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_TYPE_CD" />
+    </property>
+    <property Name="ORG_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORG_NAME" />
+    </property>
+    <property Name="FRST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FRST_NAME" />
+    </property>
+    <property Name="MDL_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MDL_NAME" />
+    </property>
+    <property Name="LAST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LAST_NAME" />
+    </property>
+    <property Name="NAME_PRFX_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_PRFX_TXT" />
+    </property>
+    <property Name="NAME_SFX_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_SFX_TXT" />
+    </property>
+    <property Name="GNDR_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GNDR_type_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKREF_CUST" PhysicalName="XPKREF_CUST" Kind="PRIMARY">
+      <property Name="CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <miscFacet PhysicalName="REF_CUST_V" Active="true" />
+    <mdmConfigFacet SchemaGen="false" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql OnMDMTables="true" IsSimpleView="true">REPLACE VIEW MDM41.REF_CUST_V AS&#xD;
+LOCKING ROW FOR ACCESS SELECT&#xD;
+CAST(COALESCE(PRTY.GOLDEN_CUST_ID,PRTY.CUST_ID) AS INTEGER) AS CUST_ID,&#xD;
+PRTY_ADDR.ADDR_ID,&#xD;
+PRTY_ADDR.ADDR_TYPE_CD,&#xD;
+CASE WHEN TRIM(UPPER(PRTY_ADDR.ADDR_TYPE_CD))= 'STREET' THEN PRTY_ADDR.ADDR_TYPE_CD END ADDR_TYPE_STREET, &#xD;
+CASE WHEN TRIM(UPPER(PRTY_ADDR.ADDR_TYPE_CD))= 'TELPHONE' THEN PRTY_ADDR.ADDR_TYPE_CD END ADDR_TYPE_PHONE, &#xD;
+CASE WHEN TRIM(UPPER(PRTY_ADDR.ADDR_TYPE_CD))= 'EMAIL' THEN PRTY_ADDR.ADDR_TYPE_CD END ADDR_TYPE_EMAIL, &#xD;
+PRTY.CUST_TYPE_CD,&#xD;
+ORG.ORG_NAME,&#xD;
+IND.FRST_NAME,&#xD;
+IND.MDL_NAME,&#xD;
+IND.LAST_NAME,&#xD;
+IND.NAME_PRFX_TXT,&#xD;
+IND.NAME_SFX_TXT,&#xD;
+IND.GNDR_TYPE_CD,&#xD;
+PRTY.SYS_TARGET_ID,&#xD;
+PRTY.SYS_AUTH_ID,&#xD;
+PRTY.SYS_SOURCE,&#xD;
+PRTY.SYS_CREATED_BY,&#xD;
+PRTY.SYS_CREATION_DATE,&#xD;
+PRTY.SYS_ENT_STATE,&#xD;
+PRTY.SYS_LAST_MODIFIED_BY,&#xD;
+PRTY.SYS_LAST_MODIFIED_DATE,&#xD;
+PRTY.SYS_NC_TYPE,&#xD;
+PRTY.SYS_ERR_CODE,&#xD;
+PRTY.SYS_ERR_SVRTY&#xD;
+FROM	MDM41_MST.M_CUST PRTY&#xD;
+LEFT OUTER JOIN MDM41_MST.M_INDIV_CUST IND ON PRTY.CUST_TYPE_CD='IND' AND PRTY.CUST_ID=IND.CUST_ID&#xD;
+LEFT OUTER JOIN MDM41_MST.M_ORG_CUST ORG ON PRTY.CUST_TYPE_CD ='ORG' AND PRTY.CUST_ID=ORG.CUST_ID AND PRTY.SYS_ENT_STATE='ACTIVE'&#xD;
+INNER JOIN &#xD;
+(SELECT CUST_ADDR.CUST_ID, CUST_ADDR.ADDR_ID, CUST_ADDR.LOB_NUM, ADDR.ADDR_TYPE_CD, ADDR.ADDR_SUBTYPE_CD FROM MDM41_MST.M_CUST_ADDR CUST_ADDR INNER JOIN MDM41_MST.M_ADDR ADDR ON ADDR.ADDR_ID=CUST_ADDR.ADDR_ID) PRTY_ADDR&#xD;
+ON PRTY.CUST_ID = PRTY_ADDR.CUST_ID AND PRTY.SYS_ENT_STATE='ACTIVE'&#xD;
+;</viewsql>
+</document>
+

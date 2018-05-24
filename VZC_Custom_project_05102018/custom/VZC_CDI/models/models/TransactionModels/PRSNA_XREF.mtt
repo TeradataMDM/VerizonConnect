@@ -1,0 +1,35 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="XREF_Key1">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="XREF_Key1" />
+    </property>
+    <property Name="XREF_Key2" PhysicalName="XREF_Key2">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="XREF_Keyn" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA_CROSS_REFERENCE" PhysicalName="XPKPRSNA_CROSS_REFERENCE" Kind="PRIMARY">
+      <property Name="PRSNA_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+    <key Active="true" Name="PRSNA_ID_PI_1323827" PhysicalName="PRSNA_ID_PI_1323827" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_XREF" MasterTable="PRSNA_XREF" />
+    <miscFacet PhysicalName="PRSNA_XREF" DisplayName="Persona Xref" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

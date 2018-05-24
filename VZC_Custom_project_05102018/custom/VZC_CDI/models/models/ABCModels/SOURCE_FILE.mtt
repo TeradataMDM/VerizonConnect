@@ -1,0 +1,31 @@
+<document>
+  <properties>
+    <property Name="FILE_IDENTIFIER" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="FILE_IDENTIFIER" />
+    </property>
+    <property Name="SOURCE_INTAKE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_INTAKE_ID" />
+    </property>
+    <property Name="FILE_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="FILE_NAME" />
+    </property>
+    <property Name="FILE_DESCRIPTION">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="FILE_DESCRIPTION" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKSOURCE_FILE" PhysicalName="XPKSOURCE_FILE" Kind="PRIMARY">
+      <property Name="File_Identifier" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_SOURCE_FILE" MasterTable="M_SOURCE_FILE" />
+    <miscFacet PhysicalName="SOURCE_FILE" DisplayName="SourceFile" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

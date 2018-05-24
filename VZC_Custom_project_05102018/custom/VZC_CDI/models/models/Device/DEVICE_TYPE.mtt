@@ -1,0 +1,52 @@
+<document>
+  <properties>
+    <property Name="DEVICE_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_type_CD" />
+    </property>
+    <property Name="DEVICE_type_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_type_NAME" />
+    </property>
+    <property Name="DEVICE_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_DESC" />
+    </property>
+    <property Name="BRND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BRND" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="DEVICE_SRC_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_SRC_ID" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+    <property Name="DEVICE_type_GNRTN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_type_GNRTN" />
+    </property>
+    <property Name="MODL_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MODL_NUM" />
+    </property>
+    <property Name="MODL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MODL_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKDEVICE_TYPE" PhysicalName="XPKDEVICE_TYPE" Kind="PRIMARY">
+      <property Name="DEVICE_type_CD" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_DEVICE_TYPE" MasterTable="M_DEVICE_TYPE" />
+    <miscFacet PhysicalName="DEVICE_TYPE" DisplayName="Device Type" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

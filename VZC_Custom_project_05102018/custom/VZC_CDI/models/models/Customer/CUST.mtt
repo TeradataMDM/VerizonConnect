@@ -1,0 +1,46 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="CUST_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_DESC" />
+    </property>
+    <property Name="CUST_DSPLY_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_DSPLY_NAME" />
+    </property>
+    <property Name="CUST_STRT_DTTM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_STRT_DTTM" />
+    </property>
+    <property Name="CUST_END_DTTM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_END_DTTM" />
+    </property>
+    <property Name="CUST_TYPE_CD" PhysicalName="CUST_TYPE_CD" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_TYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_TYPE_CD" />
+    </property>
+    <property Name="INIT_DATA_SRC_TYPE_CD" PhysicalName="INIT_DATA_SRC_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INIT_DATA_SRC_type_CD" />
+    </property>
+    <property Name="GOLDEN_CUST_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GOLDEN_CUST_ID" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCUSTOMER" PhysicalName="XPKCUSTOMER" Kind="PRIMARY">
+      <property Name="CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST" MasterTable="M_CUST" />
+    <miscFacet PhysicalName="CUST" DisplayName="Customer" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

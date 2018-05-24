@@ -1,0 +1,39 @@
+<document>
+  <properties>
+    <property Name="PARNT_PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PARNT_PRSNA_ID" />
+    </property>
+    <property Name="CHLD_PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHLD_PRSNA_ID" />
+    </property>
+    <property Name="PRSNA_RLTNSHP_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_RLTNSHP_type_CD" />
+    </property>
+    <property Name="PRSNA_RLTNSHP_ROLE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_RLTNSHP_ROLE_CD" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1PRSNA_RELATIONSHIP" PhysicalName="XIE1PRSNA_RELATIONSHIP" Kind="NUPI">
+      <property Name="CHLD_PRSNA_ID" />
+    </key>
+    <key Active="true" Name="XPKPRSNA_RELATIONSHIP" PhysicalName="XPKPRSNA_RELATIONSHIP" Kind="PRIMARY">
+      <property Name="PARNT_PRSNA_ID" />
+      <property Name="CHLD_PRSNA_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_RLTNSHP" MasterTable="PRSNA_RLTNSHP" />
+    <miscFacet PhysicalName="PRSNA_RLTNSHP" DisplayName="Persona Relationship" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

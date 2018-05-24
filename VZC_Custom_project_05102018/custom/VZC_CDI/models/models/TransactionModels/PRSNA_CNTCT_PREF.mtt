@@ -1,0 +1,52 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="ADDR_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_RQST_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CNTCT_PREFRC_TM_PRD_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_TM_PRD_CD" />
+    </property>
+    <property Name="CNTRCT_PREFRC_CYCL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTRCT_PREFRC_CYCL_CD" />
+    </property>
+    <property Name="CNTCT_PREFRC_STRT_TM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_STRT_TM" />
+    </property>
+    <property Name="CNTCT_PREFRC_END_TM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_END_TM" />
+    </property>
+    <property Name="CNTCT_PREFRC_FRQCY_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_FRQCY_NUM" />
+    </property>
+    <property Name="CNTCT_PREFRC_CNT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_CNT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1PRSNA_CONTACT_PREFERENCE_TIME_PERIOD" PhysicalName="XIE1PRSNA_CONTACT_PREFERENCE_TIME_PERIOD" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+    <key Active="true" Name="XPKPRSNA_CONTACT_PREFERENCE_TIME_PERIOD" PhysicalName="XPKPRSNA_CONTACT_PREFERENCE_TIME_PERIOD" Kind="PRIMARY">
+      <property Name="CNTCT_PREFRC_TM_PRD_CD" />
+      <property Name="PRSNA_ID" />
+      <property Name="ADDR_RQST_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_CNTCT_PREF" MasterTable="PRSNA_CNTCT_PREF" />
+    <miscFacet PhysicalName="PRSNA_CNTCT_PREF" DisplayName="Persona Contact Preferences" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

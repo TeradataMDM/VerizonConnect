@@ -1,0 +1,2263 @@
+<html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 48261360</td> <td> </td> <td> 05/02/2018 15:44:18:219</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[MDMServices]
+    </td>
+    <td>java.lang.NullPointerException
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:337)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 223585407</td> <td> </td> <td> 05/02/2018 20:32:14:782</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[MDMServices]
+    </td>
+    <td>java.lang.NullPointerException
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:337)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1981504524</td> <td> </td> <td> 05/03/2018 14:09:15:522</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+	at com.teradata.platform.core.xcommand.ExecProcCommand.execute(ExecProcCommand.java:87)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 949791846</td> <td> </td> <td> 05/03/2018 14:10:24:811</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+	at com.teradata.platform.core.xcommand.ExecProcCommand.execute(ExecProcCommand.java:87)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 1469009170</td> <td> </td> <td> 05/08/2018 07:00:11:467</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+	at com.teradata.platform.core.expression.Expression.parse(Expression.java:73)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.<init>(IfTestStatement.java:23)
+	at com.teradata.platform.core.xrules.lang.IfTestHandler.startElement(IfTestHandler.java:34)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.handleTag(RuleDocumentHandlerImpl.java:54)
+	at com.teradata.platform.core.xrules.AbstractActionHandler.startElement(AbstractActionHandler.java:32)
+	at com.teradata.platform.core.xrules.ActionHandler.startElement(ActionHandler.java:31)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.startElement(RuleDocumentHandlerImpl.java:100)
+	at com.teradata.platform.core.xrules.AbstractRuleModuleHandler.startElement(AbstractRuleModuleHandler.java:39)
+	at com.teradata.platform.core.tool.DocumentsHandler.startElement(DocumentsHandler.java:61)
+	at com.teradata.platform.core.tool.XserverParser.startElement(XserverParser.java:86)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1645459280</td> <td> </td> <td> 05/08/2018 07:00:12:509</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+	at com.teradata.platform.core.expression.Expression.parse(Expression.java:73)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.<init>(IfTestStatement.java:23)
+	at com.teradata.platform.core.xrules.lang.IfTestHandler.startElement(IfTestHandler.java:34)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.handleTag(RuleDocumentHandlerImpl.java:54)
+	at com.teradata.platform.core.xrules.AbstractActionHandler.startElement(AbstractActionHandler.java:32)
+	at com.teradata.platform.core.xrules.ActionHandler.startElement(ActionHandler.java:31)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.startElement(RuleDocumentHandlerImpl.java:100)
+	at com.teradata.platform.core.xrules.AbstractRuleModuleHandler.startElement(AbstractRuleModuleHandler.java:39)
+	at com.teradata.platform.core.tool.DocumentsHandler.startElement(DocumentsHandler.java:61)
+	at com.teradata.platform.core.tool.XserverParser.startElement(XserverParser.java:86)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: ParseException: Encountered "OR" at line 1, column 40.
+Was expecting one of:
+    <EOF> 
+    "or" ...
+    "and" ...
+    "mul" ...
+    "div" ...
+    "mod" ...
+    "+" ...
+    "-" ...
+    ">" ...
+    ">=" ...
+    "<" ...
+    "<=" ...
+    "=" ...
+    "!=" ...
+    
+System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\SurvivorshipRules\ruleSurvOrchestration.xml Public ID: ruleSurvOrchestration.xml Line Number: 141
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 1931791765</td> <td> </td> <td> 05/08/2018 09:54:19:377</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+undefined function: strLength
+ParseException
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+[BCM_MASTER]
+    </td>
+    <td>java.lang.IllegalArgumentException: undefined function: strLength
+	at com.teradata.platform.core.expression.Function.<init>(Function.java:33)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getOperand(XcoreExpressionParser.java:262)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getParantheses(XcoreExpressionParser.java:217)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getMulDivMod(XcoreExpressionParser.java:188)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getAddSub(XcoreExpressionParser.java:161)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRelational(XcoreExpressionParser.java:127)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getEquality(XcoreExpressionParser.java:99)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalAnd(XcoreExpressionParser.java:79)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalOr(XcoreExpressionParser.java:60)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getExpression(XcoreExpressionParser.java:44)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRootExpression(XcoreExpressionParser.java:36)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.parse(XcoreExpressionParser.java:31)
+	at com.teradata.platform.core.expression.Expression.parse(Expression.java:65)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.<init>(IfTestStatement.java:23)
+	at com.teradata.platform.core.xrules.lang.IfTestHandler.startElement(IfTestHandler.java:34)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.handleTag(RuleDocumentHandlerImpl.java:54)
+	at com.teradata.platform.core.xrules.AbstractActionHandler.startElement(AbstractActionHandler.java:32)
+	at com.teradata.platform.core.xrules.ActionHandler.startElement(ActionHandler.java:31)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.startElement(RuleDocumentHandlerImpl.java:100)
+	at com.teradata.platform.core.xrules.AbstractRuleModuleHandler.startElement(AbstractRuleModuleHandler.java:39)
+	at com.teradata.platform.core.tool.DocumentsHandler.startElement(DocumentsHandler.java:61)
+	at com.teradata.platform.core.tool.XserverParser.startElement(XserverParser.java:86)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: ParseException
+System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 232610539</td> <td> </td> <td> 05/08/2018 09:54:39:865</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+undefined function: strlength
+ParseException
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+[BCM_MASTER]
+    </td>
+    <td>java.lang.IllegalArgumentException: undefined function: strlength
+	at com.teradata.platform.core.expression.Function.<init>(Function.java:33)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getOperand(XcoreExpressionParser.java:262)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getParantheses(XcoreExpressionParser.java:217)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getMulDivMod(XcoreExpressionParser.java:188)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getAddSub(XcoreExpressionParser.java:161)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRelational(XcoreExpressionParser.java:127)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getEquality(XcoreExpressionParser.java:99)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalAnd(XcoreExpressionParser.java:79)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalOr(XcoreExpressionParser.java:60)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getExpression(XcoreExpressionParser.java:44)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRootExpression(XcoreExpressionParser.java:36)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.parse(XcoreExpressionParser.java:31)
+	at com.teradata.platform.core.expression.Expression.parse(Expression.java:65)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.<init>(IfTestStatement.java:23)
+	at com.teradata.platform.core.xrules.lang.IfTestHandler.startElement(IfTestHandler.java:34)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.handleTag(RuleDocumentHandlerImpl.java:54)
+	at com.teradata.platform.core.xrules.AbstractActionHandler.startElement(AbstractActionHandler.java:32)
+	at com.teradata.platform.core.xrules.ActionHandler.startElement(ActionHandler.java:31)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.startElement(RuleDocumentHandlerImpl.java:100)
+	at com.teradata.platform.core.xrules.AbstractRuleModuleHandler.startElement(AbstractRuleModuleHandler.java:39)
+	at com.teradata.platform.core.tool.DocumentsHandler.startElement(DocumentsHandler.java:61)
+	at com.teradata.platform.core.tool.XserverParser.startElement(XserverParser.java:86)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: ParseException
+System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 950523897</td> <td> </td> <td> 05/08/2018 09:55:05:457</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+undefined function: length
+ParseException
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+[BCM_MASTER]
+    </td>
+    <td>java.lang.IllegalArgumentException: undefined function: length
+	at com.teradata.platform.core.expression.Function.<init>(Function.java:33)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getOperand(XcoreExpressionParser.java:262)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getParantheses(XcoreExpressionParser.java:217)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getMulDivMod(XcoreExpressionParser.java:188)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getAddSub(XcoreExpressionParser.java:161)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRelational(XcoreExpressionParser.java:127)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getEquality(XcoreExpressionParser.java:99)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalAnd(XcoreExpressionParser.java:79)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getLogicalOr(XcoreExpressionParser.java:60)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getExpression(XcoreExpressionParser.java:44)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.getRootExpression(XcoreExpressionParser.java:36)
+	at com.teradata.platform.core.expression.XcoreExpressionParser.parse(XcoreExpressionParser.java:31)
+	at com.teradata.platform.core.expression.Expression.parse(Expression.java:65)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.<init>(IfTestStatement.java:23)
+	at com.teradata.platform.core.xrules.lang.IfTestHandler.startElement(IfTestHandler.java:34)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.handleTag(RuleDocumentHandlerImpl.java:54)
+	at com.teradata.platform.core.xrules.AbstractActionHandler.startElement(AbstractActionHandler.java:32)
+	at com.teradata.platform.core.xrules.ActionHandler.startElement(ActionHandler.java:31)
+	at com.teradata.platform.core.xrules.RuleDocumentHandlerImpl.startElement(RuleDocumentHandlerImpl.java:100)
+	at com.teradata.platform.core.xrules.AbstractRuleModuleHandler.startElement(AbstractRuleModuleHandler.java:39)
+	at com.teradata.platform.core.tool.DocumentsHandler.startElement(DocumentsHandler.java:61)
+	at com.teradata.platform.core.tool.XserverParser.startElement(XserverParser.java:86)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: ParseException
+System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\rules\MatchingRules\ruleMatchOrchestration.xml Public ID: ruleMatchOrchestration.xml Line Number: 85
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1129484067</td> <td> </td> <td> 05/08/2018 10:01:47:200</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+Next node:procSurvOrch is not defined
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.workflow.WorkflowParseException: Next node:procSurvOrch is not defined
+	at com.teradata.platform.core.workflow.nodes.NextNode.validate(NextNode.java:44)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.validate(NextNodes.java:47)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.validate(TaskNode.java:61)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.validate(DecisionNode.java:105)
+	at com.teradata.platform.core.workflow.WorkflowTemplate.validate(WorkflowTemplate.java:172)
+	at com.teradata.platform.core.tool.WorkflowsHandler.endElement(WorkflowsHandler.java:135)
+	at com.teradata.platform.core.tool.XserverParser.endElement(XserverParser.java:160)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.workflow.WorkflowParseException: Next node:procSurvOrch is not defined
+Parsing Document: System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1037889127</td> <td> </td> <td> 05/08/2018 10:01:48:311</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+Next node:procSurvOrch is not defined
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.workflow.WorkflowParseException: Next node:procSurvOrch is not defined
+	at com.teradata.platform.core.workflow.nodes.NextNode.validate(NextNode.java:44)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.validate(NextNodes.java:47)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.validate(TaskNode.java:61)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.validate(DecisionNode.java:105)
+	at com.teradata.platform.core.workflow.WorkflowTemplate.validate(WorkflowTemplate.java:172)
+	at com.teradata.platform.core.tool.WorkflowsHandler.endElement(WorkflowsHandler.java:135)
+	at com.teradata.platform.core.tool.XserverParser.endElement(XserverParser.java:160)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.workflow.WorkflowParseException: Next node:procSurvOrch is not defined
+Parsing Document: System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 203
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 2075782486</td> <td> </td> <td> 05/08/2018 14:32:49:247</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-236]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-237]
+done[wfCRDMOrchestrationProcess.xml:167-239]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1882912400</td> <td> </td> <td> 05/08/2018 14:39:23:545</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-236]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-237]
+done[wfCRDMOrchestrationProcess.xml:167-239]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 691508828</td> <td> </td> <td> 05/08/2018 14:41:24:344</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-236]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-237]
+done[wfCRDMOrchestrationProcess.xml:167-239]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 828597855</td> <td> </td> <td> 05/08/2018 15:23:28:252</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-236]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-237]
+done[wfCRDMOrchestrationProcess.xml:167-239]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 929822560</td> <td> </td> <td> 05/08/2018 15:27:44:733</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: 
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-236]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-237]
+done[wfCRDMOrchestrationProcess.xml:167-239]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1219479147</td> <td> </td> <td> 05/08/2018 15:49:43:227</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+[BCM_MASTER]
+[BCM_MASTER]
+    </td>
+    <td>java.sql.SQLException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+	at com.teradata.jdbc.jdbc_4.util.ErrorFactory.makeDatabaseSQLException(ErrorFactory.java:309)
+	at com.teradata.jdbc.jdbc_4.statemachine.ReceiveInitSubState.action(ReceiveInitSubState.java:103)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.subStateMachine(StatementReceiveState.java:311)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.action(StatementReceiveState.java:200)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.runBody(StatementController.java:137)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.run(StatementController.java:128)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:389)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:331)
+	at com.teradata.jdbc.jdbc_4.TDStatement.doNonPrepExecuteQuery(TDStatement.java:319)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeQuery(TDStatement.java:1121)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at com.teradata.platform.core.dblib.jdbc.StatementWrapper.executeQuery(StatementWrapper.java:33)
+	at com.teradata.platform.core.dblib.jdbc.Jdbc20Statement.executeQuery(Jdbc20Statement.java:20)
+	at com.teradata.platform.core.dblib.DBLibrary.executeNonScrollableQuery(DBLibrary.java:382)
+	at com.teradata.platform.core.tool.OmxContext.executeCommonQuery(OmxContext.java:355)
+	at com.teradata.platform.core.tool.OmxContext.executeNonScrollableQuery(OmxContext.java:307)
+	at com.teradata.platform.core.tool.DBRawSelect.executeQuery(DBRawSelect.java:114)
+	at com.teradata.platform.core.xcommand.ExecSqlQueryCommand.execute(ExecSqlQueryCommand.java:57)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+REQUEST-updateStageTableTargetAddrIds[wfCRDMOrchestrationProcess.xml:144-146]
+action[wfCRDMOrchestrationProcess.xml:143-153]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:142-154]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1979851640</td> <td> </td> <td> 05/08/2018 15:53:54:816</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+[BCM_MASTER]
+[BCM_MASTER]
+    </td>
+    <td>java.sql.SQLException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+	at com.teradata.jdbc.jdbc_4.util.ErrorFactory.makeDatabaseSQLException(ErrorFactory.java:309)
+	at com.teradata.jdbc.jdbc_4.statemachine.ReceiveInitSubState.action(ReceiveInitSubState.java:103)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.subStateMachine(StatementReceiveState.java:311)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.action(StatementReceiveState.java:200)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.runBody(StatementController.java:137)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.run(StatementController.java:128)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:389)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:331)
+	at com.teradata.jdbc.jdbc_4.TDStatement.doNonPrepExecuteQuery(TDStatement.java:319)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeQuery(TDStatement.java:1121)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at com.teradata.platform.core.dblib.jdbc.StatementWrapper.executeQuery(StatementWrapper.java:33)
+	at com.teradata.platform.core.dblib.jdbc.Jdbc20Statement.executeQuery(Jdbc20Statement.java:20)
+	at com.teradata.platform.core.dblib.DBLibrary.executeNonScrollableQuery(DBLibrary.java:382)
+	at com.teradata.platform.core.tool.OmxContext.executeCommonQuery(OmxContext.java:355)
+	at com.teradata.platform.core.tool.OmxContext.executeNonScrollableQuery(OmxContext.java:307)
+	at com.teradata.platform.core.tool.DBRawSelect.executeQuery(DBRawSelect.java:114)
+	at com.teradata.platform.core.xcommand.ExecSqlQueryCommand.execute(ExecSqlQueryCommand.java:57)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+REQUEST-updateStageTableTargetAddrIds[wfCRDMOrchestrationProcess.xml:144-146]
+action[wfCRDMOrchestrationProcess.xml:143-153]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:142-154]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1579990697</td> <td> </td> <td> 05/08/2018 16:01:34:579</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+[BCM_MASTER]
+[BCM_MASTER]
+    </td>
+    <td>java.sql.SQLException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'MDM41_STG' does not exist.
+	at com.teradata.jdbc.jdbc_4.util.ErrorFactory.makeDatabaseSQLException(ErrorFactory.java:309)
+	at com.teradata.jdbc.jdbc_4.statemachine.ReceiveInitSubState.action(ReceiveInitSubState.java:103)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.subStateMachine(StatementReceiveState.java:311)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.action(StatementReceiveState.java:200)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.runBody(StatementController.java:137)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.run(StatementController.java:128)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:389)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:331)
+	at com.teradata.jdbc.jdbc_4.TDStatement.doNonPrepExecuteQuery(TDStatement.java:319)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeQuery(TDStatement.java:1121)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at com.teradata.platform.core.dblib.jdbc.StatementWrapper.executeQuery(StatementWrapper.java:33)
+	at com.teradata.platform.core.dblib.jdbc.Jdbc20Statement.executeQuery(Jdbc20Statement.java:20)
+	at com.teradata.platform.core.dblib.DBLibrary.executeNonScrollableQuery(DBLibrary.java:382)
+	at com.teradata.platform.core.tool.OmxContext.executeCommonQuery(OmxContext.java:355)
+	at com.teradata.platform.core.tool.OmxContext.executeNonScrollableQuery(OmxContext.java:307)
+	at com.teradata.platform.core.tool.DBRawSelect.executeQuery(DBRawSelect.java:114)
+	at com.teradata.platform.core.xcommand.ExecSqlQueryCommand.execute(ExecSqlQueryCommand.java:57)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+REQUEST-updateStageTableTargetAddrIds[wfCRDMOrchestrationProcess.xml:144-146]
+action[wfCRDMOrchestrationProcess.xml:143-153]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:142-154]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1106085487</td> <td> </td> <td> 05/08/2018 19:25:37:230</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=execChannelMatchProfiles]: Operation not supported for tag = REQUEST   and    Name =executeMatchProfile
+[BCM_MASTER]<br/> * [PROCESS=execChannelSurvPreMaster]: [BCM_MASTER]
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: Operation not supported for tag = REQUEST   and    Name =executeMatchProfile
+[BCM_MASTER]<br/> * [PROCESS=execChannelSurvPreMaster]: [BCM_MASTER]
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=execChannelMatchProfiles]: Operation not supported for tag = REQUEST   and    Name =executeMatchProfile
+[BCM_MASTER]<br/> * [PROCESS=execChannelSurvPreMaster]: [BCM_MASTER]
+ELSE[wfCRDMOrchestrationProcess.xml:180-189]
+THEN[wfCRDMOrchestrationProcess.xml:171-191]
+action[wfCRDMOrchestrationProcess.xml:169-221]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:168-222]
+done[wfCRDMOrchestrationProcess.xml:167-224]
+next_node[wfCRDMOrchestrationProcess.xml:164-164]
+task[wfCRDMOrchestrationProcess.xml:159-166]
+next_node[wfCRDMOrchestrationProcess.xml:156-156]
+task[wfCRDMOrchestrationProcess.xml:141-158]
+next_node[wfCRDMOrchestrationProcess.xml:138-138]
+task[wfCRDMOrchestrationProcess.xml:122-140]
+next_node[wfCRDMOrchestrationProcess.xml:113-113]
+if_true[wfCRDMOrchestrationProcess.xml:111-115]
+next_node[wfCRDMOrchestrationProcess.xml:83-83]
+task[wfCRDMOrchestrationProcess.xml:68-85]
+next_node[wfCRDMOrchestrationProcess.xml:59-59]
+if_true[wfCRDMOrchestrationProcess.xml:57-61]
+next_node[wfCRDMOrchestrationProcess.xml:24-24]
+start[wfCRDMOrchestrationProcess.xml:13-26]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/08/2018 19:34:31:109</td> <td> PooledThread-725</td> <td> Exception</td> 
+    <td>
+Error : while closing connection
+Socket closed
+    </td>
+    <td>java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at java.io.FilterOutputStream.close(Unknown Source)
+	at com.teradata.platform.core.net.util.Connection.closeOut(Connection.java:136)
+	at com.teradata.platform.core.net.util.Connection.terminate(Connection.java:165)
+	at com.teradata.platform.core.net.protocol.HttpProtocolHandler.writeResponse(HttpProtocolHandler.java:145)
+	at com.teradata.platform.core.net.server.scheduling.Request.writeResponse(Request.java:139)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$1.run(RequestProcessor.java:73)
+	at com.teradata.platform.core.net.util.PooledThread.run(ThreadPool.java:118)
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/08/2018 19:34:31:109</td> <td> PooledThread-725</td> <td> Exception</td> 
+    <td>
+error while writing response 
+Connection reset by peer: socket write error
+exception while writing xrmp response
+    </td>
+    <td>java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at com.teradata.platform.core.net.protocol.HttpProtocolHandler.writeResponse(HttpProtocolHandler.java:137)
+	at com.teradata.platform.core.net.server.scheduling.Request.writeResponse(Request.java:139)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$1.run(RequestProcessor.java:73)
+	at com.teradata.platform.core.net.util.PooledThread.run(ThreadPool.java:118)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.net.WriteException: exception while writing xrmp response
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 311310707</td> <td> </td> <td> 05/08/2018 21:58:15:445</td> <td> WorkerThread-1</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+Next node:updateStageCustIds is not defined
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.workflow.WorkflowParseException: Next node:updateStageCustIds is not defined
+	at com.teradata.platform.core.workflow.nodes.NextNode.validate(NextNode.java:44)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.validate(NextNodes.java:47)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.validate(TaskNode.java:61)
+	at com.teradata.platform.core.workflow.WorkflowTemplate.validate(WorkflowTemplate.java:172)
+	at com.teradata.platform.core.tool.WorkflowsHandler.endElement(WorkflowsHandler.java:135)
+	at com.teradata.platform.core.tool.XserverParser.endElement(XserverParser.java:160)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.workflow.WorkflowParseException: Next node:updateStageCustIds is not defined
+Parsing Document: System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1047791467</td> <td> </td> <td> 05/08/2018 21:58:50:599</td> <td> WorkerThread-1</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+Next node:updateStageCustIds is not defined
+Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.workflow.WorkflowParseException: Next node:updateStageCustIds is not defined
+	at com.teradata.platform.core.workflow.nodes.NextNode.validate(NextNode.java:44)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.validate(NextNodes.java:47)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.validate(TaskNode.java:61)
+	at com.teradata.platform.core.workflow.WorkflowTemplate.validate(WorkflowTemplate.java:172)
+	at com.teradata.platform.core.tool.WorkflowsHandler.endElement(WorkflowsHandler.java:135)
+	at com.teradata.platform.core.tool.XserverParser.endElement(XserverParser.java:160)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseInput(XcoreSaxBase.java:137)
+	at com.teradata.platform.core.tool.XserverParser.parseInput(XserverParser.java:205)
+	at com.teradata.platform.core.util.XcoreSaxBase.parseFiles(XcoreSaxBase.java:174)
+	at com.teradata.platform.core.serverutil.LoadDefinitionCommand.execute(LoadDefinitionCommand.java:52)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.workflow.WorkflowParseException: Next node:updateStageCustIds is not defined
+Parsing Document: System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: Error parsing file:E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Debug Info:System ID: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\workflows\wfCRDMOrchestrationProcess.xml Public ID: wfCRDMOrchestrationProcess.xml Line Number: 477
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1033824286</td> <td> </td> <td> 05/09/2018 09:25:21:789</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[MDMServices]
+    </td>
+    <td>java.lang.NullPointerException
+	at com.teradata.platform.core.net.Poster.<init>(Poster.java:105)
+	at com.teradata.platform.core.tool.RemoteService.<init>(RemoteService.java:41)
+	at com.teradata.platform.core.xserver.Xserver.getXOperation(Xserver.java:389)
+	at com.teradata.platform.core.xserver.LocalOmxContext.getXOperation(LocalOmxContext.java:413)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:105)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.XcoreRuleException
+GET_ALL_DOC_NAMES[commonRules.xml:132-132]
+ACTION[commonRules.xml:131-210]
+RULE[commonRules.xml:130-211]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 49406357</td> <td> </td> <td> 05/09/2018 09:25:21:930</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[MDMServices]
+    </td>
+    <td>java.lang.NullPointerException
+	at com.teradata.platform.core.net.Poster.<init>(Poster.java:105)
+	at com.teradata.platform.core.tool.RemoteService.<init>(RemoteService.java:41)
+	at com.teradata.platform.core.xserver.Xserver.getXOperation(Xserver.java:389)
+	at com.teradata.platform.core.xserver.LocalOmxContext.getXOperation(LocalOmxContext.java:413)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:105)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.XcoreRuleException
+GET_ALL_DOC_NAMES[commonRules.xml:132-132]
+ACTION[commonRules.xml:131-210]
+RULE[commonRules.xml:130-211]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/09/2018 21:28:08:251</td> <td> main</td> <td> Exception</td> 
+    <td>
+Exiting the application
+Address already in use: JVM_Bind
+    </td>
+    <td>java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.teradata.platform.core.net.util.SocketFactory.createServerSocket(SocketFactory.java:101)
+	at com.teradata.platform.core.net.server.AppServer.<init>(AppServer.java:32)
+	at com.teradata.platform.core.net.ServerSetup.startServer(ServerSetup.java:257)
+	at com.teradata.platform.core.xserver.Xserver.startNetService(Xserver.java:601)
+	at com.teradata.platform.core.xserver.StartServerExecutionMode.execute(StartServerExecutionMode.java:66)
+	at com.teradata.platform.core.xserver.Xserver.execute(Xserver.java:728)
+	at com.teradata.platform.core.xserver.Xserver.main(Xserver.java:674)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+
+    </td><td><br></td>
+  </tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> 1208955247</td> <td> </td> <td> 05/10/2018 04:05:08:958</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[MDMServices]
+    </td>
+    <td>java.lang.NullPointerException
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:337)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1518951045</td> <td> </td> <td> 05/10/2018 07:29:38:074</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=updateStageCustIds]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=updateStageCustIds]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:91)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=updateStageCustIds]: 
+ELSE[wfCRDMOrchestrationProcess.xml:413-422]
+THEN[wfCRDMOrchestrationProcess.xml:404-424]
+action[wfCRDMOrchestrationProcess.xml:402-454]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:401-455]
+done[wfCRDMOrchestrationProcess.xml:400-457]
+next_node[wfCRDMOrchestrationProcess.xml:368-368]
+if_false[wfCRDMOrchestrationProcess.xml:366-370]
+next_node[wfCRDMOrchestrationProcess.xml:338-338]
+task[wfCRDMOrchestrationProcess.xml:323-340]
+next_node[wfCRDMOrchestrationProcess.xml:320-320]
+task[wfCRDMOrchestrationProcess.xml:304-322]
+next_node[wfCRDMOrchestrationProcess.xml:295-295]
+if_true[wfCRDMOrchestrationProcess.xml:293-297]
+next_node[wfCRDMOrchestrationProcess.xml:265-265]
+task[wfCRDMOrchestrationProcess.xml:250-267]
+next_node[wfCRDMOrchestrationProcess.xml:247-247]
+task[wfCRDMOrchestrationProcess.xml:232-249]
+next_node[wfCRDMOrchestrationProcess.xml:223-223]
+if_true[wfCRDMOrchestrationProcess.xml:221-225]
+next_node[wfCRDMOrchestrationProcess.xml:182-182]
+if_true[wfCRDMOrchestrationProcess.xml:180-184]
+next_node[wfCRDMOrchestrationProcess.xml:157-157]
+task[wfCRDMOrchestrationProcess.xml:142-159]
+next_node[wfCRDMOrchestrationProcess.xml:139-139]
+task[wfCRDMOrchestrationProcess.xml:123-141]
+next_node[wfCRDMOrchestrationProcess.xml:114-114]
+if_true[wfCRDMOrchestrationProcess.xml:112-116]
+next_node[wfCRDMOrchestrationProcess.xml:84-84]
+task[wfCRDMOrchestrationProcess.xml:69-86]
+next_node[wfCRDMOrchestrationProcess.xml:60-60]
+if_true[wfCRDMOrchestrationProcess.xml:58-62]
+next_node[wfCRDMOrchestrationProcess.xml:25-25]
+start[wfCRDMOrchestrationProcess.xml:14-27]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 1191071026</td> <td> </td> <td> 05/10/2018 07:47:09:538</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:None
+<br/> * [PROCESS=updateStageCustIds]: 
+[BCM_MASTER]
+    </td>
+    <td>com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=updateStageCustIds]: 
+	at com.teradata.platform.core.xrules.lang.UserRuleException.createUserException(UserRuleException.java:58)
+	at com.teradata.platform.core.xrules.lang.ExceptionStatement.execute(ExceptionStatement.java:44)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.DoneNode.execute(DoneNode.java:29)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:91)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.DecisionNode.execute(DecisionNode.java:84)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.StartNode.onEvent(StartNode.java:95)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.workflow.WorkflowInstance.start(WorkflowInstance.java:266)
+	at com.teradata.platform.core.workflow.StartWorkflowCommand.execute(StartWorkflowCommand.java:71)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.xrules.lang.UserRuleException: <br/> * [PROCESS=updateStageCustIds]: 
+ELSE[wfCRDMOrchestrationProcess.xml:465-474]
+THEN[wfCRDMOrchestrationProcess.xml:456-476]
+action[wfCRDMOrchestrationProcess.xml:454-506]
+Action Group:null
+actions[wfCRDMOrchestrationProcess.xml:453-507]
+done[wfCRDMOrchestrationProcess.xml:452-509]
+next_node[wfCRDMOrchestrationProcess.xml:416-416]
+if_false[wfCRDMOrchestrationProcess.xml:414-418]
+next_node[wfCRDMOrchestrationProcess.xml:382-382]
+task[wfCRDMOrchestrationProcess.xml:363-384]
+next_node[wfCRDMOrchestrationProcess.xml:360-360]
+task[wfCRDMOrchestrationProcess.xml:340-362]
+next_node[wfCRDMOrchestrationProcess.xml:331-331]
+if_true[wfCRDMOrchestrationProcess.xml:329-333]
+next_node[wfCRDMOrchestrationProcess.xml:297-297]
+task[wfCRDMOrchestrationProcess.xml:278-299]
+next_node[wfCRDMOrchestrationProcess.xml:275-275]
+task[wfCRDMOrchestrationProcess.xml:256-277]
+next_node[wfCRDMOrchestrationProcess.xml:247-247]
+if_true[wfCRDMOrchestrationProcess.xml:245-249]
+next_node[wfCRDMOrchestrationProcess.xml:202-202]
+if_true[wfCRDMOrchestrationProcess.xml:200-204]
+next_node[wfCRDMOrchestrationProcess.xml:173-173]
+task[wfCRDMOrchestrationProcess.xml:154-175]
+next_node[wfCRDMOrchestrationProcess.xml:151-151]
+task[wfCRDMOrchestrationProcess.xml:131-153]
+next_node[wfCRDMOrchestrationProcess.xml:122-122]
+if_true[wfCRDMOrchestrationProcess.xml:120-124]
+next_node[wfCRDMOrchestrationProcess.xml:88-88]
+task[wfCRDMOrchestrationProcess.xml:73-90]
+next_node[wfCRDMOrchestrationProcess.xml:64-64]
+if_true[wfCRDMOrchestrationProcess.xml:62-66]
+next_node[wfCRDMOrchestrationProcess.xml:25-25]
+start[wfCRDMOrchestrationProcess.xml:14-27]
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [BCM_MASTER]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 608156690</td> <td> </td> <td> 05/10/2018 09:33:17:527</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+[MDMServices]
+    </td>
+    <td>java.sql.SQLException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+	at com.teradata.jdbc.jdbc_4.util.ErrorFactory.makeDatabaseSQLException(ErrorFactory.java:309)
+	at com.teradata.jdbc.jdbc_4.statemachine.ReceiveInitSubState.action(ReceiveInitSubState.java:103)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.subStateMachine(StatementReceiveState.java:311)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.action(StatementReceiveState.java:200)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.runBody(StatementController.java:137)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.run(StatementController.java:128)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:389)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:331)
+	at com.teradata.jdbc.jdbc_4.TDStatement.doNonPrepExecuteQuery(TDStatement.java:319)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeQuery(TDStatement.java:1121)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at com.teradata.platform.core.dblib.jdbc.StatementWrapper.executeQuery(StatementWrapper.java:33)
+	at com.teradata.platform.core.dblib.jdbc.Jdbc20Statement.executeQuery(Jdbc20Statement.java:20)
+	at com.teradata.platform.core.dblib.DBLibrary.executeNonScrollableQuery(DBLibrary.java:382)
+	at com.teradata.platform.core.tool.OmxContext.executeCommonQuery(OmxContext.java:355)
+	at com.teradata.platform.core.tool.OmxContext.executeNonScrollableQuery(OmxContext.java:307)
+	at com.teradata.platform.core.tool.DBRawSelect.executeQuery(DBRawSelect.java:114)
+	at com.teradata.platform.core.xcommand.ExecSqlQueryCommand.execute(ExecSqlQueryCommand.java:57)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.UINode.reload(UINode.java:569)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.reloadEntry(UIContinueWorkflowCommand.java:280)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.reloadFromStack(UIContinueWorkflowCommand.java:272)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:185)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> 394890553</td> <td> </td> <td> 05/10/2018 09:35:35:596</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Exception processing request for UserIdentifier:USR_1
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+[MDMServices]
+    </td>
+    <td>java.sql.SQLException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+	at com.teradata.jdbc.jdbc_4.util.ErrorFactory.makeDatabaseSQLException(ErrorFactory.java:309)
+	at com.teradata.jdbc.jdbc_4.statemachine.ReceiveInitSubState.action(ReceiveInitSubState.java:103)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.subStateMachine(StatementReceiveState.java:311)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementReceiveState.action(StatementReceiveState.java:200)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.runBody(StatementController.java:137)
+	at com.teradata.jdbc.jdbc_4.statemachine.StatementController.run(StatementController.java:128)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:389)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeStatement(TDStatement.java:331)
+	at com.teradata.jdbc.jdbc_4.TDStatement.doNonPrepExecuteQuery(TDStatement.java:319)
+	at com.teradata.jdbc.jdbc_4.TDStatement.executeQuery(TDStatement.java:1121)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeQuery(DelegatingStatement.java:207)
+	at com.teradata.platform.core.dblib.jdbc.StatementWrapper.executeQuery(StatementWrapper.java:33)
+	at com.teradata.platform.core.dblib.jdbc.Jdbc20Statement.executeQuery(Jdbc20Statement.java:20)
+	at com.teradata.platform.core.dblib.DBLibrary.executeNonScrollableQuery(DBLibrary.java:382)
+	at com.teradata.platform.core.tool.OmxContext.executeCommonQuery(OmxContext.java:355)
+	at com.teradata.platform.core.tool.OmxContext.executeNonScrollableQuery(OmxContext.java:307)
+	at com.teradata.platform.core.tool.DBRawSelect.executeQuery(DBRawSelect.java:114)
+	at com.teradata.platform.core.xcommand.ExecSqlQueryCommand.execute(ExecSqlQueryCommand.java:57)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices]
+
+    </td><td><br></td>
+  </tr>

@@ -1,0 +1,49 @@
+<document>
+  <properties>
+    <property Name="MODL_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MODL_CD" />
+    </property>
+    <property Name="OEM_MODL_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="OEM_MODL_NAME" />
+    </property>
+    <property Name="VEH_COMRCL_MODL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_COMRCL_MODL_NAME" />
+    </property>
+    <property Name="VEH_MAKE">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_MAKE" />
+    </property>
+    <property Name="SLS_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SLS_STRT_DT" />
+    </property>
+    <property Name="MODL_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MODL_DESC" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+    <property Name="VIN_PTN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VIN_PTN" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XAK1VEHICLE_MODEL" PhysicalName="XAK1VEHICLE_MODEL" Kind="PRIMARY">
+      <property Name="OEM_MODL_NAME" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_MODL" MasterTable="M_VEH_MODL" />
+    <miscFacet PhysicalName="VEH_MODL" DisplayName="Vehicle Model" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

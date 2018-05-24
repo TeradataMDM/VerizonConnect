@@ -1,0 +1,28 @@
+<document>
+  <properties>
+    <property Name="CTRY_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CTRY_ID" />
+    </property>
+    <property Name="ISO_2_ALPH_CTRY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ISO_2_ALPH_CTRY_CD" />
+    </property>
+    <property Name="ISO_3_ALPH_CTRY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ISO_3_ALPH_CTRY_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCOUNTRY" PhysicalName="XPKCOUNTRY" Kind="PRIMARY">
+      <property Name="CTRY_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CTRY" MasterTable="M_CTRY" />
+    <miscFacet PhysicalName="CTRY" DisplayName="Country" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

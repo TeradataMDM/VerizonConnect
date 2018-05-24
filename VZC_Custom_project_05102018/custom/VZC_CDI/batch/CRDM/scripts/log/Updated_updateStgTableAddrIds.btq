@@ -1,0 +1,47 @@
+/***********************************************************************************************************
+SCRIPT:              updateStageTargetAddrIds.btqt 
+DESCRIPTION:         This script update stage persona address table with target address ids and match type of each address id
+DEPENDENCY:           
+INPUT:               SURVIVORSHIP INTERIM Tables 
+OUTPUT:              UPDATE STAGE PRSNA_ADDR TABLE, TGT_ADDR_ID and INSERT_UPDATE_FLAG ATTRIBUTES FROM SURVIVORSHIP INTERIM Tables 
+ERRORS:
+SPECIAL INSTRUCTIONS:
+
+CHANGE LOG:
+VERSION              DATE                 AUTHOR                          CHANGES
+1.00                05/08/2018           CA186004                        CREATED
+***********************************************************************************************************/
+.LOGON 10.25.132.9/MDM41,MDM41
+--.SET ERROROUT STDOUT;
+--.SET SESSION CHARSET 'UTF8';
+
+--------------------------------------------------------------------------------------------------------------------
+-- UPDATE STAGE PRSNA_ADDR TABLE, TGT_ADDR_ID and INSERT_UPDATE_FLAG ATTRIBUTES FROM SURVIVORSHIP INTERIM Tables --
+--------------------------------------------------------------------------------------------------------------------
+UPDATE TRG
+FROM MDM41_STG.PRSNA_ADDR_STG TRG,
+(
+	SELECT TRGT_ADDR_ID, PRSNA_ID, STREET_ADDR_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.STREET_ADDR_XREF_FWD
+	UNION
+	SELECT TRGT_ADDR_ID, PRSNA_ID, TEL_NUM_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.TEL_NUM_XREF_FWD
+	UNION 
+	SELECT TRGT_ADDR_ID, PRSNA_ID, ELEC_ADDR_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.ELEC_ADDR_XREF_FWD
+) SRC
+SET TGT_ADDR_ID = SRC.TRGT_ADDR_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG
+WHERE TRG.PRSNA_ID = SRC.PRSNA_ID
+AND   TRG.ADDR_RQST_ID = SRC.ADDR_RQST_ID
+AND   TRG.ADDR_TYPE_CD = SRC.ADDR_TYPE_CD
+;
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
+
+.LABEL EXIT
+
+.IF ERRORLEVEL <= 4 THEN .GOTO WARN;
+.IF ERRORLEVEL > 4 THEN .GOTO ERR ;
+
+.LABEL WARN
+.QUIT 0
+
+.LABEL ERR
+.QUIT 1

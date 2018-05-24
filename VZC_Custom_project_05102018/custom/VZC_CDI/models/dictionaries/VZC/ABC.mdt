@@ -1,0 +1,60 @@
+<dataDictionary>
+  <dataTypes>
+    <dataType Name="STATUS_ID" PhysicalName="STATUS_ID" Active="true" Type="Integer">
+      <extends />
+    </dataType>
+    <dataType Name="STATUS_NM" PhysicalName="STATUS_NM" Active="true" Type="String_100">
+      <extends />
+    </dataType>
+    <dataType Name="FILE_NM" PhysicalName="FILE_NM" Active="true" Type="String_500">
+      <extends />
+    </dataType>
+    <dataType Name="FILE_DESC" PhysicalName="FILE_DESC" Active="true" Type="String_500">
+      <extends />
+    </dataType>
+    <dataType Name="DATA_SOURCE" PhysicalName="DATA_SOURCE" Active="true" Required="false" Type="String_100" />
+    <dataType Name="DATA_SOURCE_TYPE" PhysicalName="DATA_SOURCE_TYPE" Active="true" Required="false" Type="String_100" />
+    <dataType Name="DUP_COUNT" PhysicalName="DUP_COUNT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="END_DTTM" PhysicalName="END_DTTM" Active="true" Required="false" Type="Timestamp" />
+    <dataType Name="ERROR_COUNT" PhysicalName="ERROR_COUNT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="ERROR_PERCENT" PhysicalName="ERROR_PERCENT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="ERROR_RESOLVED_FLAG" PhysicalName="ERROR_RESOLVED_FLAG" Active="true" Required="false" Type="Char_1" />
+    <dataType Name="ERROR_TABLE_NAME" PhysicalName="ERROR_TABLE_NAME" Active="true" Required="false" Type="String_100" />
+    <dataType Name="ERROR_TABLE_NM" PhysicalName="ERROR_TABLE_NM" Active="true" Required="false" Type="String_100" />
+    <dataType Name="EXECUTE_TEXT" PhysicalName="EXECUTE_TEXT" Active="true" Required="false" Type="String_1000" />
+    <dataType Name="FILE_DESCRIPTION" PhysicalName="FILE_DESCRIPTION" Active="true" Required="false" Type="Char_18" />
+    <dataType Name="FILE_IDENTIFIER" PhysicalName="FILE_IDENTIFIER" Active="true" Required="false" Type="Integer" />
+    <dataType Name="FILE_NAME" PhysicalName="FILE_NAME" Active="true" Required="false" Type="String_20" />
+    <dataType Name="GROUP_ID" PhysicalName="GROUP_ID" Active="true" Required="false" Type="Integer" />
+    <dataType Name="GROUP_NM" PhysicalName="GROUP_NM" Active="true" Required="false" Type="String_100" />
+    <dataType Name="JOB_ERROR_MESSAGE_TEXT" PhysicalName="JOB_ERROR_MESSAGE_TEXT" Active="true" Required="false" Type="String_1000" />
+    <dataType Name="JOB_GROUP_RUN_ID" PhysicalName="JOB_GROUP_RUN_ID" Active="true" Required="false" Type="String_50" />
+    <dataType Name="JOB_RUN_ID" PhysicalName="JOB_RUN_ID" Active="true" Required="false" Type="String_50" />
+    <dataType Name="LOG_FILE_NAME" PhysicalName="LOG_FILE_NAME" Active="true" Required="false" Type="String_1000" />
+    <dataType Name="LOG_FILE_NM" PhysicalName="LOG_FILE_NM" Active="true" Required="false" Type="String_1000" />
+    <dataType Name="NOTIFICATION_STATUS" PhysicalName="NOTIFICATION_STATUS" Active="true" Required="false" Type="String_40" />
+    <dataType Name="PARENT_GROUP_ID" PhysicalName="PARENT_GROUP_ID" Active="true" Required="false" Type="Integer" />
+    <dataType Name="ROW_ERROR_FILE" PhysicalName="ROW_ERROR_FILE" Active="true" Required="false" Type="String_100" />
+    <dataType Name="SEQUENCE_ID" PhysicalName="SEQUENCE_ID" Active="true" Required="false" Type="Integer" />
+    <dataType Name="SFTP_FLAG" PhysicalName="SFTP_FLAG" Active="true" Required="false" Type="Char_3" />
+    <dataType Name="SOURCE_COUNT" PhysicalName="SOURCE_COUNT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="SRC_INTAKE_CD" PhysicalName="SRC_INTAKE_CD" Active="true" Required="false" Type="String_100" />
+    <dataType Name="SRC_JOB_RUN_ID" PhysicalName="SRC_JOB_RUN_ID" Active="true" Required="false" Type="String_50" />
+    <dataType Name="START_DTTM" PhysicalName="START_DTTM" Active="true" Required="false" Type="Timestamp" />
+    <dataType Name="SOURCE_FOLDER_TXT" PhysicalName="SOURCE_FOLDER_TXT" Active="true" Required="false" Type="String_1000" />
+    <dataType Name="SOURCE_INTAKE_ID" PhysicalName="SOURCE_INTAKE_ID" Active="true" Required="false" Type="Char_18" />
+    <dataType Name="SOURCE_PROVIDER_CD" PhysicalName="SOURCE_PROVIDER_CD" Active="true" Required="false" Type="String_50" />
+    <dataType Name="SOURCE_TYPE_CD" PhysicalName="SOURCE_TYPE_CD" Active="true" Required="false" Type="String_50" />
+    <dataType Name="SOURCE_TYPE_DESC" PhysicalName="SOURCE_TYPE_DESC" Active="true" Required="false" Type="String_250" />
+    <dataType Name="SOURCE_TYPE_NAME" PhysicalName="SOURCE_TYPE_NAME" Active="true" Required="false" Type="String_100" />
+    <dataType Name="TARGET_COUNT" PhysicalName="TARGET_COUNT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="WARNING_COUNT" PhysicalName="WARNING_COUNT" Active="true" Required="false" Type="Integer" />
+    <dataType Name="JOB_ID" PhysicalName="JOB_ID" Active="true" Type="Integer">
+      <extends />
+    </dataType>
+    <dataType Name="JOB_NM" PhysicalName="JOB_NM" Active="true" Type="String_100">
+      <extends />
+    </dataType>
+  </dataTypes>
+</dataDictionary>
+

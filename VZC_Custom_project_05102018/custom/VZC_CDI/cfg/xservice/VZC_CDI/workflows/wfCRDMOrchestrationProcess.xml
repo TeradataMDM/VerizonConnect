@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow mgcCount="3" ShowInBreadCrumbs="true" Version="1.0" Name="wfCRDMOrchestrationProcess" Description="" Type="" PrimaryDocument="" IsStartAllowed="Yes">
+  <variables Name="wfCRDMOrchestrationProcess">
+    <variable Name="pStep" Type="int" Comment=""/>
+    <variable Name="pStatus" Type="string" Comment=""/>
+    <variable Name="pMessage" Type="string" Comment=""/>
+    <variable Name="pIsError" Type="boolean" Comment=""/>
+    <variable Name="checkPointResult" Type="string" Comment=""/>
+    <variable Name="errorConcat" Type="string" Comment=""/>
+    <variable Name="pProfileIds" Type="xml" Comment=""/>
+    <variable Name="pNameProfileIds" Type="xml" Comment=""/>
+  </variables>
+  <nodes>
+    <start Name="start">
+      <actions>
+        <action>
+          <SET Var="pStep" FromValue="0"/>
+          <SET Var="pStatus" FromValue=""/>
+          <SET Var="pMessage" FromValue=""/>
+          <SET Var="pIsError" FromValue="false"/>
+          <SET Var="pRunId" FromValue="0"/>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkMatchProfilesToProcess"/>
+      </next_nodes>
+    </start>
+    <decision Name="checkMatchProfilesToProcess" Description="This node checks if there are any match profiles to run match process.">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="getCRDMMatchProfiles" AssignToVar="Profile_IdQuery">
+                <GROUP_NAME Value="{$thisParam/MTCH_GROUP_NAME/@Value}"/>
+              </REQUEST>
+              <SET Var="mtchProfileCount" FromValue="{$Profile_IdQuery/@TotalRowCount}"/>
+              <IF_TEST Test="$mtchProfileCount > 0 ">
+                <THEN>
+                  <TO_DOCVAR AssignToVar="pProfileIds">
+                    <ROOT>
+                      <MATCH_PROFILES>
+                        <TO_XML SelectList="$Profile_IdQuery/SQL_RESULT"/>
+                      </MATCH_PROFILES>
+                      <SURV_PROFILES/>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="{$mtchProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$mtchProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$countMtchProfiles>0"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="execChannelMatchProfiles" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="execChannelMatchProfiles">
+      <actions>
+        <action>
+          <REQUEST Name="execCRDMMatchProfiles" AssignToVar="result" HandleException="true">
+            <TO_XML SelectList="$pProfileIds/MATCH_PROFILES/SQL_RESULT"/>
+          </REQUEST>
+          <IF_TEST Test="$result/@Status='Error'">
+            <THEN>
+              <SET Var="pIsError" FromValue="true"/>
+              <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execChannelMatchProfiles]: ', $result/@Description)}"/>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkSurvProfilesToProcess"/>
+      </next_nodes>
+    </task>
+    <decision Name="checkSurvProfilesToProcess" Description="This node checks if there are any surv profiles to run next process.">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="getCRDMSurvProfiles" AssignToVar="Profile_IdQuery">
+                <GROUP_NAME Value="{$thisParam/SURV_GROUP_NAME/@Value}"/>
+              </REQUEST>
+              <SET Var="survProfileCount" FromValue="{$Profile_IdQuery/@TotalRowCount}"/>
+              <IF_TEST Test="$survProfileCount > 0">
+                <THEN>
+                  <APPEND_TO_XML Select="$pProfileIds/SURV_PROFILES">
+                    <TO_XML SelectList="$Profile_IdQuery/SQL_RESULT"/>
+                  </APPEND_TO_XML>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="{$survProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$survProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$survProfileCount>0 and $pIsError='false'"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="execChannelSurvPreMaster" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="execChannelSurvPreMaster">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="execCRDMSurvProfiles" AssignToVar="result" HandleException="true">
+                <TO_XML SelectList="$pProfileIds/SURV_PROFILES/SQL_RESULT"/>
+                <EXEC_MODE Value="Premaster"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execChannelSurvPreMaster]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="updateStageAddressIds"/>
+      </next_nodes>
+    </task>
+    <task Name="updateStageAddressIds">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="updateStageTableTargetAddrIds" AssignToVar="result">
+                <GROUP_NAME Value="{$thisParam/SURV_GROUP_NAME/@Value}"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=updateStageAddressIds]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkStageTargetAddrIds"/>
+      </next_nodes>
+    </task>
+    <decision Name="checkStageTargetAddrIds" Description="This node checks if customer name matching can be run..">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <EXECUTE_SQL_QUERY Value="LOCKING ROW FOR ACCESS SELECT TGT_ADDR_ID, INSERT_UPDATE_FLAG FROM MDM41_STG.PRSNA_ADDR_STG WHERE TGT_ADDR_ID IS NULL" AssignToVar="recordsCount" ReturnRowCount="yes"/>
+              <SET Var="recordsWithOutTgtAddrIds" FromValue="{$recordsCount/@TotalRowCount}"/>
+              <IF_TEST Test="$recordsWithOutTgtAddrIds = 0 ">
+                <THEN>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="10"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$recordsWithOutTgtAddrIds}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$recordsWithOutTgtAddrIds=0 and $pIsError='false'"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="checkNameMtchPrflsToProcess" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <decision Name="checkNameMtchPrflsToProcess" Description="This node checks any customer name matching profiles to process..">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="getCRDMMatchProfiles" AssignToVar="Profile_IdQuery">
+                <GROUP_NAME Value="CUST_NAME_MTCH"/>
+              </REQUEST>
+              <SET Var="mtchProfileCount" FromValue="{$Profile_IdQuery/@TotalRowCount}"/>
+              <IF_TEST Test="$mtchProfileCount > 0 ">
+                <THEN>
+                  <TO_DOCVAR AssignToVar="pNameProfileIds">
+                    <ROOT>
+                      <MATCH_PROFILES>
+                        <TO_XML SelectList="$Profile_IdQuery/SQL_RESULT"/>
+                      </MATCH_PROFILES>
+                      <SURV_PROFILES/>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="{$mtchProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$mtchProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$countMtchProfiles > 0 and $pIsError='false'"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="execNameMtchPrfls" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="execNameMtchPrfls">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="execCRDMMatchProfiles" AssignToVar="result" HandleException="true">
+                <TO_XML SelectList="$pNameProfileIds/MATCH_PROFILES/SQL_RESULT"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execNameMtchPrfls]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="execNameMtchPrflsRecon"/>
+      </next_nodes>
+    </task>
+    <task Name="execNameMtchPrflsRecon">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="execNameMatchReconciliation" AssignToVar="result" HandleException="true">
+                <GROUP_NAME Value="CUST_NAME_RECON"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execNameMtchPrflsRecon]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkNameSurvPrflsToProcess"/>
+      </next_nodes>
+    </task>
+    <decision Name="checkNameSurvPrflsToProcess" Description="This node checks if there are any surv profiles to run next process.">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="getCRDMSurvProfiles" AssignToVar="Profile_IdQuery">
+                <GROUP_NAME Value="CUST_NAME_PRE_SURV"/>
+              </REQUEST>
+              <SET Var="survProfileCount" FromValue="{$Profile_IdQuery/@TotalRowCount}"/>
+              <IF_TEST Test="$survProfileCount > 0 ">
+                <THEN>
+                  <APPEND_TO_XML Select="$pNameProfileIds/SURV_PROFILES">
+                    <TO_XML SelectList="$Profile_IdQuery/SQL_RESULT"/>
+                  </APPEND_TO_XML>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="{$survProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$survProfileCount}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$survProfileCount>0 and $pIsError='false'"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="execNameSurvPreMaster" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="execNameSurvPreMaster">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="execCRDMSurvProfiles" AssignToVar="result" HandleException="true">
+                <TO_XML SelectList="$pNameProfileIds/SURV_PROFILES/SQL_RESULT"/>
+                <EXEC_MODE Value="Premaster"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execNameSurvPreMaster]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="identifyGoldenCustIds"/>
+      </next_nodes>
+    </task>
+    <task Name="identifyGoldenCustIds">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="identifyGoldenCustIds" AssignToVar="result" HandleException="true">
+                <GROUP_NAME Value="IDENTIFY_GOLDEN_CUST"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=identifyGoldenCustIds]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="updateStageCustIds"/>
+      </next_nodes>
+    </task>
+    <task Name="updateStageCustIds">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="updateStageTableTargetCustIds" AssignToVar="result">
+                <GROUP_NAME Value="CUST_ID_STG_UPDATE"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=updateStageCustIds]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="checkStageTargetCustIds"/>
+      </next_nodes>
+    </task>
+    <decision Name="checkStageTargetCustIds" Description="This node checks if customer ids populated correctly in stage..">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <EXECUTE_SQL_QUERY Value="LOCKING ROW FOR ACCESS SELECT TGT_CUST_ID, INSERT_UPDATE_FLAG FROM MDM41_STG.PRSNA_STG WHERE TGT_CUST_ID IS NULL" AssignToVar="recordsCount" ReturnRowCount="yes"/>
+              <SET Var="recordsWithOutTgtCustIds" FromValue="{$recordsCount/@TotalRowCount}"/>
+              <IF_TEST Test="$recordsWithOutTgtCustIds = 0 ">
+                <THEN>
+                  <SET Var="checkPointResult" FromValue="true"/>
+                  <SET Var="countMtchProfiles" FromValue="10"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </THEN>
+                <ELSE>
+                  <SET Var="checkPointResult" FromValue="false"/>
+                  <SET Var="countMtchProfiles" FromValue="{$recordsWithOutTgtCustIds}"/>
+                  <SET Var="errorConcat" FromValue="&lt;br/> * "/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <condition Value="$recordsWithOutTgtCustIds=0 and $pIsError='false'"/>
+      <if_true>
+        <next_nodes>
+          <next_node Name="execSurvPostPreMaster" Description=""/>
+        </next_nodes>
+      </if_true>
+      <if_false>
+        <next_nodes>
+          <next_node Name="done" Description=""/>
+        </next_nodes>
+      </if_false>
+    </decision>
+    <task Name="execSurvPostPreMaster">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="execCRDMSurvProfiles" AssignToVar="result" HandleException="true">
+                <TO_XML SelectList="$pProfileIds/SURV_PROFILES/SQL_RESULT"/>
+                <TO_XML SelectList="$pNameProfileIds/SURV_PROFILES/SQL_RESULT"/>
+                <EXEC_MODE Value="PostPremaster"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=execNameSurvPreMaster]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="populateCustAddrAssoc"/>
+      </next_nodes>
+    </task>
+    <task Name="populateCustAddrAssoc">
+      <actions>
+        <action>
+          <IF_TEST Test="$pIsError='false'">
+            <THEN>
+              <REQUEST Name="populateCustomerAddressAssoc" AssignToVar="result">
+                <GROUP_NAME Value="POPULATE_CUST_ADDR"/>
+              </REQUEST>
+              <IF_TEST Test="$result/@Status='Error'">
+                <THEN>
+                  <SET Var="pIsError" FromValue="true"/>
+                  <SET Var="pMessage" FromValue="{concat($pMessage, $errorConcat, '[PROCESS=populateCustAddrAssoc]: ', $result/@Description)}"/>
+                </THEN>
+              </IF_TEST>
+            </THEN>
+          </IF_TEST>
+        </action>
+      </actions>
+      <next_nodes>
+        <next_node Name="postCRDMOrchStatus"/>
+      </next_nodes>
+    </task>
+    <task Name="postCRDMOrchStatus">
+      <actions>
+        <action/>
+      </actions>
+      <next_nodes>
+        <next_node Name="done"/>
+      </next_nodes>
+    </task>
+    <done Name="done">
+      <actions>
+        <action>
+          <IF_TEST Test="$checkPointResult = 'true'">
+            <THEN>
+              <IF_TEST Test="$pIsError!=true()">
+                <THEN>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <SuccessMessage Value="Processing completed"/>
+                    </ROOT>
+                  </TO_DOCVAR>
+                </THEN>
+                <ELSE>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <_ERRORS>
+                        <_ERROR Value="{concat('ERROR: ', $pMessage)}"/>
+                      </_ERRORS>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <EXCEPTION Value="{$pMessage}"/>
+                </ELSE>
+              </IF_TEST>
+            </THEN>
+            <ELSE>
+              <IF_TEST Test="$checkPointResult = 'stageError'">
+                <THEN>
+                  <SET Var="pMessage" FromValue="Stage table not created."/>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <_ERRORS>
+                        <_ERROR Value="{$pMessage}"/>
+                      </_ERRORS>
+                    </ROOT>
+                  </TO_DOCVAR>
+                  <EXCEPTION Value="Stage table not created."/>
+                </THEN>
+                <ELSE>
+                  <SET Var="pMessage" FromValue="There are no records to process."/>
+                  <TO_DOCVAR AssignToVar="pMessageReturn">
+                    <ROOT>
+                      <SuccessMessage Value="{$pMessage}"/>
+                    </ROOT>
+                  </TO_DOCVAR>
+                </ELSE>
+              </IF_TEST>
+            </ELSE>
+          </IF_TEST>
+          <TO_DOCVAR AssignToVar="thisReturn">
+            <ROOT>
+              <TO_XML SelectList="$pMessageReturn/*"/>
+            </ROOT>
+          </TO_DOCVAR>
+        </action>
+      </actions>
+      <next_nodes/>
+    </done>
+  </nodes>
+  <mgcview>
+    <mgcdashboard location="1231,0"/>
+    <mgcnodes>
+      <start font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="30,226" size="732,526">
+        <iconProps iconfile="z1start.gif"/>
+      </start>
+      <checkMatchProfilesToProcess font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="144,225" size="732,600">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkMatchProfilesToProcess>
+      <execChannelMatchProfiles font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="140,394">
+        <iconProps iconfile="z1task.gif"/>
+      </execChannelMatchProfiles>
+      <checkSurvProfilesToProcess font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="301,228">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkSurvProfilesToProcess>
+      <execChannelSurvPreMaster font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="300,396" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </execChannelSurvPreMaster>
+      <updateStageAddressIds font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="444,395" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </updateStageAddressIds>
+      <checkStageTargetAddrIds font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="447,230">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkStageTargetAddrIds>
+      <checkNameMtchPrflsToProcess font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="595,229">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkNameMtchPrflsToProcess>
+      <execNameMtchPrfls font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="596,398">
+        <iconProps iconfile="z1task.gif"/>
+      </execNameMtchPrfls>
+      <execNameMtchPrflsRecon font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="755,399" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </execNameMtchPrflsRecon>
+      <checkNameSurvPrflsToProcess font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="758,228" size="732,600">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkNameSurvPrflsToProcess>
+      <execNameSurvPreMaster font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="910,226" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </execNameSurvPreMaster>
+      <identifyGoldenCustIds font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="910,397">
+        <iconProps iconfile="z1task.gif"/>
+      </identifyGoldenCustIds>
+      <updateStageCustIds font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="1049,395" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </updateStageCustIds>
+      <checkStageTargetCustIds font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="1041,227">
+        <iconProps iconfile="z1decision.gif"/>
+      </checkStageTargetCustIds>
+      <execSurvPostPreMaster font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="1172,229" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </execSurvPostPreMaster>
+      <populateCustAddrAssoc font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="1179,394" size="732,552">
+        <iconProps iconfile="z1task.gif"/>
+      </populateCustAddrAssoc>
+      <postCRDMOrchStatus font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="1304,234">
+        <iconProps iconfile="z1task.gif"/>
+      </postCRDMOrchStatus>
+      <done font="Times New Roman,0,9" componentConnect="true" componentIconBorder="false" componentTextColor="80,80,80" componentBorderColor="255,255,255" freeze="false" visible="true" fade="false" fadeConnectors="false" shapeKey="ICONISH" snapPointKey="REGULAR" leadingEdge="5" trailingEdge="5" topGap="3" bottomGap="2" location="527,34" size="732,526">
+        <iconProps iconfile="z1end.gif"/>
+      </done>
+    </mgcnodes>
+    <mgcconnectors>
+      <start>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="75,248" endpoint="144,247" ctrlRect1="124,246,4,4" ctrlRect2="90,245,4,4"/>
+      </start>
+      <checkMatchProfilesToProcess>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="166,270" endpoint="162,394" ctrlRect1="157,330,4,4" ctrlRect2="158,359,4,4" textRect="172,276,12,8" ctrlRect2Dirty="true" ctrlRect1Dirty="true">
+          <textProps/>
+        </nextNodeView>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="166,225" endpoint="527,56" ctrlRect1="168,39,4,4" ctrlRect2="170,57,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true" textRect="165,50,15,8">
+          <textProps/>
+        </nextNodeView>
+      </checkMatchProfilesToProcess>
+      <execChannelMatchProfiles>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="162,394" endpoint="301,250" ctrlRect1="189,398,4,4" ctrlRect2="267,271,4,4" textRect="445,365,28,8" ctrlRect1Dirty="true" ctrlRect2Dirty="true">
+          <textProps/>
+        </nextNodeView>
+      </execChannelMatchProfiles>
+      <checkSurvProfilesToProcess>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="323,273" endpoint="322,396" ctrlRect1="315,324,4,4" ctrlRect2="323,372,4,4" ctrlRect2Dirty="true" ctrlRect1Dirty="true"/>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="323,228" endpoint="527,56" ctrlRect1="332,226,4,4" ctrlRect2="302,39,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true"/>
+      </checkSurvProfilesToProcess>
+      <execChannelSurvPreMaster>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="345,418" endpoint="444,417" ctrlRect1="398,415,4,4" ctrlRect2="417,412,4,4" ctrlRect2Dirty="true" ctrlRect1Dirty="true"/>
+      </execChannelSurvPreMaster>
+      <updateStageAddressIds>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="466,394" endpoint="468,262" ctrlRect1="464,293,4,4" ctrlRect2="466,359,4,4"/>
+      </updateStageAddressIds>
+      <checkStageTargetAddrIds>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="492,252" endpoint="595,251" ctrlRect1="566,250,4,4" ctrlRect2="515,249,4,4"/>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="469,230" endpoint="549,79" ctrlRect1="467,116,4,4" ctrlRect2="547,191,4,4"/>
+      </checkStageTargetAddrIds>
+      <checkNameMtchPrflsToProcess>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="617,274" endpoint="618,398" ctrlRect1="615,365,4,4" ctrlRect2="620,406,4,4" ctrlRect2Dirty="true"/>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="617,229" endpoint="549,79" ctrlRect1="619,214,4,4" ctrlRect2="601,114,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true"/>
+      </checkNameMtchPrflsToProcess>
+      <execNameMtchPrfls>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="641,420" endpoint="755,421" ctrlRect1="724,418,4,4" ctrlRect2="667,419,4,4"/>
+      </execNameMtchPrfls>
+      <execNameMtchPrflsRecon>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="777,399" endpoint="780,273" ctrlRect1="775,303,4,4" ctrlRect2="778,366,4,4"/>
+      </execNameMtchPrflsRecon>
+      <checkNameSurvPrflsToProcess>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="803,250" endpoint="910,248" ctrlRect1="880,248,4,4" ctrlRect2="827,246,4,4"/>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="758,250" endpoint="572,56" ctrlRect1="617,248,4,4" ctrlRect2="710,54,4,4"/>
+      </checkNameSurvPrflsToProcess>
+      <execNameSurvPreMaster>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="932,271" endpoint="932,397" ctrlRect1="930,363,4,4" ctrlRect2="935,405,4,4" ctrlRect2Dirty="true"/>
+      </execNameSurvPreMaster>
+      <identifyGoldenCustIds>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="955,419" endpoint="1049,417" ctrlRect1="1023,417,4,4" ctrlRect2="976,415,4,4"/>
+      </identifyGoldenCustIds>
+      <updateStageCustIds>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1071,395" endpoint="1063,272" ctrlRect1="1076,372,4,4" ctrlRect2="1056,278,4,4" ctrlRect2Dirty="true" ctrlRect1Dirty="true"/>
+      </updateStageCustIds>
+      <checkStageTargetCustIds>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,0" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1086,249" endpoint="1172,251" ctrlRect1="1148,247,4,4" ctrlRect2="1105,249,4,4"/>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="178,0,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1063,227" endpoint="572,56" ctrlRect1="1049,215,4,4" ctrlRect2="948,30,4,4" ctrlRect2Dirty="true" ctrlRect1Dirty="true"/>
+      </checkStageTargetCustIds>
+      <execSurvPostPreMaster>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1194,274" endpoint="1201,394" ctrlRect1="1192,362,4,4" ctrlRect2="1204,392,4,4" ctrlRect2Dirty="true"/>
+      </execSurvPostPreMaster>
+      <populateCustAddrAssoc>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1224,416" endpoint="1326,279" ctrlRect1="1236,436,4,4" ctrlRect2="1341,381,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true"/>
+      </populateCustAddrAssoc>
+      <postCRDMOrchStatus>
+        <nextNodeView wavyConnector="true" connectorTextColor="0,0,0" connectorColor="0,178,178" connStartPointFill="false" connEndPointFill="true" connStartPointOval="true" draggable="true" startpoint="1304,256" endpoint="572,56" ctrlRect1="1215,187,4,4" ctrlRect2="1285,26,4,4" ctrlRect1Dirty="true" ctrlRect2Dirty="true"/>
+      </postCRDMOrchStatus>
+    </mgcconnectors>
+    <mgctexts/>
+  </mgcview>
+  <shutdown_handler>
+    <pre_actions>
+      <action/>
+    </pre_actions>
+    <post_actions>
+      <action/>
+    </post_actions>
+    <checkcondition Value=""/>
+  </shutdown_handler>
+</workflow>

@@ -1,0 +1,194 @@
+<REQUESTS ServiceName="MDMServices">
+  <!--FOLDERS facet ...-->
+  <REQUEST Name="putFacetInfo">
+    <FACET_CATEGORY ID="8361288183154514">
+      <SEGMENT Value="MDM" />
+      <SEGMENT Value="ALL_FOLDERS" />
+    </FACET_CATEGORY>
+    <FACET_CONTENT>
+      <ALL_FOLDERS>
+        <FOLDER Name="models">
+          <FOLDER Name="Channel">
+            <DOCUMENTS>
+              <DOCUMENT Name="ADDR" />
+              <DOCUMENT Name="ELEC_ADDR" />
+              <DOCUMENT Name="STREET_ADDR" />
+              <DOCUMENT Name="TEL_NUM" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="Customer">
+            <DOCUMENTS>
+              <DOCUMENT Name="ACCT" />
+              <DOCUMENT Name="CUST" />
+              <DOCUMENT Name="CUST_ACCT" />
+              <DOCUMENT Name="CUST_PRG" />
+              <DOCUMENT Name="CUST_PRSNA" />
+              <DOCUMENT Name="GOLDEN_CUST" />
+              <DOCUMENT Name="INDIV_CUST" />
+              <DOCUMENT Name="ORG_CUST" />
+              <DOCUMENT Name="SOC_GRP_CUST" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="CustomerChannelAssociation">
+            <DOCUMENTS>
+              <DOCUMENT Name="CNTCT_PREFRC" />
+              <DOCUMENT Name="CUST_ACCT_ADDR" />
+              <DOCUMENT Name="CUST_ADDR" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="CustomerDeviceAssociation">
+            <DOCUMENTS>
+              <DOCUMENT Name="CUST_DEVICE" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="CustomerVehicleAssociation">
+            <DOCUMENTS>
+              <DOCUMENT Name="TMAT_ACCT_VEH" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="CustomerVehicleDeviceAssoc">
+            <DOCUMENTS>
+              <DOCUMENT Name="CUST_ACCT_VEH_DEVICE" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="Device">
+            <DOCUMENTS>
+              <DOCUMENT Name="DEVICE" />
+              <DOCUMENT Name="DEVICE_FEAT" />
+              <DOCUMENT Name="DEVICE_IDNTFTN" />
+              <DOCUMENT Name="DEVICE_LINE" />
+              <DOCUMENT Name="DEVICE_MFGR" />
+              <DOCUMENT Name="DEVICE_TYPE" />
+              <DOCUMENT Name="PRTNR_DEVICE_TYPE" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="ReferenceModels">
+            <DOCUMENTS>
+              <DOCUMENT Name="CTRY" />
+              <DOCUMENT Name="SRC_INTAKE" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="ReferenceViews">
+            <DOCUMENTS>
+              <DOCUMENT Name="REF_CUST_V" />
+              <DOCUMENT Name="REF_ELEC_ADDR_V" />
+              <DOCUMENT Name="REF_STREET_ADDR_V" />
+              <DOCUMENT Name="REF_TEL_NUM_V" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="Toolkit Models">
+            <FOLDER Name="Group">
+              <DOCUMENTS>
+                <DOCUMENT Name="AttributeSet" />
+                <DOCUMENT Name="AttributeSetDetail" />
+                <DOCUMENT Name="GroupAttributeValInstance" />
+                <DOCUMENT Name="GroupAttributeValue" />
+                <DOCUMENT Name="GroupClass" />
+                <DOCUMENT Name="GroupExecutionLog" />
+                <DOCUMENT Name="GroupMaster" />
+                <DOCUMENT Name="GroupMember" />
+              </DOCUMENTS>
+            </FOLDER>
+            <FOLDER Name="LRDM">
+              <DOCUMENTS>
+                <DOCUMENT Name="Code_Set" />
+                <DOCUMENT Name="Code_Set_AT" AuditTrail="true" />
+                <DOCUMENT Name="Code_Set_Stats" />
+                <DOCUMENT Name="Code_Set_Table_Association" />
+                <DOCUMENT Name="Custom_Code_Set_Clm" />
+                <DOCUMENT Name="Custom_Code_Set_Clm_AT" AuditTrail="true" />
+                <DOCUMENT Name="Domain" />
+                <DOCUMENT Name="Domain_AT" AuditTrail="true" />
+                <DOCUMENT Name="MultiTable_Map" />
+                <DOCUMENT Name="Reference_Code" />
+                <DOCUMENT Name="Reference_Code_AT" AuditTrail="true" />
+                <DOCUMENT Name="Reference_Description" />
+                <DOCUMENT Name="Reference_Description_AT" AuditTrail="true" />
+                <DOCUMENT Name="Standard_Map" />
+                <DOCUMENT Name="Standard_Map_AT" AuditTrail="true" />
+                <DOCUMENT Name="Valid_Language" />
+                <DOCUMENT Name="Valid_Language_AT" AuditTrail="true" />
+              </DOCUMENTS>
+            </FOLDER>
+            <FOLDER Name="MDRM">
+              <DOCUMENTS>
+                <DOCUMENT Name="CrossRefRelation" />
+                <DOCUMENT Name="CrossReference" />
+                <DOCUMENT Name="RelationalObjKeyDesc" />
+                <DOCUMENT Name="RelationalObjProperties" />
+                <DOCUMENT Name="RelationalObject" />
+                <DOCUMENT Name="RelationalObjectColumnData" />
+                <DOCUMENT Name="RelationalObjectColumnMap" />
+                <DOCUMENT Name="RelationalObjectData" />
+                <DOCUMENT Name="RelationalObjectFilter" />
+                <DOCUMENT Name="RelationalObjectKeyType" />
+                <DOCUMENT Name="RelationalObjectMap" />
+              </DOCUMENTS>
+            </FOLDER>
+            <FOLDER Name="SyncUp">
+              <DOCUMENTS>
+                <DOCUMENT Name="LastSyncUp" />
+              </DOCUMENTS>
+            </FOLDER>
+            <FOLDER Name="System">
+              <DOCUMENTS>
+                <DOCUMENT Name="VersionDetails" />
+                <DOCUMENT Name="VersionInfo" />
+              </DOCUMENTS>
+            </FOLDER>
+          </FOLDER>
+          <FOLDER Name="TransactionModels">
+            <DOCUMENTS>
+              <DOCUMENT Name="ELEC_ADDR_RQST" />
+              <DOCUMENT Name="ELEC_ADDR_RSULT" />
+              <DOCUMENT Name="PRSNA" />
+              <DOCUMENT Name="PRSNA_ACCT" />
+              <DOCUMENT Name="PRSNA_ADDR" />
+              <DOCUMENT Name="PRSNA_ADDR_XREF" />
+              <DOCUMENT Name="PRSNA_CNTCT_PREF" />
+              <DOCUMENT Name="PRSNA_PROD" />
+              <DOCUMENT Name="PRSNA_RLTNSHP" />
+              <DOCUMENT Name="PRSNA_SRC_CHNL" />
+              <DOCUMENT Name="PRSNA_SRC_TYPE" />
+              <DOCUMENT Name="PRSNA_TRAIT" />
+              <DOCUMENT Name="PRSNA_XREF" />
+              <DOCUMENT Name="STREET_ADDR_RQST" />
+              <DOCUMENT Name="STREET_ADDR_RSULT" />
+              <DOCUMENT Name="TEL_NUM_RQST" />
+              <DOCUMENT Name="TEL_NUM_RSULT" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="Vehicle">
+            <DOCUMENTS>
+              <DOCUMENT Name="VEH" />
+              <DOCUMENT Name="VEH_ADDITIONAL_SPEC" />
+              <DOCUMENT Name="VEH_BASE_SPEC" />
+              <DOCUMENT Name="VEH_FEAT" />
+              <DOCUMENT Name="VEH_IDNTFTN" />
+              <DOCUMENT Name="VEH_MAKE" />
+              <DOCUMENT Name="VEH_MODL" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="VehicleDeviceAssociation">
+            <DOCUMENTS>
+              <DOCUMENT Name="VEH_DEVICE" />
+            </DOCUMENTS>
+          </FOLDER>
+          <FOLDER Name="ABCModels">
+            <DOCUMENTS>
+              <DOCUMENT Name="GROUP" />
+              <DOCUMENT Name="GROUP_JOB_RUN" />
+              <DOCUMENT Name="JOB_GROUP" />
+              <DOCUMENT Name="JOB_MASTER" />
+              <DOCUMENT Name="JOB_RUN_DETAILS" />
+              <DOCUMENT Name="SOURCE_FILE" />
+              <DOCUMENT Name="SOURCE_INTAKE" />
+              <DOCUMENT Name="STATUS" />
+            </DOCUMENTS>
+          </FOLDER>
+        </FOLDER>
+      </ALL_FOLDERS>
+    </FACET_CONTENT>
+  </REQUEST>
+</REQUESTS>
+

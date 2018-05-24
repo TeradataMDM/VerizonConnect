@@ -1,0 +1,973 @@
+<html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/02/2018 15:44:18:219</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+null
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/02/2018 20:32:14:781</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+null
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/03/2018 14:09:15:520</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/03/2018 14:09:15:522</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/03/2018 14:10:24:807</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:60)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/03/2018 14:10:24:811</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 2618] [SQLState 22012] FM_PERSIST_HIST_RUN_RESULT:Data out of Sync
+[MDMServices][EXEC_PROC-FM_CYCLE[MatchingWorkbench.xml:4080-4084], ELSE[MatchingWorkbench.xml:4075-4088], THEN[MatchingWorkbench.xml:4072-4107], action[MatchingWorkbench.xml:2937-4256], Action Group:null, pre_actions[MatchingWorkbench.xml:2936-4257], ui_form2[MatchingWorkbench.xml:2935-4703], next_node[MatchingWorkbench.xml:6517-6517], [MatchingWorkbench.xml:6515-6519], ui_form2[MatchingWorkbench.xml:6129-6540]]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:21:44:210</td> <td> WorkerThread-1</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1001';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1001';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1001';]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:23:45:647</td> <td> WorkerThread-1</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '1';]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:24:07:772</td> <td> WorkerThread-1</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:33:53:118</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_JOB_MASTER' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_JOB_MASTER WHERE  JOB_ID = '101';]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:34:53:350</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_GROUP' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_GROUP WHERE  GROUP_ID = '101';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_GROUP' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_GROUP WHERE  GROUP_ID = '101';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_GROUP' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_GROUP WHERE  GROUP_ID = '101';]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:37:40:704</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_STATUS' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_STATUS WHERE  STATUS_ID = '1';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_STATUS' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_STATUS WHERE  STATUS_ID = '1';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_STATUS' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_STATUS WHERE  STATUS_ID = '1';]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/07/2018 22:39:28:609</td> <td> WorkerThread-2</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_PRSNA_TRAIT' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_PRSNA_TRAIT WHERE  PRSNA_ID = '11' AND TRAIT_CD = '12' AND TRAIT_SEQ_ID = '1' AND LOB_NUM = '1';]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_PRSNA_TRAIT' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_PRSNA_TRAIT WHERE  PRSNA_ID = '11' AND TRAIT_CD = '12' AND TRAIT_SEQ_ID = '1' AND LOB_NUM = '1';]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.IfTestStatement.execute(IfTestStatement.java:53)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeActions(TaskNode.java:93)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:111)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3807] [SQLState 42S02] Object 'LD_PRSNA_TRAIT' does not exist.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT COUNT(*) AS CNT FROM LD_PRSNA_TRAIT WHERE  PRSNA_ID = '11' AND TRAIT_CD = '12' AND TRAIT_SEQ_ID = '1' AND LOB_NUM = '1';]
+
+    </td><td><br></td>
+  </tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+</table></body></html><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/09/2018 09:25:21:788</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/09/2018 09:25:21:789</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/09/2018 09:25:21:928</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleStatement.execute(RuleStatement.java:50)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:140)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.RuleModuleImpl.execute(RuleModuleImpl.java:137)
+	at com.teradata.platform.core.xrules.docext.RequestRuleModule.execute(RequestRuleModule.java:53)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: null[GET_ALL_DOC_NAMES[commonRules.xml:132-132], ACTION[commonRules.xml:131-210], RULE[commonRules.xml:130-211], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212], DEFINE_METHOD-getDocumentNames[commonRules.xml:119-212]]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/09/2018 09:25:21:929</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [MDMServices][REQUEST-getDocumentNames[commonRules.xml:260-264], ACTION[commonRules.xml:251-271], RULE[commonRules.xml:250-272], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273], DEFINE_METHOD-getAllDocLogicalNames[commonRules.xml:239-273]]
+
+    </td><td><br></td>
+  </tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr><html><head><title>Teradata Platform Log Messages</title> <style type="text/css"><!-- body, table {font-family: arial, sans-serif; font-size: small; color: #555555;}th {background: #ddd; text-align: left; border-left: 2px solid #eee;} th:nth-child(-n+5), td:nth-child(-n+5){white-space:nowrap;} td{ border-left: 2px solid #eee; border-bottom: 1px solid #eee;}--></style></head><body bgcolor="#FFFFFF" topmargin="6" leftmargin="6"><hr size="1" noshade><table wrap cellspacing="0" cellpadding="4" width="100%"><tr><th>Transaction Id</th><th>TD SessionId</th><th>Time</th><th>Thread Name</th><th>Level</th><th>Message</th><th>Stack Trace</th><th>Call Trace-Response</th></tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/10/2018 04:05:08:957</td> <td> WorkerThread-0</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+null
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/10/2018 09:33:17:527</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+Context=Executing Query: [select * from ( SELECT MDM41_CRDM.XREF_103_1.*,MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD AS S_MAP_ADDR_TYPE_CD,MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_TXT AS S_MAP_ELEC_ADDR_TXT,TRG.ADDR_TYPE_CD AS M_MAP_ADDR_TYPE_CD, TRG.ELEC_ADDR_TXT AS M_MAP_ELEC_ADDR_TXT,CASE WHEN 1=2 THEN 'Y' ELSE 'N' END MERGEINDICATOR,SCORE_PER.SCORE_PERCENTAGE FROM MDM41_CRDM.XREF_103_1,MDM41_STG.WRK_ELEC_ADDR_RSULT,MDM41.REF_ELEC_ADDR_V TRG,(SELECT INTER3.PROFILE_ID,SCORES,SCORE_NXT,MATCH_THRESHOLD_PCT,COALESCE(MATCH_THRESHOLD_PCT,SCORE_PERCENTAGE) SCORE_PERCENTAGE FROM (SELECT PROFILE_ID, THRESHOLDTYPE, SCORES, SCORE_NXT, MAX(PER_NUMBER) AS SCORE_PERCENTAGE FROM ( SELECT PROFILE_ID, SCORES, SCORE_PER, THRESHOLDTYPE, COALESCE(MIN(SCORE_PER) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORE_PER ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING)-1 ,100) SCORE_PER_NEXT, COALESCE(MIN(SCORES) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORES ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING) ,100) SCORE_NXT FROM ( SELECT DT1.PROFILE_ID ,DT1.SCORE_PER ,SCORES ,CAST('MATCHTHRESHOLD' AS VARCHAR(50)) THRESHOLDTYPE FROM (SELECT PROFILE_ID ,SCORE_PER ,SCORES ,ROW_NUMBER() OVER (PARTITION BY SCORE_PER ORDER BY SCORES) AS ROW_NUM ,COUNT(*) OVER (PARTITION BY SCORE_PER ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS ROW_COUNT FROM (SELECT DISTINCT PROFILE_ID,SCORES,QUANTILE (100,SCORES) + 1 SCORE_PER FROM ( SELECT DISTINCT         103 PROFILE_ID, SUM(CASE WHEN ( (DAY_OF_CALENDAR - 1)/( 2 ** (S.ROWE - 1) )(INTEGER)) MOD 2 =0 THEN SCORE1 ELSE SCORE2 END) SCORES FROM ( SELECT ROW_NUMBER() OVER(ORDER BY 1) ROWE , LOG_LIKELY_AGREE SCORE1, LOG_LIKELY_DISAGREE SCORE2 FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 )S,SYS_CALENDAR.CALENDAR WHERE DAY_OF_CALENDAR BETWEEN 1 AND 2 ** (SEL COUNT(*) FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 ) GROUP BY DAY_OF_CALENDAR)INTER) A ) AS DT1 CROSS JOIN (SELECT * FROM FM_PARAMETERS WHERE PROFILE_ID = 0 AND PARAMETER_NAME='MATCHTHRESHOLDABSOLUTE' )PARM WHERE ROW_NUM = (CASE WHEN PARAMETER_VALUE = 'MAX' THEN ROW_COUNT WHEN PARAMETER_VALUE = 'MIN' THEN 1 WHEN PARAMETER_VALUE = 'MEDIAN-L' THEN (ROW_COUNT + 1) / 2 WHEN PARAMETER_VALUE = 'MEDIAN-H' THEN (ROW_COUNT / 2) + 1 ELSE ROW_COUNT END ) ) INTER1)INTER2 INNER JOIN (SELECT DATE - (CALENDAR_DATE -100 ) PER_NUMBER FROM SYS_CALENDAR.CALENDAR WHERE CALENDAR_DATE BETWEEN DATE AND DATE +99 ) NUM ON PER_NUMBER BETWEEN SCORE_PER AND SCORE_PER_NEXT GROUP BY 1,2,3,4 )INTER3 LEFT OUTER JOIN FM_PROFILE PROF ON PROF.PROFILE_ID =INTER3.PROFILE_ID AND SCORES =MATCH_THRESHOLD_VALUE )SCORE_PER WHERE MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_RQST_ID= MDM41_CRDM.XREF_103_1.S_ELEC_ADDR_RQST_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.PRSNA_ID= MDM41_CRDM.XREF_103_1.S_PRSNA_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.S_ADDR_TYPE_CD AND TRG.ELEC_ADDR_ID= MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID AND TRG.ADDR_ID= MDM41_CRDM.XREF_103_1.M_ADDR_ID AND TRG.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD AND MDM41_CRDM.XREF_103_1.SCORE >= SCORE_PER.SCORES AND MDM41_CRDM.XREF_103_1.SCORE < SCORE_PER.SCORE_NXT  AND 1=1)A  where    trim(M_ADDR_ID) like CAST( trim('112') as varchar(1000) )    ORDER BY MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD,A.M_ADDR_TYPE_CD,A.S_ELEC_ADDR_RQST_ID,A.S_PRSNA_ID,A.S_ADDR_TYPE_CD]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+Context=Executing Query: [select * from ( SELECT MDM41_CRDM.XREF_103_1.*,MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD AS S_MAP_ADDR_TYPE_CD,MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_TXT AS S_MAP_ELEC_ADDR_TXT,TRG.ADDR_TYPE_CD AS M_MAP_ADDR_TYPE_CD, TRG.ELEC_ADDR_TXT AS M_MAP_ELEC_ADDR_TXT,CASE WHEN 1=2 THEN 'Y' ELSE 'N' END MERGEINDICATOR,SCORE_PER.SCORE_PERCENTAGE FROM MDM41_CRDM.XREF_103_1,MDM41_STG.WRK_ELEC_ADDR_RSULT,MDM41.REF_ELEC_ADDR_V TRG,(SELECT INTER3.PROFILE_ID,SCORES,SCORE_NXT,MATCH_THRESHOLD_PCT,COALESCE(MATCH_THRESHOLD_PCT,SCORE_PERCENTAGE) SCORE_PERCENTAGE FROM (SELECT PROFILE_ID, THRESHOLDTYPE, SCORES, SCORE_NXT, MAX(PER_NUMBER) AS SCORE_PERCENTAGE FROM ( SELECT PROFILE_ID, SCORES, SCORE_PER, THRESHOLDTYPE, COALESCE(MIN(SCORE_PER) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORE_PER ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING)-1 ,100) SCORE_PER_NEXT, COALESCE(MIN(SCORES) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORES ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING) ,100) SCORE_NXT FROM ( SELECT DT1.PROFILE_ID ,DT1.SCORE_PER ,SCORES ,CAST('MATCHTHRESHOLD' AS VARCHAR(50)) THRESHOLDTYPE FROM (SELECT PROFILE_ID ,SCORE_PER ,SCORES ,ROW_NUMBER() OVER (PARTITION BY SCORE_PER ORDER BY SCORES) AS ROW_NUM ,COUNT(*) OVER (PARTITION BY SCORE_PER ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS ROW_COUNT FROM (SELECT DISTINCT PROFILE_ID,SCORES,QUANTILE (100,SCORES) + 1 SCORE_PER FROM ( SELECT DISTINCT         103 PROFILE_ID, SUM(CASE WHEN ( (DAY_OF_CALENDAR - 1)/( 2 ** (S.ROWE - 1) )(INTEGER)) MOD 2 =0 THEN SCORE1 ELSE SCORE2 END) SCORES FROM ( SELECT ROW_NUMBER() OVER(ORDER BY 1) ROWE , LOG_LIKELY_AGREE SCORE1, LOG_LIKELY_DISAGREE SCORE2 FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 )S,SYS_CALENDAR.CALENDAR WHERE DAY_OF_CALENDAR BETWEEN 1 AND 2 ** (SEL COUNT(*) FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 ) GROUP BY DAY_OF_CALENDAR)INTER) A ) AS DT1 CROSS JOIN (SELECT * FROM FM_PARAMETERS WHERE PROFILE_ID = 0 AND PARAMETER_NAME='MATCHTHRESHOLDABSOLUTE' )PARM WHERE ROW_NUM = (CASE WHEN PARAMETER_VALUE = 'MAX' THEN ROW_COUNT WHEN PARAMETER_VALUE = 'MIN' THEN 1 WHEN PARAMETER_VALUE = 'MEDIAN-L' THEN (ROW_COUNT + 1) / 2 WHEN PARAMETER_VALUE = 'MEDIAN-H' THEN (ROW_COUNT / 2) + 1 ELSE ROW_COUNT END ) ) INTER1)INTER2 INNER JOIN (SELECT DATE - (CALENDAR_DATE -100 ) PER_NUMBER FROM SYS_CALENDAR.CALENDAR WHERE CALENDAR_DATE BETWEEN DATE AND DATE +99 ) NUM ON PER_NUMBER BETWEEN SCORE_PER AND SCORE_PER_NEXT GROUP BY 1,2,3,4 )INTER3 LEFT OUTER JOIN FM_PROFILE PROF ON PROF.PROFILE_ID =INTER3.PROFILE_ID AND SCORES =MATCH_THRESHOLD_VALUE )SCORE_PER WHERE MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_RQST_ID= MDM41_CRDM.XREF_103_1.S_ELEC_ADDR_RQST_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.PRSNA_ID= MDM41_CRDM.XREF_103_1.S_PRSNA_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.S_ADDR_TYPE_CD AND TRG.ELEC_ADDR_ID= MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID AND TRG.ADDR_ID= MDM41_CRDM.XREF_103_1.M_ADDR_ID AND TRG.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD AND MDM41_CRDM.XREF_103_1.SCORE >= SCORE_PER.SCORES AND MDM41_CRDM.XREF_103_1.SCORE < SCORE_PER.SCORE_NXT  AND 1=1)A  where    trim(M_ADDR_ID) like CAST( trim('112') as varchar(1000) )    ORDER BY MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD,A.M_ADDR_TYPE_CD,A.S_ELEC_ADDR_RQST_ID,A.S_PRSNA_ID,A.S_ADDR_TYPE_CD]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.UINode.reload(UINode.java:569)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.reloadEntry(UIContinueWorkflowCommand.java:280)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.reloadFromStack(UIContinueWorkflowCommand.java:272)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:185)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+Context=Executing Query: [select * from ( SELECT MDM41_CRDM.XREF_103_1.*,MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD AS S_MAP_ADDR_TYPE_CD,MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_TXT AS S_MAP_ELEC_ADDR_TXT,TRG.ADDR_TYPE_CD AS M_MAP_ADDR_TYPE_CD, TRG.ELEC_ADDR_TXT AS M_MAP_ELEC_ADDR_TXT,CASE WHEN 1=2 THEN 'Y' ELSE 'N' END MERGEINDICATOR,SCORE_PER.SCORE_PERCENTAGE FROM MDM41_CRDM.XREF_103_1,MDM41_STG.WRK_ELEC_ADDR_RSULT,MDM41.REF_ELEC_ADDR_V TRG,(SELECT INTER3.PROFILE_ID,SCORES,SCORE_NXT,MATCH_THRESHOLD_PCT,COALESCE(MATCH_THRESHOLD_PCT,SCORE_PERCENTAGE) SCORE_PERCENTAGE FROM (SELECT PROFILE_ID, THRESHOLDTYPE, SCORES, SCORE_NXT, MAX(PER_NUMBER) AS SCORE_PERCENTAGE FROM ( SELECT PROFILE_ID, SCORES, SCORE_PER, THRESHOLDTYPE, COALESCE(MIN(SCORE_PER) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORE_PER ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING)-1 ,100) SCORE_PER_NEXT, COALESCE(MIN(SCORES) OVER ( PARTITION BY THRESHOLDTYPE ORDER BY SCORES ROWS BETWEEN 1 FOLLOWING AND 1 FOLLOWING) ,100) SCORE_NXT FROM ( SELECT DT1.PROFILE_ID ,DT1.SCORE_PER ,SCORES ,CAST('MATCHTHRESHOLD' AS VARCHAR(50)) THRESHOLDTYPE FROM (SELECT PROFILE_ID ,SCORE_PER ,SCORES ,ROW_NUMBER() OVER (PARTITION BY SCORE_PER ORDER BY SCORES) AS ROW_NUM ,COUNT(*) OVER (PARTITION BY SCORE_PER ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS ROW_COUNT FROM (SELECT DISTINCT PROFILE_ID,SCORES,QUANTILE (100,SCORES) + 1 SCORE_PER FROM ( SELECT DISTINCT         103 PROFILE_ID, SUM(CASE WHEN ( (DAY_OF_CALENDAR - 1)/( 2 ** (S.ROWE - 1) )(INTEGER)) MOD 2 =0 THEN SCORE1 ELSE SCORE2 END) SCORES FROM ( SELECT ROW_NUMBER() OVER(ORDER BY 1) ROWE , LOG_LIKELY_AGREE SCORE1, LOG_LIKELY_DISAGREE SCORE2 FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 )S,SYS_CALENDAR.CALENDAR WHERE DAY_OF_CALENDAR BETWEEN 1 AND 2 ** (SEL COUNT(*) FROM FM_ATTR_PAIRING WHERE PROFILE_ID =         103 ) GROUP BY DAY_OF_CALENDAR)INTER) A ) AS DT1 CROSS JOIN (SELECT * FROM FM_PARAMETERS WHERE PROFILE_ID = 0 AND PARAMETER_NAME='MATCHTHRESHOLDABSOLUTE' )PARM WHERE ROW_NUM = (CASE WHEN PARAMETER_VALUE = 'MAX' THEN ROW_COUNT WHEN PARAMETER_VALUE = 'MIN' THEN 1 WHEN PARAMETER_VALUE = 'MEDIAN-L' THEN (ROW_COUNT + 1) / 2 WHEN PARAMETER_VALUE = 'MEDIAN-H' THEN (ROW_COUNT / 2) + 1 ELSE ROW_COUNT END ) ) INTER1)INTER2 INNER JOIN (SELECT DATE - (CALENDAR_DATE -100 ) PER_NUMBER FROM SYS_CALENDAR.CALENDAR WHERE CALENDAR_DATE BETWEEN DATE AND DATE +99 ) NUM ON PER_NUMBER BETWEEN SCORE_PER AND SCORE_PER_NEXT GROUP BY 1,2,3,4 )INTER3 LEFT OUTER JOIN FM_PROFILE PROF ON PROF.PROFILE_ID =INTER3.PROFILE_ID AND SCORES =MATCH_THRESHOLD_VALUE )SCORE_PER WHERE MDM41_STG.WRK_ELEC_ADDR_RSULT.ELEC_ADDR_RQST_ID= MDM41_CRDM.XREF_103_1.S_ELEC_ADDR_RQST_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.PRSNA_ID= MDM41_CRDM.XREF_103_1.S_PRSNA_ID AND MDM41_STG.WRK_ELEC_ADDR_RSULT.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.S_ADDR_TYPE_CD AND TRG.ELEC_ADDR_ID= MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID AND TRG.ADDR_ID= MDM41_CRDM.XREF_103_1.M_ADDR_ID AND TRG.ADDR_TYPE_CD= MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD AND MDM41_CRDM.XREF_103_1.SCORE >= SCORE_PER.SCORES AND MDM41_CRDM.XREF_103_1.SCORE < SCORE_PER.SCORE_NXT  AND 1=1)A  where    trim(M_ADDR_ID) like CAST( trim('112') as varchar(1000) )    ORDER BY MDM41_CRDM.XREF_103_1.M_ELEC_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_ID,MDM41_CRDM.XREF_103_1.M_ADDR_TYPE_CD,A.M_ADDR_TYPE_CD,A.S_ELEC_ADDR_RQST_ID,A.S_PRSNA_ID,A.S_ADDR_TYPE_CD]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/10/2018 09:33:17:527</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:297-297], action[SurvMerge.xml:72-341], Action Group:null, pre_actions[SurvMerge.xml:71-342], ui_form2[SurvMerge.xml:70-747]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:297-297], action[SurvMerge.xml:72-341], Action Group:null, pre_actions[SurvMerge.xml:71-342], ui_form2[SurvMerge.xml:70-747]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 3809] [SQLState 42S02] Column 'M_ADDR_ID' is ambiguous.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:297-297], action[SurvMerge.xml:72-341], Action Group:null, pre_actions[SurvMerge.xml:71-342], ui_form2[SurvMerge.xml:70-747]]
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/10/2018 09:35:35:596</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT * FROM MDM41_MST.M_ADDR WHERE ADDR_TYPE_CD='Email' AND ADDR_ID='112' AND ELEC_ADDR_ID='112']
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT * FROM MDM41_MST.M_ADDR WHERE ADDR_TYPE_CD='Email' AND ADDR_ID='112' AND ELEC_ADDR_ID='112']
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xrules.misc.CommandStatement.execute(CommandStatement.java:127)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.lang.ForEachStatement.execute(ForEachStatement.java:106)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.xrules.ActionGroup.execute(ActionGroup.java:42)
+	at com.teradata.platform.core.xrules.RuleContext.execute(RuleContext.java:208)
+	at com.teradata.platform.core.xrules.ActionContainerImpl.execute(ActionContainerImpl.java:58)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.reallyExecute(AbstractEventNode.java:165)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.execute(AbstractEventNode.java:195)
+	at com.teradata.platform.core.workflow.nodes.UINode.execute(UINode.java:227)
+	at com.teradata.platform.core.workflow.nodes.NextNode.execute(NextNode.java:74)
+	at com.teradata.platform.core.workflow.nodes.NextNodes.execute(NextNodes.java:65)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.executeNextNodes(TaskNode.java:73)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.UINode.executeNextNodes(UINode.java:163)
+	at com.teradata.platform.core.workflow.nodes.TaskNode.execute(TaskNode.java:118)
+	at com.teradata.platform.core.workflow.nodes.AbstractEventNode.onEvent(AbstractEventNode.java:249)
+	at com.teradata.platform.core.workflow.nodes.UINode.onEvent(UINode.java:238)
+	at com.teradata.platform.core.workflow.WorkflowInstance.onEvent(WorkflowInstance.java:318)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.executeAction(UIContinueWorkflowCommand.java:233)
+	at com.teradata.platform.core.xcommand.UIContinueWorkflowCommand.execute(UIContinueWorkflowCommand.java:191)
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:186)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+Context=Executing Query: [LOCKING ROW FOR ACCESS SELECT * FROM MDM41_MST.M_ADDR WHERE ADDR_TYPE_CD='Email' AND ADDR_ID='112' AND ELEC_ADDR_ID='112']
+
+    </td><td><br></td>
+  </tr>
+  <tr> <td> Unknown</td> <td> </td> <td> 05/10/2018 09:35:35:596</td> <td> WorkerThread-4</td> <td> Exception</td> 
+    <td>
+Error in Method executeRequest(Persist.java): MDMServices
+[Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:797-797], FOR_EACH[SurvMerge.xml:792-895], action[SurvMerge.xml:750-922], Action Group:null, pre_actions[SurvMerge.xml:749-923], ui_form2[SurvMerge.xml:748-986], next_node[SurvMerge.xml:728-728], [SurvMerge.xml:726-730], ui_form2[SurvMerge.xml:70-747]]
+    </td>
+    <td>com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:797-797], FOR_EACH[SurvMerge.xml:792-895], action[SurvMerge.xml:750-922], Action Group:null, pre_actions[SurvMerge.xml:749-923], ui_form2[SurvMerge.xml:748-986], next_node[SurvMerge.xml:728-728], [SurvMerge.xml:726-730], ui_form2[SurvMerge.xml:70-747]]
+	at com.teradata.platform.core.tool.Persist.executeRequest(Persist.java:259)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.endNewRequest(LocalRequestHandler.java:324)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:211)
+	at com.teradata.platform.core.xserver.LocalRequestHandler.request(LocalRequestHandler.java:176)
+	at com.teradata.platform.core.net.SoapRequestHandler.request(SoapRequestHandler.java:41)
+	at com.teradata.platform.core.net.server.scheduling.Request.execute(Request.java:89)
+	at com.teradata.platform.core.net.util.RunnableTask.execute(RunnableTask.java:53)
+	at com.teradata.platform.core.net.server.scheduling.RequestProcessor$WorkerRunnableTask.execute(RequestProcessor.java:48)
+	at com.teradata.platform.core.net.util.RunnableTask.run(RunnableTask.java:43)
+	at java.lang.Thread.run(Unknown Source)
+***********************  Xcore Trace *************************
+com.teradata.platform.core.util.XcoreException: [Teradata Database] [TeraJDBC 16.10.00.03] [Error 5628] [SQLState HY000] Column ELEC_ADDR_ID not found in MDM41_MST.M_ADDR.
+[MDMServices][EXECUTE_SQL_QUERY[SurvMerge.xml:797-797], FOR_EACH[SurvMerge.xml:792-895], action[SurvMerge.xml:750-922], Action Group:null, pre_actions[SurvMerge.xml:749-923], ui_form2[SurvMerge.xml:748-986], next_node[SurvMerge.xml:728-728], [SurvMerge.xml:726-730], ui_form2[SurvMerge.xml:70-747]]
+
+    </td><td><br></td>
+  </tr>

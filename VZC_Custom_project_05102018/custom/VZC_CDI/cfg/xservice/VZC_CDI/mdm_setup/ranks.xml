@@ -1,0 +1,51 @@
+<UPLOAD_CONFIG>
+  <JOB_PATH ResourceName="NC_CODE_SET">
+    <TEMPLATE Value="NetChangeCode_SetTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_CUSTOM_CODE_SET_CLM">
+    <TEMPLATE Value="NetChangeCustom_Code_Set_ClmTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_CLASS">
+    <TEMPLATE Value="NetChangeGroupClassTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_VALID_LANGUAGE">
+    <TEMPLATE Value="NetChangeValid_LanguageTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_ATTR_SET" Sequence="true">
+    <TEMPLATE Value="NetChangeAttributeSetTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_ATTR_SET_DETAIL" Sequence="true">
+    <TEMPLATE Value="NetChangeAttributeSetDetailTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_CODE_SET_STATS" Sequence="true">
+    <TEMPLATE Value="NetChangeCode_Set_StatsTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_DOMAIN" Sequence="true">
+    <TEMPLATE Value="NetChangeDomainTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_MASTER" Sequence="true">
+    <TEMPLATE Value="NetChangeGroupMasterTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_ATTR_VAL" Sequence="true">
+    <TEMPLATE Value="NetChangeGroupAttributeValueTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_EXEC_LOG" Sequence="true">
+    <TEMPLATE Value="NetChangeGroupExecutionLogTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_ATTR_VAL_INST" Sequence="true">
+    <TEMPLATE Value="NetChangeGroupAttributeValInstanceTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="GP_NC_GRP_MEMBER" Sequence="true">
+    <TEMPLATE Value="NetChangeGroupMemberTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_REFERENCE_CODE" Sequence="true">
+    <TEMPLATE Value="NetChangeReference_CodeTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_REFERENCE_DESCRIPTION" Sequence="true">
+    <TEMPLATE Value="NetChangeReference_DescriptionTemplate" />
+  </JOB_PATH>
+  <JOB_PATH ResourceName="NC_STANDARD_MAP" Sequence="true">
+    <TEMPLATE Value="NetChangeStandard_MapTemplate" />
+  </JOB_PATH>
+</UPLOAD_CONFIG>
+

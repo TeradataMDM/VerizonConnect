@@ -1,0 +1,28 @@
+<document>
+  <properties>
+    <property Name="JOB_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_ID" />
+    </property>
+    <property Name="JOB_NM" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_NM" />
+    </property>
+    <property Name="FILE_IDENTIFIER">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="FILE_IDENTIFIER" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="JOB_ID_PI_2002439" PhysicalName="JOB_ID_PI_2002439" Kind="PRIMARY">
+      <property Name="JOB_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_JOB_MASTER" MasterTable="M_JOB_MASTER" />
+    <miscFacet PhysicalName="JOB_MASTER" DisplayName="JobMaster" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

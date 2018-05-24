@@ -1,0 +1,31 @@
+<document>
+  <properties>
+    <property Name="ACCT_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_ID" />
+    </property>
+    <property Name="ACCT_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_NAME" />
+    </property>
+    <property Name="ACCT_TYPE_CD" PhysicalName="ACCT_TYPE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>ACCT_TYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_TYPE_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKACCOUNT" PhysicalName="XPKACCOUNT" Kind="PRIMARY">
+      <property Name="ACCT_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_ACCT" MasterTable="M_ACCT" />
+    <miscFacet PhysicalName="ACCT" DisplayName="Account" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

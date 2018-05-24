@@ -1,0 +1,36 @@
+<document>
+  <properties>
+    <property Name="ADDR_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_RQST_ID" />
+    </property>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="XREF_KEY1">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="XREF_Key1" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1PRSNA_ADDRESS_XREF" PhysicalName="XIE1PRSNA_ADDRESS_XREF" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+    <key Active="true" Name="XPKPRSNA_ADDRESS_XREF" PhysicalName="XPKPRSNA_ADDRESS_XREF" Kind="PRIMARY">
+      <property Name="ADDR_RQST_ID" />
+      <property Name="PRSNA_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_ADDR_XREF" MasterTable="PRSNA_ADDR_XREF" />
+    <miscFacet PhysicalName="PRSNA_ADDR_XREF" DisplayName="Persona Address Xref" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

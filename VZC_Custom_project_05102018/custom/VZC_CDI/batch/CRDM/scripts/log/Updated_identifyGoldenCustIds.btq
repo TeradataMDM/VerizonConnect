@@ -1,0 +1,73 @@
+/***********************************************************************************************************
+SCRIPT:              identifyGoldenCustIds.btq
+DESCRIPTION:         This script identify the golden ids.
+DEPENDENCY:           
+INPUT:               SURVIVORSHIP INTERIM Tables 
+OUTPUT:              
+SPECIAL INSTRUCTIONS:
+
+CHANGE LOG:
+VERSION              DATE                 AUTHOR                          CHANGES
+1.00                05/08/2018           CA186004                        CREATED
+***********************************************************************************************************/
+.LOGON 10.25.132.9/MDM41,MDM41
+--.SET ERROROUT STDOUT;
+--.SET SESSION CHARSET 'UTF8';
+
+--------------------------------------------------------------------------------------------------------------------
+-- Tables --
+--------------------------------------------------------------------------------------------------------------------
+/*Find Related records */
+
+UPDATE    MDM41_CRDM.SURV_201_303_2 
+FROM    (
+select    DISTINCT X1.CUST_ID,'GRP_'||TRIM(MAX(X2. CUST_ID) ) GRP
+from MDM41_CRDM.XREF_303_1 X1 INNER JOIN MDM41_CRDM.XREF_303_1 X2
+    ON X1.PRSNA_ID =X2.PRSNA_ID
+    GROUP BY 1)X
+    SET RELATION_KEY=GRP
+    WHERE MDM41_CRDM.SURV_201_303_2.CUST_ID=X.CUST_ID ;
+	
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
+    
+/* Rule for Update Golden Master  */
+	
+UPDATE MST 
+FROM    MDM41_CRDM.SURV_201_303_2  MST ,( 
+SELECT    ROWSEQNUM
+                ,RELATION_KEY
+                ,CAST (COALESCE(MST.SYS_LAST_MODIFIED_DATE,MST.SYS_CREATION_DATE) AS TIMESTAMP(0)) AS PICK_COLUM
+                   ,MST.CUST_ID
+FROM    (
+SELECT    * 
+FROM        MDM41_CRDM.SURV_201_303_2 
+WHERE    SYS_ERR_SVRTY IS NULL) INTR INNER JOIN M_CUST MST 
+    ON INTR.CUST_ID=MST.CUST_ID 
+QUALIFY     ROW_NUMBER()  OVER  (PARTITION BY RELATION_KEY ORDER BY PICK_COLUM DESC,ROWSEQNUM)=1)RUL  
+SET    GOLDEN_PK= RUL.CUST_ID ,SYS_ENT_STATE=(CASE WHEN RUL.CUST_ID=MST.CUST_ID THEN 'ACTIVE' ELSE 'DELETED' END ) 
+WHERE    RUL.RELATION_KEY=MST.RELATION_KEY 
+    AND  MST.INSERT_UPDATE_FLAG ='U';
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
+
+UPDATE    MDM41_CRDM.SURV_201_303_1 
+FROM    (
+select    DISTINCT X1.CUST_ID,'GRP_'||TRIM(MAX(X2. CUST_ID) ) GRP
+from MDM41_CRDM.XREF_303_1 X1 INNER JOIN MDM41_CRDM.XREF_303_1 X2
+    ON X1.PRSNA_ID =X2.PRSNA_ID
+    GROUP BY 1)X
+    SET RELATION_KEY=GRP
+    WHERE MDM41_CRDM.SURV_201_303_1.CUST_ID=X.CUST_ID ;
+	
+IF ERRORLEVEL > 0 THEN .GOTO EXIT;
+	
+.LABEL EXIT
+
+.IF ERRORLEVEL <= 4 THEN .GOTO WARN;
+.IF ERRORLEVEL > 4 THEN .GOTO ERR ;
+
+.LABEL WARN
+.QUIT 0
+
+.LABEL ERR
+.QUIT 1

@@ -1,0 +1,68 @@
+<document IsDocView="true">
+  <properties>
+    <property Name="ELEC_ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_SUBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_SUBTYPE_CD" />
+    </property>
+    <property Name="ELEC_ADDR_SBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_SBTYPE_CD" />
+    </property>
+    <property Name="DMN_ROOT_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DMN_ROOT_CD" />
+    </property>
+    <property Name="ELEC_ADDR_TXT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_TXT" />
+    </property>
+    <property Name="ELEC_ADDR_DMN_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_DMN_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKREF_ELEC_ADDR" PhysicalName="XPKREF_ELEC_ADDR" Kind="PRIMARY">
+      <property Name="ELEC_ADDR_ID" />
+      <property Name="ADDR_TYPE_CD" />
+      <property Name="ADDR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <miscFacet PhysicalName="REF_ELEC_ADDR_V" Active="true" />
+    <mdmConfigFacet SchemaGen="false" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql OnMDMTables="true" IsSimpleView="true">REPLACE VIEW MDM41.REF_ELEC_ADDR_V&#xD;
+AS&#xD;
+LOCKING ROW FOR ACCESS SELECT	&#xD;
+ELEC_ADDR.ELEC_ADDR_ID,&#xD;
+ADDR.ADDR_ID, &#xD;
+ADDR.ADDR_TYPE_CD, &#xD;
+ADDR.ADDR_SUBTYPE_CD, &#xD;
+ELEC_ADDR.ELEC_ADDR_SBTYPE_CD, &#xD;
+ELEC_ADDR.DMN_ROOT_CD, &#xD;
+ELEC_ADDR.ELEC_ADDR_TXT,&#xD;
+ELEC_ADDR.ELEC_ADDR_DMN_NAME,&#xD;
+ELEC_ADDR.SYS_TARGET_ID,&#xD;
+ELEC_ADDR.SYS_AUTH_ID,&#xD;
+ELEC_ADDR.SYS_SOURCE,&#xD;
+ELEC_ADDR.SYS_CREATED_BY,&#xD;
+ELEC_ADDR.SYS_CREATION_DATE,&#xD;
+ELEC_ADDR.SYS_ENT_STATE,&#xD;
+ELEC_ADDR.SYS_LAST_MODIFIED_BY,&#xD;
+ELEC_ADDR.SYS_LAST_MODIFIED_DATE,&#xD;
+ELEC_ADDR.SYS_NC_TYPE,&#xD;
+ELEC_ADDR.SYS_ERR_CODE,&#xD;
+ELEC_ADDR.SYS_ERR_SVRTY&#xD;
+FROM	MDM41_MST.M_ELEC_ADDR ELEC_ADDR&#xD;
+INNER JOIN MDM41_MST.M_ADDR ADDR&#xD;
+ON ELEC_ADDR.ELEC_ADDR_ID = ADDR.ADDR_ID&#xD;
+WHERE ELEC_ADDR.SYS_ENT_STATE='ACTIVE';</viewsql>
+</document>
+

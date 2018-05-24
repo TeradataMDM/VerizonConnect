@@ -1,0 +1,115 @@
+BTEQ 16.10.00.01 Wed May 09 22:26:32 2018 PID: 3876
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+/***********************************************************************************************************
+SCRIPT:              custNameRecon.btq
+DESCRIPTION:         This script update stage persona table with target cust ids
+DEPENDENCY:           
+INPUT:               SURVIVORSHIP INTERIM Tables 
+OUTPUT:              
+SPECIAL INSTRUCTIONS:
+
+CHANGE LOG:
+VERSION              DATE                 AUTHOR                          CHANGES
+1.00                05/08/2018           CA186004                        CREATED
+***********************************************************************************************************/
+.LOGON 10.25.132.9/MDM41,
+
+ *** Logon successfully completed.
+ *** Teradata Database Release is 16.20q.00.10                  
+ *** Teradata Database Version is 16.20q.00.10                    
+ *** Transaction Semantics are BTET.
+ *** Session Character Set Name is 'ASCII'.
+ 
+ *** Total elapsed time was 1 second.
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+--.SET ERROROUT STDOUT;
+--.SET SESSION CHARSET 'UTF8';
+
+--------------------------------------------------------------------------------------------------------------------
+-- Tables --
+--------------------------------------------------------------------------------------------------------------------
+
+DEL MDM41_CRDM.XREF_303_REL_KEY ;
+
+ *** Delete completed. 2 rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
++---------+---------+---------+---------+---------+---------+---------+----
+
+INSERT INTO MDM41_CRDM.XREF_303_REL_KEY
+SELECT LVL_1.M_PRSNA_ID AS PRSNA_ID,'DUPE_'||TRIM(MAX(GREATEST((LVL_1.S_PR
+SNA_ID (VARCHAR(500))) ,
+  (LVL_2.S_PRSNA_ID (VARCHAR(500))) ,(LVL_3.S_PRSNA_ID (VARCHAR(500))) ,
+  (LVL_4.S_PRSNA_ID (VARCHAR(500))) ))) RELATION_KEY 
+FROM MDM41_CRDM.XREF_304_1 AS LVL_1,MDM41_CRDM.XREF_304_1 AS LVL_2,
+  MDM41_CRDM.XREF_304_1 AS LVL_3,MDM41_CRDM.XREF_304_1 AS LVL_4 
+WHERE LVL_2.M_PRSNA_ID = LVL_1.S_PRSNA_ID 
+ AND LVL_3.M_PRSNA_ID = LVL_2.S_PRSNA_ID 
+ AND LVL_4.M_PRSNA_ID = LVL_3.S_PRSNA_ID 
+GROUP BY LVL_1.M_PRSNA_ID ;
+
+ *** Insert completed. 2 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
++---------+---------+---------+---------+---------+---------+---------+----
+
+INSERT INTO 
+MDM41_CRDM.XREF_303_1 (CUST_ID, PRSNA_ID, Score, Survivor_Ind, RUN_ID, RUN
+_TIMESTAMP) 
+SELECT DISTINCT CUST_ID,RELKEY.PRSNA_ID,Score,Survivor_Ind,RUN_ID,RUN_TIME
+STAMP FROM 
+(SELECT X.CUST_ID,REL.PRSNA_ID,Score,Survivor_Ind,RUN_ID,RUN_TIMESTAMP,REL
+_KEY
+FROM MDM41_CRDM.XREF_303_1 X INNER JOIN 
+MDM41_CRDM.XREF_303_REL_KEY REL
+ON X.PRSNA_ID=REL.PRSNA_ID) XREF
+INNER JOIN MDM41_CRDM.XREF_303_REL_KEY  RELKEY
+ON XREF.REL_KEY=RELKEY.REL_KEY;
+
+ *** Insert completed. 6 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
++---------+---------+---------+---------+---------+---------+---------+----
+
+DELETE FROM MDM41_CRDM.NROW_303
+WHERE PRSNA_ID IN (SELECT PRSNA_ID FROM MDM41_CRDM.XREF_303_1) ;
+
+ *** Delete completed. No rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
++---------+---------+---------+---------+---------+---------+---------+----
+
+.LABEL EXIT
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL <= 4 THEN .GOTO WARN;
+.GOTO WARN;
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORLEVEL > 4 THEN .GOTO ERR ;
+ *** Skipped.
++---------+---------+---------+---------+---------+---------+---------+----
+
+.LABEL WARN
++---------+---------+---------+---------+---------+---------+---------+----
+.QUIT 0
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 0 

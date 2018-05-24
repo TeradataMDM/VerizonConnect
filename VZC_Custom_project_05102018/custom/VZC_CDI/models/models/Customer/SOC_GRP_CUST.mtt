@@ -1,0 +1,37 @@
+<document>
+  <properties>
+    <property Name="SOC_GRP_CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_CUST_ID" />
+    </property>
+    <property Name="SOC_GRP_CUST_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_CUST_NAME" />
+    </property>
+    <property Name="SOC_GRP_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_type_CD" />
+    </property>
+    <property Name="SOC_GRP_CUST_CNT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_CUST_CNT" />
+    </property>
+    <property Name="SOC_GRP_CUST_CHLD_CNT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_CUST_CHLD_CNT" />
+    </property>
+    <property Name="SOC_GRP_CUST_Pet_CNT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_CUST_Pet_CNT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKSOCIAL_GROUP_CUSTOMER" PhysicalName="XPKSOCIAL_GROUP_CUSTOMER" Kind="PRIMARY">
+      <property Name="SOC_GRP_CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_SOC_GRP_CUST" MasterTable="M_SOC_GRP_CUST" />
+    <miscFacet PhysicalName="SOC_GRP_CUST" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

@@ -1,0 +1,128 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="PRSNA_SRC_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_SRC_ID" />
+    </property>
+    <property Name="FRST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FRST_NAME" />
+    </property>
+    <property Name="MDL_NAME" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MDL_NAME" />
+    </property>
+    <property Name="LAST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LAST_NAME" />
+    </property>
+    <property Name="ORG_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORG_NAME" />
+    </property>
+    <property Name="FULL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FULL_NAME" />
+    </property>
+    <property Name="NICK_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NICK_NAME" />
+    </property>
+    <property Name="GNDR_TYPE_CD" PhysicalName="GNDR_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GNDR_type_CD" />
+    </property>
+    <property Name="USR_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="USR_ID" />
+    </property>
+    <property Name="USR_ACCT_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="USR_ACCT_STRT_DT" />
+    </property>
+    <property Name="USR_ACCT_ROLE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="USR_ACCT_ROLE_CD" />
+    </property>
+    <property Name="STDZD_FRST_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="STDZD_FRST_NAME" />
+    </property>
+    <property Name="STDZD_LAST_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="STDZD_LAST_NAME" />
+    </property>
+    <property Name="STDZD_MDL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="STDZD_MDL_NAME" />
+    </property>
+    <property Name="PRSNA_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_TYPE_CD" />
+    </property>
+    <property Name="PRSNA_ROLE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ROLE_CD" />
+    </property>
+    <property Name="UNVRSL_AUTHZTN_LANG_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="UNVRSL_AUTHZTN_LANG_CD" />
+    </property>
+    <property Name="PRSNA_BUS_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_BUS_DT" />
+    </property>
+    <property Name="UNVRSL_AUTHZTN_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="UNVRSL_AUTHZTN_STRT_DT" />
+    </property>
+    <property Name="SOC_GRP_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SOC_GRP_NAME" />
+    </property>
+    <property Name="MKTG_PRG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MKTG_PRG_ID" />
+    </property>
+    <property Name="SRC_INTAKE_ID" PhysicalName="SRC_INTAKE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_Intake_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="PRTNR_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRTNR_NAME" />
+    </property>
+    <property Name="NAME_PRFX">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_PRFX" />
+    </property>
+    <property Name="NAME_SFX">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_SFX" />
+    </property>
+    <property Name="PREFD_LANG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PREFD_LANG" />
+    </property>
+    <property Name="TERMS_ACPTNC_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TERMS_ACPTNC_DT" />
+    </property>
+    <property Name="CMUNCTN_TM_ZN">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CMUNCTN_TM_ZN" />
+    </property>
+    <property Name="LEAD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LEAD_NUM" />
+    </property>
+    <property Name="ETHCTY_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ETHCTY_type_CD" />
+    </property>
+    <property Name="USR_RGSTRN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="USR_RGSTRN_DT" />
+    </property>
+    <property Name="UNVRSL_OPT_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="UNVRSL_OPT_IND" />
+    </property>
+    <property Name="TGT_CUST_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TGT_CUST_ID" />
+    </property>
+    <property Name="INSERT_UPDATE_FLAG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INSERT_UPDATE_FLAG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA" PhysicalName="XPKPRSNA" Kind="PRIMARY">
+      <property Name="PRSNA_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA" MasterTable="PRSNA" />
+    <miscFacet PhysicalName="PRSNA" DisplayName="Persona" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

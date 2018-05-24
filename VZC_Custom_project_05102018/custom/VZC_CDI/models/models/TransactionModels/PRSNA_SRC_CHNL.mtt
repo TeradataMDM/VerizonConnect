@@ -1,0 +1,26 @@
+<document>
+  <properties>
+    <property Name="PRSNA_SRC_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_SRC_type_CD" />
+    </property>
+    <property Name="CHNL_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHNL_ID" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA_SOURCE_CHANNEL" PhysicalName="XPKPRSNA_SOURCE_CHANNEL" Kind="PRIMARY">
+      <property Name="PRSNA_SRC_type_CD" />
+      <property Name="CHNL_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_SRC_CHNL" MasterTable="PRSNA_SRC_CHNL" />
+    <miscFacet PhysicalName="PRSNA_SRC_CHNL" DisplayName="Persona Source Channel" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

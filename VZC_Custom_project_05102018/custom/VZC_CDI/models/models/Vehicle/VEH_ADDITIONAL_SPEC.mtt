@@ -1,0 +1,38 @@
+<document>
+  <properties>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="VEH_SPEC_TYPE" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_SPEC_TYPE" />
+    </property>
+    <property Name="VEH_SPEC_MEAS_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_SPEC_MEAS_CD" />
+    </property>
+    <property Name="VEH_SPEC_VAL">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_SPEC_VAL" />
+    </property>
+    <property Name="VEH_SPEC_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_SPEC_DESC" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKVEHICLE_ADDITIONAL_SPECIFICATION" PhysicalName="XPKVEHICLE_ADDITIONAL_SPECIFICATION" Kind="PRIMARY">
+      <property Name="VEH_ID" />
+      <property Name="VEH_SPEC_TYPE" />
+    </key>
+    <key Active="true" Name="XIE1VEHICLE_ADDITIONAL_SPECIFICATION" PhysicalName="XIE1VEHICLE_ADDITIONAL_SPECIFICATION" Kind="NUPI">
+      <property Name="VEH_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_ADDITIONAL_SPEC" MasterTable="M_VEH_ADDITIONAL_SPEC" />
+    <miscFacet PhysicalName="VEH_ADDITIONAL_SPEC" DisplayName="Vehicle Additional Speciification" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

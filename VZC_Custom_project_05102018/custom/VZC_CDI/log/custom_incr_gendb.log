@@ -1,0 +1,1659 @@
+05/07/2018  22:01:20.72
+Setting up Incr Database Schema and Data
+05/07/2018  22:01:20.74
+performing Service Setup
+05/07/2018  22:01:20.76
+performing Service Setup
+
+05/07/2018 22:01:21:184 *************
+05/07/2018 22:01:21:215 Service setup
+05/07/2018 22:01:21:215 *************
+
+05/07/2018 22:01:21:278 Service setup done
+
+05/07/2018 22:01:22:167 ********************
+05/07/2018 22:01:22:167 Validating Model Set
+05/07/2018 22:01:22:167 ********************
+
+05/07/2018 22:01:22:292  Schema Gen set to False,Skipping Validation for REF_CUST_V
+05/07/2018 22:01:22:292  Schema Gen set to False,Skipping Validation for REF_ELEC_ADDR_V
+05/07/2018 22:01:22:292  Schema Gen set to False,Skipping Validation for REF_STREET_ADDR_V
+05/07/2018 22:01:22:292  Schema Gen set to False,Skipping Validation for REF_TEL_NUM_V
+05/07/2018 22:01:22:292
+  Error: RelationalObjProperties's Column Name:"Name" is a RESERVED word
+
+05/07/2018 22:01:22:292
+  Error: RelationalObjProperties's Column Name:"Nullable" is a RESERVED word
+
+
+05/07/2018 22:01:22:386 *************************
+05/07/2018 22:01:22:386 Done Validating Model Set
+05/07/2018 22:01:22:386 *************************
+
+
+05/07/2018 22:01:22:386 ***********************
+05/07/2018 22:01:22:386 Export master documents
+05/07/2018 22:01:22:386 ***********************
+
+05/07/2018 22:01:22:745 export master documents done
+05/07/2018 22:01:22:745 Export document facets
+
+05/07/2018 22:01:23:072 **********************
+05/07/2018 22:01:23:072 Export error documents
+05/07/2018 22:01:23:072 **********************
+
+05/07/2018 22:01:23:181 export error documents done
+05/07/2018 22:01:23:181 Export error document facet
+05/07/2018 22:01:23:509 Export misc facets
+
+05/07/2018 22:01:23:509 **********************
+05/07/2018 22:01:23:509 Export input documents
+05/07/2018 22:01:23:509 **********************
+
+05/07/2018 22:01:23:540 export input documents done
+
+05/07/2018 22:01:23:540 ************************
+05/07/2018 22:01:23:540 Export version documents
+05/07/2018 22:01:23:540 ************************
+
+05/07/2018 22:01:23:649 export version documents done
+
+05/07/2018 22:01:23:649 **************************
+05/07/2018 22:01:23:649 Export netchange documents
+05/07/2018 22:01:23:649 **************************
+
+05/07/2018 22:01:23:665 export netchange documents done
+
+05/07/2018 22:01:23:665 ***********************
+05/07/2018 22:01:23:665 Export output documents
+05/07/2018 22:01:23:665 ***********************
+
+05/07/2018 22:01:23:759 export output documents done
+
+05/07/2018 22:01:23:759 ****************
+05/07/2018 22:01:23:759 Export specs ...
+05/07/2018 22:01:23:759 ****************
+
+05/07/2018 22:01:23:759 Export rank list
+05/07/2018 22:01:23:790 Export correlation table
+05/07/2018 22:01:23:805 Export document views
+05/07/2018 22:01:23:821 Export document views
+05/07/2018 22:01:23:821 Export net change sql
+05/07/2018 22:01:23:946 Export net change templates
+05/07/2018 22:01:23:961 Export net change csv templates
+05/07/2018 22:01:23:961 Export entity templates
+05/07/2018 22:01:24:055 Export validation specs
+05/07/2018 22:01:24:086 Export internationalization spec
+05/07/2018 22:01:24:102 Export Doc View Sql
+05/07/2018 22:01:24:102 Export Web Service Facets
+
+05/07/2018 22:01:24:305 *******
+05/07/2018 22:01:24:305 Summary
+05/07/2018 22:01:24:305 *******
+
+
+05/07/2018 22:01:24:305 ********
+05/07/2018 22:01:24:305 Warnings
+05/07/2018 22:01:24:305 ********
+
+05/07/2018 22:01:24:305 No warnings
+
+05/07/2018 22:01:24:305 ******
+05/07/2018 22:01:24:305 Errors
+05/07/2018 22:01:24:305 ******
+
+RelationalObjProperties's Column Name:"Name" is a RESERVED word     : 1
+RelationalObjProperties's Column Name:"Nullable" is a RESERVED word : 1
+
+05/07/2018 22:01:24:305 MDM spec. generation done
+05/07/2018  22:01:24.41
+Generating Schema
+05/07/2018 22:01:24:869 *************
+05/07/2018 22:01:24:885 ISG Validator
+05/07/2018 22:01:24:885 *************
+05/07/2018 22:01:29:410 Starting Schema Generation
+05/07/2018 22:01:29:425 Starting Teradata Platform Server...
+05/07/2018 22:01:29:628 xserver :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:29:737 Creating initial db connections for connection profile default : 5
+05/07/2018 22:01:30:642 PLATFORM :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:33:357 MDMServices :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:038 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:209 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:209 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:240 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:287 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:287 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:303 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:303 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:38:318 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:42:079 Executed SQL :ALTER TABLE MB_OBJECT_DETAILS  ADD  SURROGATE_ENABLED char(1) DEFAULT 'FALSE' 
+05/07/2018 22:01:42:313 Executed SQL :CREATE TABLE MDM41_MST.M_GROUP (	GROUP_ID	INTEGER		 NOT NULL,	GROUP_NM	varchar(100)		,	PARENT_GROUP_ID	INTEGER		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_GROUP_PK PRIMARY KEY(GROUP_ID) )  
+05/07/2018 22:01:42:391 Executed SQL :REPLACE VIEW M_GROUP AS SELECT * FROM MDM41_MST.M_GROUP 
+05/07/2018 22:01:42:453 Executed SQL :ALTER TABLE MDM41_MST.M_GROUP ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:42:500 Executed SQL :ALTER TABLE MDM41_MST.M_GROUP ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:44:013 Executed SQL :CREATE TABLE MDM41_MST.M_GROUP_JOB_RUN (	JOB_GROUP_RUN_ID	varchar(50)		 NOT NULL,	SRC_INTAKE_CD	varchar(100)		,	DATA_SOURCE	varchar(100)		,	DATA_SOURCE_TYPE	varchar(100)		,	STATUS_ID	INTEGER		,	START_DTTM	TIMESTAMP(0)		,	END_DTTM	TIMESTAMP(0)		,	SRC_JOB_RUN_ID	varchar(50)		,	EXECUTE_TEXT	varchar(1000)		,	LOG_FILE_NM	varchar(1000)		,	JOB_ERROR_MESSAGE_TEXT	varchar(1000)		,	ERROR_TABLE_NM	varchar(100)		,	ERROR_RESOLVED_FLAG	char(1)		,	SOURCE_COUNT	INTEGER		,	TARGET_COUNT	INTEGER		,	ERROR_COUNT	INTEGER		,	NOTIFICATION_STATUS	varchar(40)		 DEFAULT 'NOT_PROCESSED' ,	ROW_ERROR_FILE	varchar(100)		,	ERROR_PERCENT	INTEGER		,	DUP_COUNT	INTEGER		,	WARNING_COUNT	INTEGER		,	GROUP_ID	INTEGER		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_GROUP_JOB_RUN_PK PRIMARY KEY(JOB_GROUP_RUN_ID) )  PRIMARY INDEX MST_JOB_RUN_FK1 (STATUS_ID)  
+05/07/2018 22:01:44:154 Executed SQL :REPLACE VIEW M_GROUP_JOB_RUN AS SELECT * FROM MDM41_MST.M_GROUP_JOB_RUN 
+05/07/2018 22:01:44:200 Executed SQL :CREATE INDEX MST_JOB_RUN_FK2 (SRC_INTAKE_CD, END_DTTM) ON MDM41_MST.M_GROUP_JOB_RUN 
+05/07/2018 22:01:44:263 Executed SQL :ALTER TABLE MDM41_MST.M_GROUP_JOB_RUN ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:44:325 Executed SQL :ALTER TABLE MDM41_MST.M_GROUP_JOB_RUN ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:44:388 Executed SQL :CREATE TABLE MDM41_MST.M_JOB_GROUP (	GROUP_ID	INTEGER		 NOT NULL,	JOB_ID	INTEGER		 NOT NULL,	SEQUENCE_ID	INTEGER		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_JOB_GROUP_PK PRIMARY KEY(GROUP_ID,JOB_ID) )  PRIMARY INDEX MST_XIE1MST_JOB_GROUP (JOB_ID)  
+05/07/2018 22:01:44:434 Executed SQL :REPLACE VIEW M_JOB_GROUP AS SELECT * FROM MDM41_MST.M_JOB_GROUP 
+05/07/2018 22:01:44:466 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_GROUP ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:44:512 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_GROUP ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:44:590 Executed SQL :CREATE TABLE MDM41_MST.M_JOB_MASTER (	JOB_ID	INTEGER		 NOT NULL,	JOB_NM	varchar(100)		,	FILE_IDENTIFIER	INTEGER		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_JOB_MASTER_PK PRIMARY KEY(JOB_ID) )  
+05/07/2018 22:01:44:637 Executed SQL :REPLACE VIEW M_JOB_MASTER AS SELECT * FROM MDM41_MST.M_JOB_MASTER 
+05/07/2018 22:01:44:684 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_MASTER ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:44:762 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_MASTER ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:44:856 Executed SQL :CREATE TABLE MDM41_MST.M_JOB_RUN_DETAILS (	JOB_RUN_ID	varchar(50)		 NOT NULL,	EXECUTE_TEXT	varchar(1000)		,	LOG_FILE_NAME	varchar(1000)		,	JOB_ERROR_MESSAGE_TEXT	varchar(1000)		,	ERROR_TABLE_NAME	varchar(100)		,	ERROR_RESOLVED_FLAG	char(1)		,	SOURCE_COUNT	INTEGER		,	TARGET_COUNT	INTEGER		,	ERROR_COUNT	INTEGER		,	JOB_ID	INTEGER		 NOT NULL,	JOB_GROUP_RUN_ID	varchar(50)		,	STATUS_ID	INTEGER		,	START_DTTM	TIMESTAMP(0)		,	END_DTTM	TIMESTAMP(0)		,	ERROR_PERCENT	INTEGER		,	WARNING_COUNT	INTEGER		,	ROW_ERROR_FILE	varchar(100)		,	DUP_COUNT	INTEGER		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_JOB_RUN_D1_PK PRIMARY KEY(JOB_RUN_ID,JOB_ID) )  
+05/07/2018 22:01:44:918 Executed SQL :REPLACE VIEW M_JOB_RUN_DETAILS AS SELECT * FROM MDM41_MST.M_JOB_RUN_DETAILS 
+05/07/2018 22:01:44:965 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_RUN_DETAILS ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:45:012 Executed SQL :ALTER TABLE MDM41_MST.M_JOB_RUN_DETAILS ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:45:074 Executed SQL :CREATE TABLE MDM41_MST.M_SOURCE_FILE (	FILE_IDENTIFIER	INTEGER		 NOT NULL,	SOURCE_INTAKE_ID	char(18)		 NOT NULL,	FILE_NAME	varchar(20)		,	FILE_DESCRIPTION	char(18)		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_SOURCE_FILE_PK PRIMARY KEY(FILE_IDENTIFIER) )  
+05/07/2018 22:01:45:121 Executed SQL :REPLACE VIEW M_SOURCE_FILE AS SELECT * FROM MDM41_MST.M_SOURCE_FILE 
+05/07/2018 22:01:45:152 Executed SQL :ALTER TABLE MDM41_MST.M_SOURCE_FILE ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:45:215 Executed SQL :ALTER TABLE MDM41_MST.M_SOURCE_FILE ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:45:277 Executed SQL :CREATE TABLE MDM41_MST.M_SOURCE_INTAKE (	SOURCE_INTAKE_ID	char(18)		 NOT NULL,	SOURCE_TYPE_CD	varchar(50)		 NOT NULL,	SOURCE_TYPE_DESC	varchar(250)		,	SOURCE_TYPE_NAME	varchar(100)		,	SOURCE_PROVIDER_CD	varchar(50)		,	SOURCE_FOLDER_TXT	varchar(1000)		,	SFTP_FLAG	char(3)		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_SOURCE_INTAKE_PK PRIMARY KEY(SOURCE_INTAKE_ID) )  
+05/07/2018 22:01:45:339 Executed SQL :REPLACE VIEW M_SOURCE_INTAKE AS SELECT * FROM MDM41_MST.M_SOURCE_INTAKE 
+05/07/2018 22:01:45:386 Executed SQL :ALTER TABLE MDM41_MST.M_SOURCE_INTAKE ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:45:417 Executed SQL :ALTER TABLE MDM41_MST.M_SOURCE_INTAKE ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:45:464 Executed SQL :CREATE TABLE MDM41_MST.M_STATUS (	STATUS_ID	INTEGER		 NOT NULL,	STATUS_NM	varchar(100)		,	SYS_TARGET_ID	INTEGER		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_CREATED_BY	varchar(70)		,	SYS_CREATION_DATE	TIMESTAMP(0)		,	SYS_ENT_STATE	varchar(25)		,	SYS_LAST_MODIFIED_BY	varchar(70)		,	SYS_LAST_MODIFIED_DATE	TIMESTAMP(0)		,	SYS_NC_TYPE	varchar(25)		,	SYS_ERR_CODE	varchar(10000)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_WORKFLOW_ID	varchar(100)		, CONSTRAINT M_STATUS_PK PRIMARY KEY(STATUS_ID) )  
+05/07/2018 22:01:45:495 Executed SQL :REPLACE VIEW M_STATUS AS SELECT * FROM MDM41_MST.M_STATUS 
+05/07/2018 22:01:45:542 Executed SQL :ALTER TABLE MDM41_MST.M_STATUS ADD SYS_ENT_STATE CHECK ( SYS_ENT_STATE  IN ('ACTIVE','INACTIVE','NEW','DELETED') )
+05/07/2018 22:01:45:589 Executed SQL :ALTER TABLE MDM41_MST.M_STATUS ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING') )
+05/07/2018 22:01:45:636 Executed SQL :CREATE TABLE MDM41_MST.E_GROUP (	GROUP_ID	varchar(25)		,	GROUP_NM	varchar(100)		,	PARENT_GROUP_ID	varchar(25)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'GROUP' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_GROUP_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:45:683 Executed SQL :REPLACE VIEW E_GROUP AS SELECT * FROM MDM41_MST.E_GROUP 
+05/07/2018 22:01:45:729 Executed SQL :ALTER TABLE MDM41_MST.E_GROUP ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:45:792 Executed SQL :CREATE TABLE MDM41_MST.E_GROUP_JOB_RUN (	JOB_GROUP_RUN_ID	varchar(50)		,	SRC_INTAKE_CD	varchar(100)		,	DATA_SOURCE	varchar(100)		,	DATA_SOURCE_TYPE	varchar(100)		,	STATUS_ID	varchar(25)		,	START_DTTM	varchar(50)		,	END_DTTM	varchar(50)		,	SRC_JOB_RUN_ID	varchar(50)		,	EXECUTE_TEXT	varchar(1000)		,	LOG_FILE_NM	varchar(1000)		,	JOB_ERROR_MESSAGE_TEXT	varchar(1000)		,	ERROR_TABLE_NM	varchar(100)		,	ERROR_RESOLVED_FLAG	char(1)		,	SOURCE_COUNT	varchar(25)		,	TARGET_COUNT	varchar(25)		,	ERROR_COUNT	varchar(25)		,	NOTIFICATION_STATUS	varchar(40)		,	ROW_ERROR_FILE	varchar(100)		,	ERROR_PERCENT	varchar(25)		,	DUP_COUNT	varchar(25)		,	WARNING_COUNT	varchar(25)		,	GROUP_ID	varchar(25)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'GROUP_JOB_RUN' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_GROUP_JOB_RUN_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:45:885 Executed SQL :REPLACE VIEW E_GROUP_JOB_RUN AS SELECT * FROM MDM41_MST.E_GROUP_JOB_RUN 
+05/07/2018 22:01:45:948 Executed SQL :ALTER TABLE MDM41_MST.E_GROUP_JOB_RUN ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:010 Executed SQL :CREATE TABLE MDM41_MST.E_JOB_GROUP (	GROUP_ID	varchar(25)		,	JOB_ID	varchar(25)		,	SEQUENCE_ID	varchar(25)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'JOB_GROUP' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_JOB_GROUP_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:057 Executed SQL :REPLACE VIEW E_JOB_GROUP AS SELECT * FROM MDM41_MST.E_JOB_GROUP 
+05/07/2018 22:01:46:088 Executed SQL :ALTER TABLE MDM41_MST.E_JOB_GROUP ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:151 Executed SQL :CREATE TABLE MDM41_MST.E_JOB_MASTER (	JOB_ID	varchar(25)		,	JOB_NM	varchar(100)		,	FILE_IDENTIFIER	varchar(25)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'JOB_MASTER' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_JOB_MASTER_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:197 Executed SQL :REPLACE VIEW E_JOB_MASTER AS SELECT * FROM MDM41_MST.E_JOB_MASTER 
+05/07/2018 22:01:46:244 Executed SQL :ALTER TABLE MDM41_MST.E_JOB_MASTER ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:322 Executed SQL :CREATE TABLE MDM41_MST.E_JOB_RUN_DETAILS (	JOB_RUN_ID	varchar(50)		,	EXECUTE_TEXT	varchar(1000)		,	LOG_FILE_NAME	varchar(1000)		,	JOB_ERROR_MESSAGE_TEXT	varchar(1000)		,	ERROR_TABLE_NAME	varchar(100)		,	ERROR_RESOLVED_FLAG	char(1)		,	SOURCE_COUNT	varchar(25)		,	TARGET_COUNT	varchar(25)		,	ERROR_COUNT	varchar(25)		,	JOB_ID	varchar(25)		,	JOB_GROUP_RUN_ID	varchar(50)		,	STATUS_ID	varchar(25)		,	START_DTTM	varchar(50)		,	END_DTTM	varchar(50)		,	ERROR_PERCENT	varchar(25)		,	WARNING_COUNT	varchar(25)		,	ROW_ERROR_FILE	varchar(100)		,	DUP_COUNT	varchar(25)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'JOB_RUN_DETAILS' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_JOB_RUN_D2_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:369 Executed SQL :REPLACE VIEW E_JOB_RUN_DETAILS AS SELECT * FROM MDM41_MST.E_JOB_RUN_DETAILS 
+05/07/2018 22:01:46:416 Executed SQL :ALTER TABLE MDM41_MST.E_JOB_RUN_DETAILS ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:478 Executed SQL :CREATE TABLE MDM41_MST.E_SOURCE_FILE (	FILE_IDENTIFIER	varchar(25)		,	SOURCE_INTAKE_ID	char(18)		,	FILE_NAME	varchar(20)		,	FILE_DESCRIPTION	char(18)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'SOURCE_FILE' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_SOURCE_FILE_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:525 Executed SQL :REPLACE VIEW E_SOURCE_FILE AS SELECT * FROM MDM41_MST.E_SOURCE_FILE 
+05/07/2018 22:01:46:572 Executed SQL :ALTER TABLE MDM41_MST.E_SOURCE_FILE ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:728 Executed SQL :CREATE TABLE MDM41_MST.E_SOURCE_INTAKE (	SOURCE_INTAKE_ID	char(18)		,	SOURCE_TYPE_CD	varchar(50)		,	SOURCE_TYPE_DESC	varchar(250)		,	SOURCE_TYPE_NAME	varchar(100)		,	SOURCE_PROVIDER_CD	varchar(50)		,	SOURCE_FOLDER_TXT	varchar(1000)		,	SFTP_FLAG	char(3)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'SOURCE_INTAKE' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_SOURCE_INTAKE_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:790 Executed SQL :REPLACE VIEW E_SOURCE_INTAKE AS SELECT * FROM MDM41_MST.E_SOURCE_INTAKE 
+05/07/2018 22:01:46:837 Executed SQL :ALTER TABLE MDM41_MST.E_SOURCE_INTAKE ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:46:884 Executed SQL :CREATE TABLE MDM41_MST.E_STATUS (	STATUS_ID	varchar(25)		,	STATUS_NM	varchar(100)		,	SYS_TARGET_ID	varchar(10)		,	SYS_AUTH_ID	varchar(1000)		,	SYS_SOURCE	varchar(256)		 DEFAULT 'BackEnd' ,	SYS_ERROR_ID	INTEGER GENERATED BY DEFAULT AS IDENTITY ( START WITH 1 INCREMENT BY 2 MINVALUE 1 MAXVALUE 2147483647 NO CYCLE)		 NOT NULL,	SYS_ERR_CODE	varchar(10000)		,	SYS_UPDATED	varchar(15)		,	SYS_ERROR_TIME	varchar(20)		,	SYS_ERR_SVRTY	varchar(30)		,	SYS_NC_TYPE	varchar(25)		,	SYS_DOCUMENT	varchar(100)		 DEFAULT 'STATUS' ,	SYS_LOAD_ID	varchar(32)		,	SYS_WORKFLOW_ID	varchar(100)		,	SYS_VER_ID	INTEGER		, CONSTRAINT E_STATUS_PK PRIMARY KEY(SYS_ERROR_ID) )  
+05/07/2018 22:01:46:915 Executed SQL :REPLACE VIEW E_STATUS AS SELECT * FROM MDM41_MST.E_STATUS 
+05/07/2018 22:01:46:962 Executed SQL :ALTER TABLE MDM41_MST.E_STATUS ADD SYS_ERR_SVRTY CHECK ( SYS_ERR_SVRTY  IN ('SEVERE_ERROR','ERROR','WARNING','REJECTED') )
+05/07/2018 22:01:47:009 Creating View from File: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\viewsql\REF_CUST_V.sql
+05/07/2018 22:01:47:165 Creating View from File: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\viewsql\REF_ELEC_ADDR_V.sql
+05/07/2018 22:01:47:258 Creating View from File: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\viewsql\REF_STREET_ADDR_V.sql
+05/07/2018 22:01:47:368 Creating View from File: E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\cfg\xservice\VZC_CDI\viewsql\REF_TEL_NUM_V.sql
+<OPERATIONS Total="3167">
+  <OPERATION Name="CREATE_SCHEMA_META_DATA" Repeats="6" ElapsedTime="2996"/>
+  <OPERATION Name="GET_TABLE_NAMES" Repeats="6" ElapsedTime="93"/>
+  <OPERATION Name="GET_TABLE_COLUMNS" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_TABLE_PK" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_TABLE_PI" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_TABLE_UK" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_TABLE_INDEX" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_TABLE_FK" Repeats="587" ElapsedTime="0"/>
+  <OPERATION Name="GET_SEQUENCES" Repeats="6" ElapsedTime="78"/>
+</OPERATIONS>
+05/07/2018 22:01:47:539 Started shut down of Xserver
+05/07/2018 22:01:47:539 Shutting down Net Package
+05/07/2018 22:01:47:539 Closing DB connection pools
+05/07/2018 22:01:47:539 Closing db connections of connection profile default : 5
+05/07/2018 22:01:47:695 Finished shut down of Xserver
+********************************************************
+05/07/2018 22:01:47:695 Finished Schema Generation Time Taken 0 Minute(s) 18 Second(s)
+********************************************************
+05/07/2018 22:01:47:695 Starting Teradata Platform Server...
+05/07/2018 22:01:47:711 xserver :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:47:711 Creating initial db connections for connection profile default : 5
+05/07/2018 22:01:48:241 PLATFORM :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:49:973 MDMServices :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:234 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:328 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:328 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:343 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:374 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:374 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:374 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:374 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:01:53:390 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+
+Accepting connections on port *** 14444 *** 
+
+05/07/2018 22:01:53:562 Stopping Xserver
+05/07/2018 22:01:53:562 Started shut down of Xserver
+05/07/2018 22:01:53:577 Shutting down Net Package
+05/07/2018 22:01:53:577 Invoking Pre Shut Down On Services
+**   1 10:01:53pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+**   2 10:01:53pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+05/07/2018 22:01:53:686 Shutting down Asynch Task Procesing
+05/07/2018 22:01:53:686 Invoking Post Shut Down On Services
+05/07/2018 22:01:53:686 Closing DB connection pools
+05/07/2018 22:01:53:686 Closing db connections of connection profile default : 5
+05/07/2018 22:01:53:749 Finished shut down of Xserver
+05/07/2018 22:01:53:749 Xserver Stopped
+05/07/2018 22:01:53:827 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_WRITE_SP_LOG.sql
+05/07/2018 22:01:54:950 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_CREATE_OTHER_GT_TABLES.sql
+05/07/2018 22:01:56:167 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_EXEC_CREATE_OTHER_GT_TABLES.sql
+05/07/2018 22:01:56:885 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_REFRESH_DBC.sql
+05/07/2018 22:01:57:790 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_INCRL_DB_OBJECT_LOAD.sql
+05/07/2018 22:01:58:586 Compiling Procedure: 
+xservice/platform/modules/common/storedprocedures/teradata/SYS_CLEANUP_FILE_TYPE_COLUMN_DATA.sql
+05/07/2018 22:01:59:319 Compiling Procedure: 
+xservice/platform/modules/menubuilder/macros/teradata/LEFT_NAV_LEVEL_MACRO.sql
+05/07/2018 22:01:59:506 Compiling Procedure: 
+xservice/platform/modules/usersecurity/storedprocedures/US_USER_GROUP_VIEW.sql
+05/07/2018 22:01:59:568 Compiling Procedure: 
+xservice/platform/modules/usersecurity/storedprocedures/US_GROUP_PROFILE_ACT_VIEW.sql
+05/07/2018 22:01:59:678 Compiling Procedure: 
+xservice/platform/modules/usersecurity/storedprocedures/US_USER_GROUP_ACT_VIEW.sql
+05/07/2018 22:01:59:756 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_STG_DDL.sql
+05/07/2018 22:02:00:614 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_VALIDATION.sql
+05/07/2018 22:02:01:160 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_MENU_BUILDER.sql
+05/07/2018 22:02:02:034 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_MODEL_BUILDER.sql
+05/07/2018 22:02:03:594 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_QUERIES.sql
+05/07/2018 22:02:04:811 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_USER_MNG.sql
+05/07/2018 22:02:06:090 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_WORKFLOW.sql
+05/07/2018 22:02:07:182 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_RESTORE_META.sql
+05/07/2018 22:02:07:635 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_BACKUP_META.sql
+05/07/2018 22:02:08:196 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_SCHEDULER.sql
+05/07/2018 22:02:08:758 Compiling Procedure: 
+xservice/platform/modules/profilemigration/storedprocedures/teradata/PM_BUSINESS_ENTITY.sql
+05/07/2018 22:02:09:398 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/storedprocedures/teradata/MB_IMPORT_POST.sql
+05/07/2018 22:02:09:944 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/storedprocedures/teradata/MB_NON_MDM_MACRO_DEREGISTER.sql
+05/07/2018 22:02:10:209 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/storedprocedures/teradata/MB_NON_MDM_MACRO_REGISTER.sql
+05/07/2018 22:02:10:615 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/storedprocedures/teradata/MB_NON_MDM_TB_DE_REGISTER.sql
+05/07/2018 22:02:11:239 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/storedprocedures/teradata/MB_NON_MDM_TB_REGISTER.sql
+05/07/2018 22:02:12:253 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/macros/teradata/MB_NON_MDM_DB_VALIDATE.sql
+05/07/2018 22:02:12:331 Compiling Procedure: 
+xservice/platform/modules/modelBuilder/macros/teradata/MB_NON_MDM_TB_LIST.sql
+05/07/2018 22:02:12:393 Compiling Procedure: 
+xservice/platform/modules/favorites/storedprocedures/FV_FAVORITE_VIEW.sql
+05/07/2018 22:02:12:534 Compiling Procedure: 
+xservice/mdmservices/modules/common/views/teradata/SYS_TABLE_VIEW.sql
+05/07/2018 22:02:12:565 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_CREATE_GTT.sql
+05/07/2018 22:02:14:546 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_CREATE_GTT_TABLES.sql
+05/07/2018 22:02:15:717 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_EXECUTE_CREATE_GTT_TABLES.sql
+05/07/2018 22:02:18:104 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GETCOLUMNS_ERRORSEL.sql
+05/07/2018 22:02:18:634 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GETKEYCOLUMNS.sql
+05/07/2018 22:02:19:274 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GETNONKEYCOLUMNS.sql
+05/07/2018 22:02:19:914 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GETNONKEYCOLS.sql
+05/07/2018 22:02:20:397 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GETNONKEYVISIBLECOLUMNS.sql
+05/07/2018 22:02:21:037 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GET_BPEMETA_SERVICENAME.sql
+05/07/2018 22:02:21:209 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GET_INPUT_STG_SERVICENAME.sql
+05/07/2018 22:02:21:365 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GET_MST_SERVICENAME.sql
+05/07/2018 22:02:21:536 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GET_NC_SERVICENAME.sql
+05/07/2018 22:02:21:692 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GET_VER_STG_SERVICENAME.sql
+05/07/2018 22:02:21:879 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENACT.sql
+05/07/2018 22:02:22:223 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENDEL.sql
+05/07/2018 22:02:22:784 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENUPD.sql
+05/07/2018 22:02:23:081 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENINS.sql
+05/07/2018 22:02:23:362 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENLDDEL_XLS.sql
+05/07/2018 22:02:23:611 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENACT_XLS.sql
+05/07/2018 22:02:23:939 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENDEL_XLS.sql
+05/07/2018 22:02:24:220 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENUPD_XLS.sql
+05/07/2018 22:02:24:547 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENINS_XLS.sql
+05/07/2018 22:02:24:828 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_GENDEACT_XLS.sql
+05/07/2018 22:02:25:109 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_POPULATE_NC_SQLS.sql
+05/07/2018 22:02:25:842 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_POPULATE_NC_SQLS_ALL.sql
+05/07/2018 22:02:26:232 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_CREATE_OTHER_TABLES.sql
+05/07/2018 22:02:26:576 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_EXECUTE_CREATE_OTHER_TABLES.sql
+05/07/2018 22:02:26:966 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_EXT_LOAD_PREPROC.sql
+05/07/2018 22:02:27:527 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_DBC_SYNC.sql
+05/07/2018 22:02:27:871 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_INCRL_DB_OBJECT_LOAD.sql
+05/07/2018 22:02:28:620 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_REFRESH_DBC.sql
+05/07/2018 22:02:30:336 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_CREATE_SNAPSHOTS.sql
+05/07/2018 22:02:31:038 Compiling Procedure: 
+xservice/mdmservices/modules/common/storedprocedures/teradata/SYS_UPDATE_SNAPSHOT.sql
+05/07/2018 22:02:31:537 Compiling Procedure: 
+xservice/mdmservices/modules/approval/storedprocedures/teradata/AW_EXECUTE_CHECK_APPROVAL.sql
+05/07/2018 22:02:31:865 Compiling Procedure: 
+xservice/mdmservices/modules/approval/storedprocedures/teradata/AW_EXECUTE_PURGE_APPROVAL.sql
+05/07/2018 22:02:32:083 Compiling Procedure: 
+xservice/mdmservices/modules/approval/storedprocedures/teradata/AW_EXECUTE_UPDATE_AUTO_APPROVAL.sql
+05/07/2018 22:02:32:739 Compiling Procedure: 
+xservice/mdmservices/modules/approval/storedprocedures/teradata/AW_UPDATE_APPROVAL_STATUS.sql
+05/07/2018 22:02:33:659 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/views/teradata/LK_CODE_MST_TYPE.sql
+05/07/2018 22:02:33:753 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/views/teradata/LK_CODE_MST_VAL.sql
+05/07/2018 22:02:33:877 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_GEN_RM_QUERY.sql
+05/07/2018 22:02:40:009 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_DATE_OVERLAP_RULE_MANUAL.sql
+05/07/2018 22:02:40:446 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_POLL_CORRECTION.sql
+05/07/2018 22:02:40:789 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_POP_MULTITABLE_MAP.sql
+05/07/2018 22:02:41:226 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_POPULATE_MDM_CODE_SET_STATS.sql
+05/07/2018 22:02:41:897 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_RM_LRDM_UNBAL_QUERY.sql
+05/07/2018 22:02:48:356 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_VERSION_METADATA.sql
+05/07/2018 22:02:48:934 Compiling Procedure: 
+xservice/mdmservices/modules/lrdm/storedprocedures/teradata/LK_VERSION_DATA.sql
+05/07/2018 22:02:49:651 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES.sql
+05/07/2018 22:02:50:166 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_CNSTR_E2E.sql
+05/07/2018 22:02:50:478 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_CNSTR_EXT.sql
+05/07/2018 22:02:50:712 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_NOT_NULL_E2E.sql
+05/07/2018 22:02:51:009 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_NOT_NULL_EXT.sql
+05/07/2018 22:02:51:321 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_RI_E2E.sql
+05/07/2018 22:02:54:769 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_RI_ENTY.sql
+05/07/2018 22:02:59:793 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_RI_EXT.sql
+05/07/2018 22:03:02:975 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_RI_VER.sql
+05/07/2018 22:03:06:127 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_UV_E2E.sql
+05/07/2018 22:03:07:282 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_UV_EXT.sql
+05/07/2018 22:03:08:561 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_UV_VER.sql
+05/07/2018 22:03:09:762 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_UV_XLS.sql
+05/07/2018 22:03:10:293 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RUL_COL_MAP.sql
+05/07/2018 22:03:10:886 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_INCRL_DB_OBJECT_LOAD.sql
+05/07/2018 22:03:11:385 Compiling Procedure: 
+xservice/mdmservices/modules/businessrules/storedprocedures/teradata/BR_GEN_DEFAULT_RULES_CUSTOM.sql
+05/07/2018 22:03:11:713 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_CREATE_DDP_GT_TABLES.sql
+05/07/2018 22:03:12:368 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXEC_SYS_CREATE_DDP_GT_TABLES.sql
+05/07/2018 22:03:13:678 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_DOPERSIST_CUSTOM_POST_IU.sql
+05/07/2018 22:03:13:881 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_DOPERSIST_CUSTOM_PRE_IU.sql
+05/07/2018 22:03:14:225 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_ERR_VALID.sql
+05/07/2018 22:03:15:317 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_DB_DATA_MMT.sql
+05/07/2018 22:03:19:498 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_EXT_DATA_MMT.sql
+05/07/2018 22:03:24:678 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_INS_UPD_RULES.sql
+05/07/2018 22:03:25:567 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_CALL_EXE_SQL_INS_UPD_RULES.sql
+05/07/2018 22:03:26:067 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_STDZTION.sql
+05/07/2018 22:03:27:268 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_DEFLT_RULES.sql
+05/07/2018 22:03:27:830 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_ERR_DATA_MMT.sql
+05/07/2018 22:03:28:313 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_EXT_ONLY_MST.sql
+05/07/2018 22:03:31:870 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_VALIDATION.sql
+05/07/2018 22:03:32:775 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST.sql
+05/07/2018 22:03:34:336 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_LITE.sql
+05/07/2018 22:03:35:693 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DDP_SINGLE_RECORD.sql
+05/07/2018 22:03:37:331 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_ALCR.sql
+05/07/2018 22:03:38:361 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_ENTITY_DOPERSIST.sql
+05/07/2018 22:03:38:782 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_ENTITY_DOPERSIST_LITE.sql
+05/07/2018 22:03:39:157 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_VALIDATION_RULES.sql
+05/07/2018 22:03:39:640 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_EXT_AUDIT.sql
+05/07/2018 22:03:41:013 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_EXECUTE_DOPERSIST_CLOSE_AUDIT.sql
+05/07/2018 22:03:41:419 Compiling Procedure: 
+xservice/mdmservices/modules/dodbpersist/storedprocedures/teradata/DO_LOAD_GT_TO_MST_SQL.sql
+05/07/2018 22:03:42:168 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/views/teradata/E2_ERROR_SUMMARY_VIEW.sql
+05/07/2018 22:03:42:339 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_WRITEDEBUGMSG.sql
+05/07/2018 22:03:42:527 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_INSERT_DEFAULT_LOAD_VALUES.sql
+05/07/2018 22:03:42:839 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_CHECK_LOAD_CONCURRENCY.sql
+05/07/2018 22:03:43:135 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_CLEAR_ERROR_TABLES.sql
+05/07/2018 22:03:43:650 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_CLEAR_NETCHANGE_TABLES.sql
+05/07/2018 22:03:44:134 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_DEREGISTER_LOAD.sql
+05/07/2018 22:03:44:352 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_ERROR_CORRECTION.sql
+05/07/2018 22:03:44:836 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_EXECUTE_CORRECTION_RULES.sql
+05/07/2018 22:03:45:179 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_EXECUTE_FILTER_RULES.sql
+05/07/2018 22:03:45:491 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_EXECUTE_VALIDATION_RULES.sql
+05/07/2018 22:03:45:928 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_GEN_ERR_SUMMARY.sql
+05/07/2018 22:03:46:677 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_GEN_ERR_SUMMARY_E2E.sql
+05/07/2018 22:03:47:239 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_POPULATE_MERGE_SQLS.sql
+05/07/2018 22:03:47:847 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_POST_REGISTER_LOAD.sql
+05/07/2018 22:03:48:034 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_SET_PRELOAD_CONFIG.sql
+05/07/2018 22:03:48:362 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_START_DIRECTSQL_LOAD.sql
+05/07/2018 22:03:48:674 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_START_NET_CHANGE.sql
+05/07/2018 22:03:49:033 Compiling Procedure: 
+xservice/mdmservices/modules/e2e/storedprocedures/teradata/E2_START_DB_OBJECT_INPUT_LOAD.sql
+05/07/2018 22:03:49:548 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/storedprocedures/teradata/DQ_GEN_ERR_SUMMARY.sql
+05/07/2018 22:03:51:716 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/storedprocedures/teradata/DQ_INIT_REPORTS.sql
+05/07/2018 22:03:52:387 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_ANR.sql
+05/07/2018 22:03:52:434 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_DOC.sql
+05/07/2018 22:03:52:465 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_DQR.sql
+05/07/2018 22:03:52:512 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_DRL.sql
+05/07/2018 22:03:52:543 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_ECD.sql
+05/07/2018 22:03:52:606 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_ECDL.sql
+05/07/2018 22:03:52:637 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_ECI.sql
+05/07/2018 22:03:52:684 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_ECIDD.sql
+05/07/2018 22:03:52:730 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_GETDQVALUE.sql
+05/07/2018 22:03:52:793 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_QRR.sql
+05/07/2018 22:03:52:840 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_QRS.sql
+05/07/2018 22:03:52:871 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_QSR.sql
+05/07/2018 22:03:52:949 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_QTR.sql
+05/07/2018 22:03:52:996 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_QTR_TF.sql
+05/07/2018 22:03:53:027 Compiling Procedure: 
+xservice/mdmservices/modules/dataquality/macros/DQ_SOURCE.sql
+05/07/2018 22:03:53:074 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_CREATE_OTHER_MATCHING_TABLES.sql
+05/07/2018 22:03:54:057 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_EXEC_CREATE_OTHER_MATCHING_TABLES.sql
+05/07/2018 22:03:55:913 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_CREATE_MATCHING_GT_TABLES.sql
+05/07/2018 22:03:59:174 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_EXEC_CREATE_MATCHING_GT_TABLES.sql
+05/07/2018 22:04:05:509 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCHING_BLOCK_INFO.sql
+05/07/2018 22:04:06:289 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCHING_DEFAULT_THRESHOLD.sql
+05/07/2018 22:04:06:866 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_EXIST.sql
+05/07/2018 22:04:07:162 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_INITIALIZE.sql
+05/07/2018 22:04:07:412 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_ALTER_KEYS.sql
+05/07/2018 22:04:07:865 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_THRESH.sql
+05/07/2018 22:04:08:177 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH_BLOCK.sql
+05/07/2018 22:04:12:186 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_PERSIST_HIST_RUN_RESULT.sql
+05/07/2018 22:04:12:873 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_CYCLE.sql
+05/07/2018 22:04:13:809 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DELETE.sql
+05/07/2018 22:04:15:463 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DELETE_LOG.sql
+05/07/2018 22:04:15:775 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_XREF.sql
+05/07/2018 22:04:18:053 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_BLOCK_RESET.sql
+05/07/2018 22:04:18:895 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DATAPROF.sql
+05/07/2018 22:04:19:441 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_RESULTS.sql
+05/07/2018 22:04:21:782 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_HISTORY.sql
+05/07/2018 22:04:22:827 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_INVERT.sql
+05/07/2018 22:04:26:088 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_NON_BLK_RUN.sql
+05/07/2018 22:04:28:412 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_ORPHAN_FILTER.sql
+05/07/2018 22:04:29:161 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_VECTORS.sql
+05/07/2018 22:04:31:564 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DATA_MOD1.sql
+05/07/2018 22:04:32:095 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DATA_MOD2.sql
+05/07/2018 22:04:33:031 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DESIGNATOR.sql
+05/07/2018 22:04:34:201 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_NICKNAME.sql
+05/07/2018 22:04:36:104 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_POPULATE_NICKNAMES.sql
+05/07/2018 22:04:45:668 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_STRING_MATCH.sql
+05/07/2018 22:04:50:240 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH.sql
+05/07/2018 22:04:59:336 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_CLONE.sql
+05/07/2018 22:05:00:178 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_DUPE_STATS.sql
+05/07/2018 22:05:01:536 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH_EXECUTE.sql
+05/07/2018 22:05:02:862 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH_SPMLM_ATTRIBUTE_SETS.sql
+05/07/2018 22:05:03:330 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH_SPMLM_VECTORS.sql
+05/07/2018 22:05:05:873 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/teradata/FM_MATCH_LOG.sql
+05/07/2018 22:05:06:310 Compiling Procedure: 
+xservice/mdmservices/modules/matching/storedprocedures/FM_VIEW_LOG.sql
+05/07/2018 22:05:06:606 Compiling Procedure: 
+xservice/mdmservices/modules/matching/macros/FM_MATCHING_SCORES.sql
+05/07/2018 22:05:06:762 Compiling Procedure: 
+xservice/mdmservices/modules/matching/macros/FM_SURV_RUN_CHK.sql
+05/07/2018 22:05:06:840 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_CREATE_OTHER_TABLES.sql
+05/07/2018 22:05:07:964 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXEC_CREATE_OTHER_TABLES.sql
+05/07/2018 22:05:09:805 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_ID_GEN.sql
+05/07/2018 22:05:10:086 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_IDGEN_UPDATE.sql
+05/07/2018 22:05:10:507 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_APPLY_TRANSFORM.sql
+05/07/2018 22:05:10:757 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_LKP_ERROR.sql
+05/07/2018 22:05:11:256 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_LOOKUP_META.sql
+05/07/2018 22:05:11:849 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_APPLY_LOOKUP.sql
+05/07/2018 22:05:13:596 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_VALIDATION.sql
+05/07/2018 22:05:14:860 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_CROSS_REFERENCE.sql
+05/07/2018 22:05:16:046 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_CROSS_REFERENCE_RT.sql
+05/07/2018 22:05:17:231 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_APPLY_IDGEN.sql
+05/07/2018 22:05:17:918 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_DEDUPE.sql
+05/07/2018 22:05:19:603 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_RULE_ENGINE.sql
+05/07/2018 22:05:22:661 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_INTRIM_REL.sql
+05/07/2018 22:05:25:797 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_RELATION_SRC.sql
+05/07/2018 22:05:27:466 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_RELATION.sql
+05/07/2018 22:05:29:401 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_SOURCE_RULE.sql
+05/07/2018 22:05:31:227 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_CROSS_REFERENCE_CLM.sql
+05/07/2018 22:05:36:781 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_INTRIM.sql
+05/07/2018 22:05:42:460 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_VIEW_MATCH_QUERY.sql
+05/07/2018 22:05:44:192 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_VIEW_NROW_QUERY.sql
+05/07/2018 22:05:45:846 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_SOURCE_RULE_MANUAL.sql
+05/07/2018 22:05:51:150 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_SQL.sql
+05/07/2018 22:05:54:957 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN_SQL_RT.sql
+05/07/2018 22:05:58:546 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_CHECK_STATUS_TARGET.sql
+05/07/2018 22:05:59:123 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_END_LOG.sql
+05/07/2018 22:05:59:451 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_END_LOG_ERR.sql
+05/07/2018 22:05:59:685 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/SV_SURV_LATEST_LOG.sql
+05/07/2018 22:05:59:825 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_UPDATE_STATUS.sql
+05/07/2018 22:06:00:012 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_INITIALIZE.sql
+05/07/2018 22:06:00:652 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_GEN.sql
+05/07/2018 22:06:01:011 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_ERROR.sql
+05/07/2018 22:06:01:385 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_RULE.sql
+05/07/2018 22:06:01:697 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_RELATION.sql
+05/07/2018 22:06:02:337 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_INTRIM.sql
+05/07/2018 22:06:02:821 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_INTRIM_INTERACTIVE.sql
+05/07/2018 22:06:03:039 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MERGE_FILTER.sql
+05/07/2018 22:06:03:507 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_NROW_FILTER.sql
+05/07/2018 22:06:04:256 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MERGE.sql
+05/07/2018 22:06:04:724 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_NROW.sql
+05/07/2018 22:06:05:192 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE.sql
+05/07/2018 22:06:06:565 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_AUTO.sql
+05/07/2018 22:06:07:221 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_END_LOG_ERR_MST.sql
+05/07/2018 22:06:07:439 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_INTRIM_PRE_MASTER.sql
+05/07/2018 22:06:08:001 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_RULE_PRE_MASTER.sql
+05/07/2018 22:06:08:422 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_PRE_MASTER.sql
+05/07/2018 22:06:09:264 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MERGE_MASTER.sql
+05/07/2018 22:06:09:935 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_NROW_MASTER.sql
+05/07/2018 22:06:10:591 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_RELATION_MASTER.sql
+05/07/2018 22:06:11:293 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MASTER.sql
+05/07/2018 22:06:11:636 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_NROW_RT.sql
+05/07/2018 22:06:12:260 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MERGE_RT.sql
+05/07/2018 22:06:12:900 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_EXECUTE_MASTER_RT.sql
+05/07/2018 22:06:13:259 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_DELETE.sql
+05/07/2018 22:06:13:649 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_REFRESH_PROFILES.sql
+05/07/2018 22:06:13:898 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/teradata/SV_SURV_LINEAGE_DETAILS.sql
+05/07/2018 22:06:15:162 Compiling Procedure: 
+xservice/mdmservices/modules/survivorship/storedprocedures/SV_SURV_MAPPINGX.sql
+05/07/2018 22:06:15:256 Compiling Procedure: 
+xservice/mdmservices/modules/extendedattributes/macros/EA_GET_EXTENDED_ATTRIBUTES.sql
+05/07/2018 22:06:18:626 Compiling Procedure: 
+xservice/mdmservices/modules/extendedattributes/storedprocedures/teradata/EA_MIGRATE_EXT_ATTRS.sql
+05/07/2018 22:06:19:312 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_RM_QUERY.sql
+05/07/2018 22:06:25:553 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_HIERARCHY_METADATA_VERSION.sql
+05/07/2018 22:06:26:661 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HM_QUERY_VER.sql
+05/07/2018 22:06:34:087 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HM_QUERY_SRCH_VER.sql
+05/07/2018 22:06:41:608 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HM_QUERY_SRCH.sql
+05/07/2018 22:06:53:060 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HM_QUERY.sql
+05/07/2018 22:07:04:402 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HIER_UNBALANCED_VER.sql
+05/07/2018 22:07:19:958 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HIER_UNBALANCED_SRCH_VER.sql
+05/07/2018 22:07:29:366 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HIER_UNBALANCED_SRCH.sql
+05/07/2018 22:07:40:724 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_GEN_HIER_UNBALANCED.sql
+05/07/2018 22:07:58:027 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_DATA_VERSION_PROMOTE_STATUS.sql
+05/07/2018 22:07:58:635 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_DATA_VERSION_PROMOTE.sql
+05/07/2018 22:07:59:275 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_DATA_VERSION_METADATA.sql
+05/07/2018 22:07:59:868 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/storedprocedures/teradata/HM_DATA_VERSION.sql
+05/07/2018 22:08:00:258 Compiling Procedure: 
+xservice/mdmservices/modules/hierarchymanagement/macros/teradata/HM_GET_HIER_OBJECT_LVL.sql
+05/07/2018 22:08:00:398 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_CLEANING_PAD_COPY.sql
+05/07/2018 22:08:00:757 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_CLEANING_PAD_DELETE.sql
+05/07/2018 22:08:01:132 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_CLEANING_PAD_SAVE.sql
+05/07/2018 22:08:02:177 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_CREATE_CAS_GT_TABLES.sql
+05/07/2018 22:08:02:754 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_EXEC_CREATE_CAS_GT_TABLES.sql
+05/07/2018 22:08:03:690 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_START_LOG_CAS_RULE.sql
+05/07/2018 22:08:03:987 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_END_LOG_CAS_RULE.sql
+05/07/2018 22:08:04:221 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_EXECUTE_CAS_RULES.sql
+05/07/2018 22:08:04:985 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_DATAPROFILE.sql
+05/07/2018 22:08:05:594 Compiling Procedure: 
+xservice/mdmservices/modules/cleansingandstandardization/storedprocedures/teradata/CL_EXECUTE_CAS_BY_SOURCE.sql
+05/07/2018 22:08:06:233 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_CLEAN.sql
+05/07/2018 22:08:06:452 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_GET_ENTITY_COLUMNS.sql
+05/07/2018 22:08:06:826 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_GET_KEY_COLUMNS.sql
+05/07/2018 22:08:07:232 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_GET_NONKEY_UPDATE.sql
+05/07/2018 22:08:07:762 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_PUBLISH.sql
+05/07/2018 22:08:13:910 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_QUEUE.sql
+05/07/2018 22:08:15:236 Compiling Procedure: 
+xservice/mdmservices/modules/publication/storedprocedures/teradata/PB_QUEUE_CREATE.sql
+05/07/2018 22:08:16:250 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_CREATE_BACKUP.sql
+05/07/2018 22:08:16:656 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_RESTORE_BACKUP.sql
+05/07/2018 22:08:17:295 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_EXECUTE_DOPERSIST_LITE.sql
+05/07/2018 22:08:18:075 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_EXECUTE_DOPERSIST.sql
+05/07/2018 22:08:21:055 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_EXECUTE_DOPERSIST_CUSTOM.sql
+05/07/2018 22:08:21:695 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_EXECUTE_VALIDATION.sql
+05/07/2018 22:08:22:397 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_EXECUTE_DOPERSIST_APPROVAL.sql
+05/07/2018 22:08:23:193 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_GEN_ERR_SUMMARY.sql
+05/07/2018 22:08:23:536 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_LD_CREATION.sql
+05/07/2018 22:08:24:597 Compiling Procedure: 
+xservice/mdmservices/modules/dataupload/storedprocedures/teradata/DU_LD_REFRESH.sql
+05/07/2018 22:08:25:190 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_APPROVAL.sql
+05/07/2018 22:08:26:189 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_BUSSINESS_RULE.sql
+05/07/2018 22:08:27:265 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_CONFIG_UI.sql
+05/07/2018 22:08:28:092 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_EXT_ATTRBS.sql
+05/07/2018 22:08:28:622 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_FAVORITE.sql
+05/07/2018 22:08:29:184 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_LRDM.sql
+05/07/2018 22:08:31:072 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_MATCHING.sql
+05/07/2018 22:08:32:383 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_MDRM_HIER_MNGR.sql
+05/07/2018 22:08:36:704 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_SURV_MDRM.sql
+05/07/2018 22:08:39:497 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_SURV_REFRESH.sql
+05/07/2018 22:08:39:872 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_SURVIVORSHIP.sql
+05/07/2018 22:08:42:883 Compiling Procedure: 
+xservice/mdmservices/modules/profilemigration/storedprocedures/teradata/PM_SOURCE_REG.sql
+05/07/2018 22:08:43:600 Compilation completed successfully.... 
+05/07/2018 22:08:43:756 Starting Compile Stored Procedures
+05/07/2018 22:08:43:866 Compilation completed successfully.... 
+********************************************************
+05/07/2018 22:08:43:881 Finished Compiling Stored Procedures Time Taken 6 Minute(s) 50 Second(s)
+********************************************************
+********************************************************
+ Generate Publication Objects Step Skipped
+********************************************************
+
+05/07/2018 22:08:44:147 Cleaning Facets Metadata...
+05/07/2018 22:08:44:365 Uploading Facets from : E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\bin\..\cfg\xservice\VZC_CDI\mdm_setup\facets
+05/07/2018 22:08:45:816 Uploading Facets Successfully done : Time Taken : 1.0 seconds
+
+05/07/2018 22:08:45:910 Starting Xserver
+05/07/2018 22:08:45:910 Starting Teradata Platform Server...
+05/07/2018 22:08:45:910 xserver :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:45:910 Creating initial db connections for connection profile default : 5
+05/07/2018 22:08:46:518 PLATFORM :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:47:719 MDMServices :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:653 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:715 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:715 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:731 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:746 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:777 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:777 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:777 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:793 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:50:793 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+**   3 10:08:50pm REQUEST              DEFINE_INIT                    None      
+05/07/2018 22:08:52:057 Creating initial db connections for connection profile Scheduler : 3
+**   4 10:08:53pm GET_DOCUMENT         CRYPTION_KEY                   None      
+**   5 10:08:53pm REQUEST              DEFINE_INIT                    None      
+05/07/2018 22:08:54:613 Xserver Started
+05/07/2018 22:08:54:615 Loading xservice/mdmservices/modules/common/staticdata/isg/metadataCleanup.xml
+**   6 10:08:54pm REMOVE_DOCUMENT      SYS_TABLE_MAP                  None      
+
+Accepting connections on port *** 14444 *** 
+
+**   7 10:08:54pm REMOVE_DOCUMENT      SYS_DOCVIEW_MAP                None      
+**   8 10:08:54pm REMOVE_DOCUMENT      SYS_NATIVE_TABLE_MAP           None      
+**   9 10:08:54pm REMOVE_DOCUMENT      SYS_TABLE_COLUMN_MAP           None      
+**  10 10:08:54pm REMOVE_DOCUMENT      UPLOAD_TEMPLATE_PROPS          None      
+**  11 10:08:54pm REMOVE_DOCUMENT      UPLOAD_TEMPLATE                None      
+05/07/2018 22:08:54:956 <RESPONSES Status="Success">
+  <RESPONSE RowCount="82" Status="Success"/>
+  <RESPONSE RowCount="4" Status="Success"/>
+  <RESPONSE RowCount="3" Status="Success"/>
+  <RESPONSE RowCount="999" Status="Success"/>
+  <RESPONSE RowCount="1298" Status="Success"/>
+  <RESPONSE RowCount="86" Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:08:54:958 Stopping Xserver
+05/07/2018 22:08:54:958 Started shut down of Xserver
+05/07/2018 22:08:54:958 Shutting down Net Package
+05/07/2018 22:08:54:959 Invoking Pre Shut Down On Services
+**  12 10:08:54pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+**  13 10:08:55pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+05/07/2018 22:08:55:024 Shutting down Asynch Task Procesing
+05/07/2018 22:08:55:024 Invoking Post Shut Down On Services
+05/07/2018 22:08:55:024 Closing DB connection pools
+05/07/2018 22:08:55:024 Closing db connections of connection profile default : 5
+05/07/2018 22:08:55:102 Finished shut down of Xserver
+05/07/2018 22:08:55:102 Xserver Stopped
+05/07/2018 22:08:55:102 Starting Xserver
+05/07/2018 22:08:55:102 Starting Teradata Platform Server...
+05/07/2018 22:08:55:102 xserver :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:55:102 Creating initial db connections for connection profile default : 5
+05/07/2018 22:08:55:476 PLATFORM :LogLevels [ Error, Exception ] 
+05/07/2018 22:08:57:395 MDMServices :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:188 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:250 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:250 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:250 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:282 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:297 BCM_MASTER :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:297 BCM_INPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:313 BCM_OUTPUT_STAGING :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:313 BCM_NET_CHANGE :LogLevels [ Error, Exception ] 
+05/07/2018 22:09:00:313 BCM_VERSION_STAGING :LogLevels [ Error, Exception ] 
+**  14 10:09:00pm REQUEST              DEFINE_INIT                    None      
+05/07/2018 22:09:00:953 Creating initial db connections for connection profile Scheduler : 3
+**  15 10:09:01pm GET_DOCUMENT         CRYPTION_KEY                   None      
+**  16 10:09:01pm REQUEST              DEFINE_INIT                    None      
+05/07/2018 22:09:02:893 Xserver Started
+05/07/2018 22:09:02:895 Loading xservice/mdmservices/modules/common/staticdata/isg/tk_incr_userActivities.xml
+**  17 10:09:02pm REQUEST              generateDocActivityList        None      
+
+Accepting connections on port *** 14444 *** 
+
+05/07/2018 22:09:03:140 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:03:140 xservice/toolkit/staticdata/outputStagingServiceStaticData.xml  Skipped
+05/07/2018 22:09:03:141 Loading xservice/toolkit/staticdata/PopulateSysTableColMap.xml
+**  18 10:09:03pm REQUEST              populateTableColumnMap         None      
+05/07/2018 22:09:06:092 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:06:095 Loading mdm_setup/entity_templates.xml
+**  19 10:09:06pm REQUEST              dummyRequest                   None      
+**  20 10:09:06pm REQUEST              addTemplate                    None      
+**  21 10:09:06pm REQUEST              addTemplate                    None      
+**  22 10:09:06pm REQUEST              addTemplate                    None      
+**  23 10:09:06pm REQUEST              addTemplate                    None      
+**  24 10:09:06pm REQUEST              addTemplate                    None      
+**  25 10:09:06pm REQUEST              addTemplate                    None      
+**  26 10:09:06pm REQUEST              addTemplate                    None      
+**  27 10:09:06pm REQUEST              addTemplate                    None      
+**  28 10:09:06pm REQUEST              addTemplate                    None      
+**  29 10:09:06pm REQUEST              addTemplate                    None      
+**  30 10:09:06pm REQUEST              addTemplate                    None      
+**  31 10:09:06pm REQUEST              addTemplate                    None      
+**  32 10:09:06pm REQUEST              addTemplate                    None      
+**  33 10:09:06pm REQUEST              addTemplate                    None      
+**  34 10:09:06pm REQUEST              addTemplate                    None      
+**  35 10:09:06pm REQUEST              addTemplate                    None      
+**  36 10:09:06pm REQUEST              addTemplate                    None      
+**  37 10:09:07pm REQUEST              addTemplate                    None      
+**  38 10:09:07pm REQUEST              addTemplate                    None      
+**  39 10:09:07pm REQUEST              addTemplate                    None      
+**  40 10:09:07pm REQUEST              addTemplate                    None      
+**  41 10:09:07pm REQUEST              addTemplate                    None      
+**  42 10:09:07pm REQUEST              addTemplate                    None      
+**  43 10:09:07pm REQUEST              addTemplate                    None      
+**  44 10:09:07pm REQUEST              addTemplate                    None      
+**  45 10:09:07pm REQUEST              addTemplate                    None      
+**  46 10:09:07pm REQUEST              addTemplate                    None      
+**  47 10:09:07pm REQUEST              addTemplate                    None      
+**  48 10:09:07pm REQUEST              addTemplate                    None      
+**  49 10:09:07pm REQUEST              addTemplate                    None      
+**  50 10:09:07pm REQUEST              addTemplate                    None      
+**  51 10:09:07pm REQUEST              addTemplate                    None      
+**  52 10:09:07pm REQUEST              addTemplate                    None      
+**  53 10:09:08pm REQUEST              addTemplate                    None      
+**  54 10:09:08pm REQUEST              addTemplate                    None      
+**  55 10:09:08pm REQUEST              addTemplate                    None      
+**  56 10:09:08pm REQUEST              addTemplate                    None      
+**  57 10:09:08pm REQUEST              addTemplate                    None      
+**  58 10:09:08pm REQUEST              addTemplate                    None      
+**  59 10:09:08pm REQUEST              addTemplate                    None      
+**  60 10:09:08pm REQUEST              addTemplate                    None      
+**  61 10:09:08pm REQUEST              addTemplate                    None      
+**  62 10:09:08pm REQUEST              addTemplate                    None      
+**  63 10:09:08pm REQUEST              addTemplate                    None      
+**  64 10:09:08pm REQUEST              addTemplate                    None      
+**  65 10:09:08pm REQUEST              addTemplate                    None      
+**  66 10:09:08pm REQUEST              addTemplate                    None      
+**  67 10:09:08pm REQUEST              addTemplate                    None      
+**  68 10:09:08pm REQUEST              addTemplate                    None      
+**  69 10:09:08pm REQUEST              addTemplate                    None      
+**  70 10:09:08pm REQUEST              addTemplate                    None      
+**  71 10:09:08pm REQUEST              addTemplate                    None      
+**  72 10:09:09pm REQUEST              addTemplate                    None      
+**  73 10:09:09pm REQUEST              addTemplate                    None      
+**  74 10:09:09pm REQUEST              addTemplate                    None      
+**  75 10:09:09pm REQUEST              addTemplate                    None      
+**  76 10:09:09pm REQUEST              addTemplate                    None      
+**  77 10:09:09pm REQUEST              addTemplate                    None      
+**  78 10:09:09pm REQUEST              addTemplate                    None      
+**  79 10:09:09pm REQUEST              addTemplate                    None      
+**  80 10:09:09pm REQUEST              addTemplate                    None      
+**  81 10:09:09pm REQUEST              addTemplate                    None      
+**  82 10:09:09pm REQUEST              addTemplate                    None      
+**  83 10:09:09pm REQUEST              addTemplate                    None      
+**  84 10:09:09pm REQUEST              addTemplate                    None      
+**  85 10:09:09pm REQUEST              addTemplate                    None      
+**  86 10:09:10pm REQUEST              addTemplate                    None      
+**  87 10:09:10pm REQUEST              addTemplate                    None      
+**  88 10:09:10pm REQUEST              addTemplate                    None      
+**  89 10:09:10pm REQUEST              addTemplate                    None      
+**  90 10:09:10pm REQUEST              addTemplate                    None      
+**  91 10:09:10pm REQUEST              addTemplate                    None      
+**  92 10:09:10pm REQUEST              addTemplate                    None      
+**  93 10:09:11pm REQUEST              addTemplate                    None      
+**  94 10:09:11pm REQUEST              addTemplate                    None      
+**  95 10:09:11pm REQUEST              addTemplate                    None      
+**  96 10:09:11pm REQUEST              addTemplate                    None      
+**  97 10:09:11pm REQUEST              addTemplate                    None      
+**  98 10:09:11pm REQUEST              addTemplate                    None      
+**  99 10:09:11pm REQUEST              addTemplate                    None      
+** 100 10:09:11pm REQUEST              addTemplate                    None      
+** 101 10:09:11pm REQUEST              addTemplate                    None      
+** 102 10:09:11pm REQUEST              addTemplate                    None      
+** 103 10:09:11pm REQUEST              addTemplate                    None      
+** 104 10:09:12pm REQUEST              addTemplate                    None      
+** 105 10:09:12pm REQUEST              addTemplate                    None      
+** 106 10:09:12pm REQUEST              addTemplate                    None      
+** 107 10:09:12pm REQUEST              addTemplate                    None      
+** 108 10:09:12pm REQUEST              addTemplate                    None      
+** 109 10:09:12pm REQUEST              addTemplate                    None      
+** 110 10:09:12pm REQUEST              addTemplate                    None      
+** 111 10:09:12pm REQUEST              addTemplate                    None      
+** 112 10:09:12pm REQUEST              addTemplate                    None      
+** 113 10:09:12pm REQUEST              addTemplate                    None      
+05/07/2018 22:09:12:952 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:12:956 Loading xservice/mdmservices/modules/dataupload/staticdata/LRDM_entity_templates.xml
+** 114 10:09:12pm REQUEST              dummyRequest                   None      
+** 115 10:09:12pm REQUEST              updateTemplate                 None      
+** 116 10:09:13pm REQUEST              updateTemplate                 None      
+** 117 10:09:13pm REQUEST              updateTemplate                 None      
+** 118 10:09:13pm REQUEST              generateLRDMTemplate           None      
+05/07/2018 22:09:13:169 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:13:172 Loading mdm_setup/correlation.xml
+** 119 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 120 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 121 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 122 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 123 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 124 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 125 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 126 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 127 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 128 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 129 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 130 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 131 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 132 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 133 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 134 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 135 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 136 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 137 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 138 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 139 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 140 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 141 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 142 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 143 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 144 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 145 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 146 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 147 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 148 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 149 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 150 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 151 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 152 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 153 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 154 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 155 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 156 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 157 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 158 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 159 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 160 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 161 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 162 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 163 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 164 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 165 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 166 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 167 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 168 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 169 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 170 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 171 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 172 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 173 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 174 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 175 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 176 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 177 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 178 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 179 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 180 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 181 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 182 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 183 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 184 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 185 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 186 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 187 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 188 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 189 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 190 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 191 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 192 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 193 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 194 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 195 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 196 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 197 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 198 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 199 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 200 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 201 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 202 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 203 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 204 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 205 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 206 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 207 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+** 208 10:09:13pm ADD_DOCUMENT         SYS_TABLE_MAP                  None      
+05/07/2018 22:09:13:780 <RESPONSES Status="Success">
+  <RESPONSE Status="Success">
+    <ID Value="0"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="1"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="2"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="3"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="4"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="5"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="6"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="7"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="8"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="9"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="10"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="11"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="12"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="13"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="14"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="15"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="16"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="17"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="18"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="19"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="20"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="21"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="22"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="23"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="24"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="25"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="26"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="27"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="28"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="29"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="30"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="31"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="32"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="34"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="35"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="36"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="37"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="38"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="39"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="40"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="41"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="42"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="43"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="44"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="45"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="46"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="51"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="52"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="53"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="54"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="55"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="56"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="57"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="58"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="59"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="60"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="61"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="62"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="63"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="64"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="65"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="66"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="67"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="68"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="69"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="70"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="71"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="72"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="73"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="74"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="76"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="77"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="78"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="79"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="80"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="81"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="82"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="83"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="84"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="85"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="86"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="87"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="88"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="89"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="90"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="91"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="92"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="93"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="94"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="95"/>
+  </RESPONSE>
+</RESPONSES>
+
+05/07/2018 22:09:13:782 Loading mdm_setup/docViews.xml
+** 209 10:09:13pm ADD_DOCUMENT         SYS_DOCVIEW_MAP                None      
+** 210 10:09:13pm ADD_DOCUMENT         SYS_DOCVIEW_MAP                None      
+** 211 10:09:13pm ADD_DOCUMENT         SYS_DOCVIEW_MAP                None      
+** 212 10:09:13pm ADD_DOCUMENT         SYS_DOCVIEW_MAP                None      
+05/07/2018 22:09:13:861 <RESPONSES Status="Success">
+  <RESPONSE Status="Success">
+    <ID Value="47"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="48"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="49"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="50"/>
+  </RESPONSE>
+</RESPONSES>
+
+05/07/2018 22:09:13:863 Loading mdm_setup/nativeDocuments.xml
+** 213 10:09:13pm ADD_DOCUMENT         SYS_NATIVE_TABLE_MAP           None      
+** 214 10:09:13pm ADD_DOCUMENT         SYS_NATIVE_TABLE_MAP           None      
+** 215 10:09:13pm ADD_DOCUMENT         SYS_NATIVE_TABLE_MAP           None      
+05/07/2018 22:09:13:901 <RESPONSES Status="Success">
+  <RESPONSE Status="Success">
+    <ID Value="33"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="75"/>
+  </RESPONSE>
+  <RESPONSE Status="Success">
+    <ID Value="96"/>
+  </RESPONSE>
+</RESPONSES>
+
+05/07/2018 22:09:13:903 Loading xservice/mdmservices/modules/common/staticdata/isg/modelBuilder_Req.xml
+** 216 10:09:13pm REQUEST              updateGeneratedModelsSchemaD.. None      
+05/07/2018 22:09:13:922 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:13:924 Loading xservice/platform/modules/common/staticdata/refreshSysDBC.xml
+** 217 10:09:13pm REQUEST              refreshSysDBC                  None      
+05/07/2018 22:09:33:438 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:33:440 Loading xservice/mdmservices/modules/common/staticdata/isg/populateNCSQLs.xml
+** 218 10:09:33pm REQUEST              callPopulateNCSqls             None      
+05/07/2018 22:09:34:327 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:34:328 Loading xservice/mdmservices/modules/common/staticdata/isg/createGTT.xml
+** 219 10:09:34pm REQUEST              createGlobalTempTables         None      
+05/07/2018 22:09:38:761 <RESPONSES Status="Success">
+  <RESPONSE Status="Success">
+    <_RESULT Value="SUCCESS"/>
+  </RESPONSE>
+</RESPONSES>
+
+05/07/2018 22:09:38:762 Loading xservice/mdmservices/modules/extendedattributes/staticdata/MigrateExtAttrBusniessRules.xml
+** 220 10:09:38pm REQUEST              MigrateExtAttrBusinessRules    None      
+05/07/2018 22:09:39:060 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:39:064 Loading xservice/mdmservices/modules/extendedattributes/staticdata/migrateExtendedAttrs.xml
+** 221 10:09:39pm REQUEST              migrateExtendedAttributeSP     None      
+05/07/2018 22:09:39:201 <RESPONSES Status="Success">
+  <RESPONSE Status="Success">
+    <_RESULT Value="SUCCESS"/>
+  </RESPONSE>
+</RESPONSES>
+
+05/07/2018 22:09:39:202 Loading xservice/platform/modules/common/staticdata/refreshSysDBC.xml
+** 222 10:09:39pm REQUEST              refreshSysDBC                  None      
+05/07/2018 22:09:55:782 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:09:55:784 Loading xservice/mdmservices/modules/businessrules/staticdata/refreshDefaultRules.xml
+** 223 10:09:55pm REQUEST              refreshDefaultRules            None      
+05/07/2018 22:12:48:043 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:12:48:045 Loading xservice/mdmservices/modules/configurableworkflow/staticdata/configUI_AutoGen_Req.xml
+** 224 10:12:48pm REQUEST              GenerateAutoConfigUI           None      
+05/07/2018 22:13:07:352 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:13:07:354 Loading xservice/mdmservices/modules/businessrules/staticdata/BusinessRuleSeedData.xml
+** 225 10:13:07pm REQUEST              BusinessValidation             None      
+05/07/2018 22:13:13:490 <RESPONSES Status="Success">
+  <RESPONSE Status="Success"/>
+</RESPONSES>
+
+05/07/2018 22:13:13:491 Populating SYS_VIEW_MAP
+Cleaning up SYS_VIEW_MAP... 
+Inserting into SYS_VIEW_MAP...
+... successfully populated SYS_VIEW_MAP
+05/07/2018 22:13:16:346 Done populating SYS_VIEW_MAP
+05/07/2018 22:13:16:346 Stopping Xserver
+05/07/2018 22:13:16:346 Started shut down of Xserver
+05/07/2018 22:13:16:346 Shutting down Net Package
+05/07/2018 22:13:16:347 Invoking Pre Shut Down On Services
+** 226 10:13:16pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+** 227 10:13:16pm REQUEST              DEFINE_PRE_SHUTDOWN            None      
+05/07/2018 22:13:16:504 Shutting down Asynch Task Procesing
+05/07/2018 22:13:16:504 Invoking Post Shut Down On Services
+05/07/2018 22:13:16:504 Closing DB connection pools
+05/07/2018 22:13:16:504 Closing db connections of connection profile default : 5
+05/07/2018 22:13:16:817 Finished shut down of Xserver
+05/07/2018 22:13:16:817 Xserver Stopped
+********************************************************
+05/07/2018 22:13:16:817 Finished Uploading Static Data Time Taken 4 Minute(s) 32 Second(s)
+********************************************************
+05/07/2018 22:13:16:910 *************
+05/07/2018 22:13:16:910 ISG Validator
+05/07/2018 22:13:16:910 *************
+
+********************************************************
+********************************************************
+05/07/2018 22:13:18:876  Database Schema Generation and Static Data Population Completed Successfully Total Time Taken 11 Minute(s) 51 Second(s)
+********************************************************
+********************************************************
+05/07/2018 22:13:18:876 ShutDown already in progress
+05/07/2018 22:13:18:876 ShutDown already in progress
+05/07/2018 22:13:18:876 ShutDown already in progress

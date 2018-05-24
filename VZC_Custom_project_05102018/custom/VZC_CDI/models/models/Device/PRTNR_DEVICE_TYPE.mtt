@@ -1,0 +1,29 @@
+<document>
+  <properties>
+    <property Name="DEVICE_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_type_CD" />
+    </property>
+    <property Name="PRTNR_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRTNR_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1PARTNER_DEVICE_TYPE" PhysicalName="XIE1PARTNER_DEVICE_TYPE" Kind="NUPI">
+      <property Name="DEVICE_type_CD" />
+    </key>
+    <key Active="true" Name="XPKPARTNER_DEVICE_TYPE" PhysicalName="XPKPARTNER_DEVICE_TYPE" Kind="PRIMARY">
+      <property Name="DEVICE_type_CD" />
+      <property Name="PRTNR_NAME" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_PRTNR_DEVICE_TYPE" MasterTable="M_PRTNR_DEVICE_TYPE" />
+    <miscFacet PhysicalName="PRTNR_DEVICE_TYPE" DisplayName="Partner Device Type" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

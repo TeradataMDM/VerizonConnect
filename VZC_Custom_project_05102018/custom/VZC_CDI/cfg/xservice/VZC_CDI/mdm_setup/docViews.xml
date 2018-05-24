@@ -1,0 +1,39 @@
+<REQUESTS ServiceName="MDMServices">
+  <ADD_DOCUMENT Name="SYS_DOCVIEW_MAP">
+    <ID Value="47" />
+    <LOGICAL_NAME Value="REF_CUST_V" />
+    <PHYSICAL_NAME Value="REF_CUST_V" />
+    <IS_HARD_DELETE_ENABLED Value="false" />
+    <ACTIVE Value="true" />
+    <RANK_ID Value="48" />
+    <IS_TEMPORAL Value="false" />
+  </ADD_DOCUMENT>
+  <ADD_DOCUMENT Name="SYS_DOCVIEW_MAP">
+    <ID Value="48" />
+    <LOGICAL_NAME Value="REF_ELEC_ADDR_V" />
+    <PHYSICAL_NAME Value="REF_ELEC_ADDR_V" />
+    <IS_HARD_DELETE_ENABLED Value="false" />
+    <ACTIVE Value="true" />
+    <RANK_ID Value="49" />
+    <IS_TEMPORAL Value="false" />
+  </ADD_DOCUMENT>
+  <ADD_DOCUMENT Name="SYS_DOCVIEW_MAP">
+    <ID Value="49" />
+    <LOGICAL_NAME Value="REF_STREET_ADDR_V" />
+    <PHYSICAL_NAME Value="REF_STREET_ADDR_V" />
+    <IS_HARD_DELETE_ENABLED Value="false" />
+    <ACTIVE Value="true" />
+    <RANK_ID Value="50" />
+    <IS_TEMPORAL Value="false" />
+  </ADD_DOCUMENT>
+  <ADD_DOCUMENT Name="SYS_DOCVIEW_MAP">
+    <ID Value="50" />
+    <LOGICAL_NAME Value="REF_TEL_NUM_V" />
+    <PHYSICAL_NAME Value="REF_TEL_NUM_V" />
+    <IS_HARD_DELETE_ENABLED Value="false" />
+    <ACTIVE Value="true" />
+    <RANK_ID Value="51" />
+    <IS_TEMPORAL Value="false" />
+  </ADD_DOCUMENT>
+</REQUESTS>
+

@@ -1,0 +1,50 @@
+<document>
+  <properties>
+    <property Name="ACCT_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_ID" />
+    </property>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>LOB_NUM</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CUST_ACCT_ADDR_USG_CD" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_ACCT_ADDR_USG_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_ADDR_USG_CD" />
+    </property>
+    <property Name="CUST_ACCT_ADDR_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_ADDR_STRT_DT" />
+    </property>
+    <property Name="CUST_ACCT_ADDR_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ACCT_ADDR_END_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCUSTOMER_ACCOUNT_ADDRESS" PhysicalName="XPKCUSTOMER_ACCOUNT_ADDRESS" Kind="PRIMARY">
+      <property Name="ADDR_ID" />
+      <property Name="CUST_ACCT_ADDR_USG_CD" />
+      <property Name="ACCT_ID" />
+      <property Name="LOB" />
+      <property Name="CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_ACCT_ADDR" MasterTable="M_CUST_ACCT_ADDR" />
+    <miscFacet PhysicalName="CUST_ACCT_ADDR" DisplayName="Customer Account Address" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

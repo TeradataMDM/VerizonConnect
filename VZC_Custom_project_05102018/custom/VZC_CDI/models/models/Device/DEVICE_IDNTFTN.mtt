@@ -1,0 +1,39 @@
+<document>
+  <properties>
+    <property Name="DEVICE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_ID" />
+    </property>
+    <property Name="DEVICE_IDNTFTN_type">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_IDNTFTN_type" />
+    </property>
+    <property Name="DEVICE_IDNTFTN_VAL" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_IDNTFTN_VAL" />
+    </property>
+    <property Name="DEVICE_IDNTFTN_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_IDNTFTN_STRT_DT" />
+    </property>
+    <property Name="DEVICE_IDNTFTN_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_IDNTFTN_END_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1DEVICE_IDENTIFICATION" PhysicalName="XIE1DEVICE_IDENTIFICATION" Kind="NUPI">
+      <property Name="DEVICE_ID" />
+    </key>
+    <key Active="true" Name="XPKDEVICE_IDENTIFICATION" PhysicalName="XPKDEVICE_IDENTIFICATION" Kind="PRIMARY">
+      <property Name="DEVICE_ID" />
+      <property Name="DEVICE_IDNTFTN_VAL" />
+      <property Name="DEVICE_IDNTFTN_STRT_DT" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_DEVICE_IDNTFTN" MasterTable="M_DEVICE_IDNTFTN" />
+    <miscFacet PhysicalName="DEVICE_IDNTFTN" DisplayName="Device Identification" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

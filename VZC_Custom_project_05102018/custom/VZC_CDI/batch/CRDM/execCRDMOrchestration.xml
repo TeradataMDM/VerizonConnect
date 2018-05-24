@@ -1,0 +1,13 @@
+<!--
+  Copyright (c) 2009 by Teradata Corporation. 
+  All Rights Reserved. 
+  Teradata CONFIDENTIAL AND TRADE SECRET 
+-->
+<REQUESTS ServiceName="BCM_MASTER">
+  <START_WORKFLOW>
+    <TEMPLATE Value="wfCRDMOrchestrationProcess111"/>
+    <ADDITIONAL_PARAMETERS>
+      <GROUP_NAME Value="CHNL_MTCH"/>
+    </ADDITIONAL_PARAMETERS>
+  </START_WORKFLOW>
+</REQUESTS>

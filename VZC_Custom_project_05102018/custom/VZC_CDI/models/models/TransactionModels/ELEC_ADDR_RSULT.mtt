@@ -1,0 +1,43 @@
+<document>
+  <properties>
+    <property Name="ELEC_ADDR_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_RQST_ID" />
+    </property>
+    <property Name="PRSNA_ID" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="LOB_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="ADDR_RSULT_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_RSULT_CD" />
+    </property>
+    <property Name="DMN_ROOT_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DMN_ROOT_CD" />
+    </property>
+    <property Name="ELEC_ADDR_SBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_SBTYPE_CD" />
+    </property>
+    <property Name="ELEC_ADDR_TXT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_TXT" />
+    </property>
+    <property Name="ELEC_ADDR_DMN_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ELEC_ADDR_DMN_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKELECTRONIC_ADDRESS_RESULT" PhysicalName="XPKELECTRONIC_ADDRESS_RESULT" Kind="PRIMARY">
+      <property Name="ELEC_ADDR_RQST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_ELEC_ADDR_RSULT" MasterTable="ELEC_ADDR_RSULT" />
+    <miscFacet PhysicalName="ELEC_ADDR_RSULT" DisplayName="Electronic Address Result" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

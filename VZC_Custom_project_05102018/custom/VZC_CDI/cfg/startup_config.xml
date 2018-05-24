@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlatformServerConfig>
+  <XserverFile File="xserver.xml"/>
+  <Services>
+    <Service File="platform.xml"/>
+    <Service File="mdmservices.xml"/>
+    <Service File="toolkit.xml"/>
+    <Service File="toolkit-input.xml"/>
+    <Service File="toolkit-netchange.xml"/>
+    <Service File="toolkit-version.xml"/>
+    <Service File="VZC_CDI.xml"/>
+    <Service File="VZC_CDI-input.xml"/>
+    <Service File="VZC_CDI-output.xml"/>
+    <Service File="VZC_CDI-netchange.xml"/>
+    <Service File="VZC_CDI-version.xml"/>
+  </Services>
+</PlatformServerConfig>

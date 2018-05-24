@@ -1,0 +1,79 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="FRST_NAME" PhysicalName="FRST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FRST_NAME" />
+    </property>
+    <property Name="MDL_NAME" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MDL_NAME" />
+    </property>
+    <property Name="LAST_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LAST_NAME" />
+    </property>
+    <property Name="NAME_PRFX_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_PRFX_TXT" />
+    </property>
+    <property Name="NAME_SFX_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NAME_SFX_TXT" />
+    </property>
+    <property Name="ETHCTY_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ETHCTY_type_CD" />
+    </property>
+    <property Name="GNDR_type_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>GNDR_type_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GNDR_type_CD" />
+    </property>
+    <property Name="BIRTH_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BIRTH_DT" />
+    </property>
+    <property Name="NTLTY_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NTLTY_CD" />
+    </property>
+    <property Name="BIRTH_YR">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BIRTH_YR" />
+    </property>
+    <property Name="BIRTH_MTH">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BIRTH_MTH" />
+    </property>
+    <property Name="BIRTH_DY">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="BIRTH_DY" />
+    </property>
+    <property Name="DEATH_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEATH_DT" />
+    </property>
+    <property Name="Soundex_NAME_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Soundex_NAME_TXT" />
+    </property>
+    <property Name="NICK_NAME_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NICK_NAME_TXT" />
+    </property>
+    <property Name="STD_NAME_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="STD_NAME_TXT" />
+    </property>
+    <property Name="Pet_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Pet_type_CD" />
+    </property>
+    <property Name="Pet_BREED_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Pet_BREED_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKINDIVIDUAL_CUSTOMER" PhysicalName="XPKINDIVIDUAL_CUSTOMER" Kind="PRIMARY">
+      <property Name="CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_INDIV_CUST" MasterTable="M_INDIV_CUST" />
+    <miscFacet PhysicalName="INDIV_CUST" DisplayName="Individual Customer" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

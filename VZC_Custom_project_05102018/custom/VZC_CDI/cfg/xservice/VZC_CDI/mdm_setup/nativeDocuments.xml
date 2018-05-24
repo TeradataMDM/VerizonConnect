@@ -1,0 +1,18 @@
+<REQUESTS ServiceName="MDMServices">
+  <ADD_DOCUMENT Name="SYS_NATIVE_TABLE_MAP">
+    <ID Value="33" />
+    <LOGICAL_NAME Value="MultiTable_Map" />
+    <PHYSICAL_NAME Value="MULTITABLE_MAP" />
+  </ADD_DOCUMENT>
+  <ADD_DOCUMENT Name="SYS_NATIVE_TABLE_MAP">
+    <ID Value="75" />
+    <LOGICAL_NAME Value="VersionInfo" />
+    <PHYSICAL_NAME Value="VERSION_INFO" />
+  </ADD_DOCUMENT>
+  <ADD_DOCUMENT Name="SYS_NATIVE_TABLE_MAP">
+    <ID Value="96" />
+    <LOGICAL_NAME Value="VersionDetails" />
+    <PHYSICAL_NAME Value="VERSION_DETAILS" />
+  </ADD_DOCUMENT>
+</REQUESTS>
+

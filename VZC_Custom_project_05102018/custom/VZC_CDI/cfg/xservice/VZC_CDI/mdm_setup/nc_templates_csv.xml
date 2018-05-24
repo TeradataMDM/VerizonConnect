@@ -1,0 +1,348 @@
+<REQUESTS ServiceName="PLATFORM">
+  <REQUEST Name="dummyRequest" />
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeAttributeSetTemplate" DisplayName="Net Change AttributeSet" TemplateType="Transaction.NetChangeAttributeSetTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="AttributeSet">
+      <PROPERTY Name="Attribute_Set_Id" />
+      <PROPERTY Name="Attribute_Set_Name" />
+      <PROPERTY Name="Attribute_Set_Description" />
+      <PROPERTY Name="Group_Class_Id" />
+      <PROPERTY Name="Updt_Priority" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeAttributeSetDetailTemplate" DisplayName="Net Change AttributeSetDetail" TemplateType="Transaction.NetChangeAttributeSetDetailTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="AttributeSetDetail">
+      <PROPERTY Name="Attribute_Set_Id" />
+      <PROPERTY Name="Attribute_Description" />
+      <PROPERTY Name="Updt_Phy_Col_Name" />
+      <PROPERTY Name="Updt_Log_Col_Name" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeCode_SetTemplate" DisplayName="Net Change Code_Set" TemplateType="Transaction.NetChangeCode_SetTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Code_Set">
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Map_Table_Name" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="IS_EDITABLE" />
+      <PROPERTY Name="IS_PROMOTED" />
+      <PROPERTY Name="Code_Name" />
+      <PROPERTY Name="Parent_Code_Set_Id" />
+      <PROPERTY Name="Is_Custom_Map_Table" />
+      <PROPERTY Name="Values_Table_Name" />
+      <PROPERTY Name="Reference_Desc_Table_Name" />
+      <PROPERTY Name="Service_Name" />
+      <PROPERTY Name="Database_Name" />
+      <PROPERTY Name="REORDER_SEQ_ID" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeCode_Set_StatsTemplate" DisplayName="Net Change Code_Set_Stats" TemplateType="Transaction.NetChangeCode_Set_StatsTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Code_Set_Stats">
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Value_Id_Count" />
+      <PROPERTY Name="Mapped_Source_Count" />
+      <PROPERTY Name="Unmapped_Source_Count" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeCustom_Code_Set_ClmTemplate" DisplayName="Net Change Custom_Code_Set_Clm" TemplateType="Transaction.NetChangeCustom_Code_Set_ClmTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Custom_Code_Set_Clm">
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Column_Type" />
+      <PROPERTY Name="Logical_Column_Name" />
+      <PROPERTY Name="Physical_Column_Name" />
+      <PROPERTY Name="Logical_Display_Column_Name" />
+      <PROPERTY Name="Physical_Display_Column_Name" />
+      <PROPERTY Name="Column_Sequence" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeDomainTemplate" DisplayName="Net Change Domain" TemplateType="Transaction.NetChangeDomainTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Domain">
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Domain_Id" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupAttributeValInstanceTemplate" DisplayName="Net Change GroupAttributeValInstance" TemplateType="Transaction.NetChangeGroupAttributeValInstanceTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupAttributeValInstance">
+      <PROPERTY Name="Log_Id" />
+      <PROPERTY Name="Attribute_Set_Id" />
+      <PROPERTY Name="Group_Id" />
+      <PROPERTY Name="Updt_Log_Col_Name" />
+      <PROPERTY Name="Updt_Col_Value" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupAttributeValueTemplate" DisplayName="Net Change GroupAttributeValue" TemplateType="Transaction.NetChangeGroupAttributeValueTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupAttributeValue">
+      <PROPERTY Name="Attribute_Set_Id" />
+      <PROPERTY Name="Group_Id" />
+      <PROPERTY Name="Updt_Log_Col_Name" />
+      <PROPERTY Name="Updt_Col_Value" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupClassTemplate" DisplayName="Net Change GroupClass" TemplateType="Transaction.NetChangeGroupClassTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupClass">
+      <PROPERTY Name="Group_Class_Id" />
+      <PROPERTY Name="Class_Name" />
+      <PROPERTY Name="Class_Description" />
+      <PROPERTY Name="Phy_Tbl_Name" />
+      <PROPERTY Name="Log_Tbl_Name" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupExecutionLogTemplate" DisplayName="Net Change GroupExecutionLog" TemplateType="Transaction.NetChangeGroupExecutionLogTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupExecutionLog">
+      <PROPERTY Name="Log_Id" />
+      <PROPERTY Name="Group_Id" />
+      <PROPERTY Name="Execution_Status" />
+      <PROPERTY Name="Execution_Time" />
+      <PROPERTY Name="Group_Name" />
+      <PROPERTY Name="Attribute_Set_Name" />
+      <PROPERTY Name="Execution_Response" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupMasterTemplate" DisplayName="Net Change GroupMaster" TemplateType="Transaction.NetChangeGroupMasterTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupMaster">
+      <PROPERTY Name="Group_Id" />
+      <PROPERTY Name="Group_Name" />
+      <PROPERTY Name="Group_Description" />
+      <PROPERTY Name="Group_Class_Id" />
+      <PROPERTY Name="Group_Rule_Id" />
+      <PROPERTY Name="Group_Precedence" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeGroupMemberTemplate" DisplayName="Net Change GroupMember" TemplateType="Transaction.NetChangeGroupMemberTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="GroupMember">
+      <PROPERTY Name="Member_Id" />
+      <PROPERTY Name="Group_Class_Id" />
+      <PROPERTY Name="Group_Id" />
+      <PROPERTY Name="Pk_Col_Val1" />
+      <PROPERTY Name="Pk_Col_Val2" />
+      <PROPERTY Name="Pk_Col_Val3" />
+      <PROPERTY Name="Pk_Col_Val4" />
+      <PROPERTY Name="Pk_Col_Val5" />
+      <PROPERTY Name="Pk_Col_Val6" />
+      <PROPERTY Name="Pk_Col_Val7" />
+      <PROPERTY Name="Pk_Col_Val8" />
+      <PROPERTY Name="Pk_Col_Val9" />
+      <PROPERTY Name="Pk_Col_Val10" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeReference_CodeTemplate" DisplayName="Net Change Reference_Code" TemplateType="Transaction.NetChangeReference_CodeTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Reference_Code">
+      <PROPERTY Name="EDW_Code" />
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="VALUE_ID" />
+      <PROPERTY Name="Parent_EDW_Code" />
+      <PROPERTY Name="Parent_Code_Set_Id" />
+      <PROPERTY Name="Parent_VALUE_ID" />
+      <PROPERTY Name="Code_Name" />
+      <PROPERTY Name="Parent_Code_Name" />
+      <PROPERTY Name="Is_Default" />
+      <PROPERTY Name="SEQUENCE_ID" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeReference_DescriptionTemplate" DisplayName="Net Change Reference_Description" TemplateType="Transaction.NetChangeReference_DescriptionTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Reference_Description">
+      <PROPERTY Name="EDW_Code" />
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="Language_Id" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeStandard_MapTemplate" DisplayName="Net Change Standard_Map" TemplateType="Transaction.NetChangeStandard_MapTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Standard_Map">
+      <PROPERTY Name="Source_Code" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Domain_Id" />
+      <PROPERTY Name="Code_Set_Id" />
+      <PROPERTY Name="EDW_Code" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="Source_Code_Value_Id" />
+      <PROPERTY Name="Other_Description" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="NetChangeValid_LanguageTemplate" DisplayName="Net Change Valid_Language" TemplateType="Transaction.NetChangeValid_LanguageTemplate" DataType="CSV" ServiceName="MDMServices" ApiName="reconcileNetChange" MiscData="Valid_Language">
+      <PROPERTY Name="Language_Id" />
+      <PROPERTY Name="Language_Name" />
+      <PROPERTY Name="Description" />
+      <PROPERTY Name="Start_Date" />
+      <PROPERTY Name="End_Date" />
+      <PROPERTY Name="Record_Deleted_Flag" />
+      <PROPERTY Name="Ctl_Id" />
+      <PROPERTY Name="Process_Name" />
+      <PROPERTY Name="Process_Id" />
+      <PROPERTY Name="Update_Process_Name" />
+      <PROPERTY Name="Update_Process_Id" />
+      <PROPERTY Name="SYS_TARGET_ID" />
+      <PROPERTY Name="SYS_AUTH_ID" />
+      <PROPERTY Name="SOURCE" />
+      <PROPERTY Name="SYS_ERR_CODE" />
+      <PROPERTY Name="SYS_ERR_SEVERITY" />
+      <PROPERTY Name="SYS_TYPE" />
+      <PROPERTY Name="SYS_DOCUMENT" />
+      <PROPERTY Name="WORKFLOW_ID" />
+    </TEMPLATE>
+  </REQUEST>
+  <REQUEST Name="addTemplate">
+    <TEMPLATE Name="DataUploadCompleteTemplate" DisplayName="Data Upload Complete" TemplateType="DataUploadComplete" DataType="XML" ServiceName="MDMServices" ApiName="raiseDataUploadCompleted" UserData="" />
+  </REQUEST>
+</REQUESTS>
+

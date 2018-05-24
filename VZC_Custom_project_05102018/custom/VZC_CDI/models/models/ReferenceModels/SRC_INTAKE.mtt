@@ -1,0 +1,40 @@
+<document>
+  <properties>
+    <property Name="SRC_Intake_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_Intake_ID" />
+    </property>
+    <property Name="SRC_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_type_CD" />
+    </property>
+    <property Name="SRC_type_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_type_DESC" />
+    </property>
+    <property Name="SRC_type_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_type_NAME" />
+    </property>
+    <property Name="SRC_PRVDR_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_PRVDR_CD" />
+    </property>
+    <property Name="SRC_FLDR_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_FLDR_TXT" />
+    </property>
+    <property Name="SFTP_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SFTP_FLG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKSOURCE_INTAKE" PhysicalName="XPKSOURCE_INTAKE" Kind="PRIMARY">
+      <property Name="SRC_Intake_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_SRC_INTAKE" MasterTable="M_SRC_INTAKE" />
+    <miscFacet PhysicalName="SRC_INTAKE" DisplayName="Source Intake" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

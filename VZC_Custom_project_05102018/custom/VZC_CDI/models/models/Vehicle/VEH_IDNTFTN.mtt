@@ -1,0 +1,39 @@
+<document>
+  <properties>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="VEH_IDNTFTN_type">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_IDNTFTN_type" />
+    </property>
+    <property Name="Idenfication_VAL" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Idenfication_VAL" />
+    </property>
+    <property Name="VEH_IDNTFTN_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_IDNTFTN_STRT_DT" />
+    </property>
+    <property Name="VEH_IDNTFTN_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_IDNTFTN_END_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1VEHICLE_IDENTIFCATION" PhysicalName="XIE1VEHICLE_IDENTIFCATION" Kind="NUPI">
+      <property Name="VEH_ID" />
+    </key>
+    <key Active="true" Name="XPKVEHICLE_IDENTIFCATION" PhysicalName="XPKVEHICLE_IDENTIFCATION" Kind="PRIMARY">
+      <property Name="VEH_ID" />
+      <property Name="Idenfication_VAL" />
+      <property Name="VEH_IDNTFTN_STRT_DT" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_IDNTFTN" MasterTable="M_VEH_IDNTFTN" />
+    <miscFacet PhysicalName="VEH_IDNTFTN" DisplayName="Vehicle Identification" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

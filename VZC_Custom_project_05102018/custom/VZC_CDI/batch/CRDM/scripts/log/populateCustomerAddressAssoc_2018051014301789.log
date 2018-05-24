@@ -1,0 +1,75 @@
+BTEQ 16.10.00.01 Thu May 10 14:30:18 2018 PID: 5928
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+/***********************************************************************************************************
+SCRIPT:              populateCustomerAddressAssoc.btq
+DESCRIPTION:         This script populates cust address table
+DEPENDENCY:           
+INPUT:               SURVIVORSHIP INTERIM Tables 
+OUTPUT:              
+SPECIAL INSTRUCTIONS:
+
+CHANGE LOG:
+VERSION              DATE                 AUTHOR                          CHANGES
+1.00                05/08/2018           CA186004                        CREATED
+***********************************************************************************************************/
+.LOGON 10.25.132.9/MDM41,
+
+ *** Logon successfully completed.
+ *** Teradata Database Release is 16.20q.00.10                  
+ *** Teradata Database Version is 16.20q.00.10                    
+ *** Transaction Semantics are BTET.
+ *** Session Character Set Name is 'ASCII'.
+ 
+ *** Total elapsed time was 1 second.
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+--.SET ERROROUT STDOUT;
+--.SET SESSION CHARSET 'UTF8';
+
+--------------------------------------------------------------------------------------------------------------------
+-- Tables --
+--------------------------------------------------------------------------------------------------------------------
+
+
+INSERT INTO MDM41_MST.M_CUST_ADDR
+(ADDR_ID, CUST_ID, 
+LOB_NUM, CUST_ADDR_STRT_DT, CUST_ADDR_USG_TYPE_CD, SYS_CREATED_BY,
+  SYS_CREATION_DATE,
+  SYS_ENT_STATE)
+sel A.TGT_ADDR_ID , B.TGT_CUST_ID, 1,
+  current_timestamp(0),
+  A.ADDR_TYPE_CD,
+  'Admin',
+  current_timestamp(0),
+  'ACTIVE' 
+from MDM41_STG.PRSNA_ADDR_STG A, MDM41_STG.PRSNA_STG B
+WHERE  (A.INSERT_UPDATE_FLAG='I' or B.INSERT_UPDATE_FLAG='I') 
+AND A.PRSNA_ID = B.PRSNA_ID
+GROUP BY 1,2,3,4,5,6,7;
+
+ *** Insert completed. No rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL > 0 THEN .GOTO EXIT;
++---------+---------+---------+---------+---------+---------+---------+----
+
+.LABEL EXIT
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORLEVEL <= 4 THEN .GOTO WARN;
+.GOTO WARN;
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORLEVEL > 4 THEN .GOTO ERR ;
+ *** Skipped.
++---------+---------+---------+---------+---------+---------+---------+----
+
+.LABEL WARN
++---------+---------+---------+---------+---------+---------+---------+----
+.QUIT 0
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 0 

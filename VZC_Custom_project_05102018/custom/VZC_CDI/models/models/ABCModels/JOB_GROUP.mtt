@@ -1,0 +1,32 @@
+<document>
+  <properties>
+    <property Name="GROUP_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="GROUP_ID" />
+    </property>
+    <property Name="JOB_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_ID" />
+    </property>
+    <property Name="SEQUENCE_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SEQUENCE_ID" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="MST_JOB_GROUP_PK" PhysicalName="MST_JOB_GROUP_PK" Kind="PRIMARY">
+      <property Name="GROUP_ID" />
+      <property Name="JOB_ID" />
+    </key>
+    <key Active="true" Name="XIE1MST_JOB_GROUP" PhysicalName="XIE1MST_JOB_GROUP" Kind="NUPI">
+      <property Name="JOB_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_JOB_GROUP" MasterTable="M_JOB_GROUP" />
+    <miscFacet PhysicalName="JOB_GROUP" DisplayName="JobGroup" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

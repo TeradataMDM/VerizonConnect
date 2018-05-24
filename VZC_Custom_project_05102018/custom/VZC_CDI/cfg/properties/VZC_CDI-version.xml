@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dom-config>
+  <service-config Name="BCM_VERSION_STAGING" TransactionCache="false" Register="false">
+    <register-handlers>
+      <handler TagName="MDM" ClassName="com.teradata.platform.services.mdmservices.util.MDMPreInitHandler"/>
+      <handler TagName="validationSpecFiles" ClassName="com.teradata.platform.core.validation.ValidationSpecsHandler"/>
+    </register-handlers>
+    <MDM/>
+    <extensionFiles>
+      <extensionFile Name="com/teradata/platform/services/mdmservices/modules/dodbpersist/ruleextension/dodbpersistRuleExtension.xml"/>
+    </extensionFiles>
+    <docDefnFiles>
+      <docDefnFile Name="xservice/VZC_CDI/staging/version/documents/ver_xdoc.xml"/>
+    </docDefnFiles>
+    <logger>
+      <file Name="../log/VZC_CDI_version.log"/>
+      <logLevels>
+        <logLevel Value="Exception"/>
+        <logLevel Value="Error"/>
+      </logLevels>
+      <brief-console Value="false"/>
+    </logger>
+    <service-params>
+      <param Value="1000" Name="DEFAULT_MAX_ROWS_FETCH"/>
+    </service-params>
+    <schemaGenerate Value="false">
+      <file Value="../db/VZC_CDI_version.sql"/>
+      <generateTables Value="false"/>
+      <viewSqlDir Value="xservice/VZC_CDI/staging/version/viewsql"/>
+      <dbname Value="MDM41_VER"/>
+      <maxTableNameLength Value="128"/>
+      <maxColumnNameLength Value="128"/>
+    </schemaGenerate>
+    <ruleDefnFiles/>
+    <workflow>
+      <workflowDefnFiles/>
+      <uiWorkflowDefnFiles/>
+    </workflow>
+    <eventDefnFiles/>
+    <statetransition>
+      <stateTransitionFiles/>
+      <stateMappingFiles/>
+    </statetransition>
+    <messaging>
+      <messageTemplateFiles/>
+      <messageRecipientGroupFiles/>
+      <messagingEventDefFiles/>
+      <messagingEventFiles/>
+    </messaging>
+    <validationSpecFiles/>
+    <dataPersistSpec/>
+    <modules/>
+  </service-config>
+</dom-config>

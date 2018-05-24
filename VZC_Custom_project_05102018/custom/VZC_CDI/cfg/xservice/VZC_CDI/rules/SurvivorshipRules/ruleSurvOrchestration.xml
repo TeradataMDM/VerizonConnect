@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENTS>
+  <!--
+Copyright (c) 2009 by Teradata Corporation.
+All Rights Reserved.
+Teradata CONFIDENTIAL AND TRADE SECRET
+-->
+  <DEFINE_METHOD Name="matchingAddHistory">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="matchingAddHistory">
+          <Profile_Id Value="1"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <EXEC_PROC Name="MATCHING_ADD_HISTORY">
+          <Profile_Id Type="IN" Value="{$thisParam/Profile_Id/@Value}" DataType="int"/>
+        </EXEC_PROC>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <!-- ********************************************************************** -->
+  <DEFINE_METHOD Name="getCRDMSurvProfiles">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="getCRDMSurvProfiles">
+          <GROUP_NAME Value="CHNL_PRE_SURV"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <SET Var="query1" FromValue="LOCKING ROW FOR ACCESS SELECT A.MAPPING_ID AS SURV_PROFILE_ID, A.MATCH_PROFILE_ID, A.MAP_PROFILE_NAME AS SURV_PROFILE_NAME, B.SEQUENCE_ID FROM (SELECT X.MAPPING_ID, X.MATCH_PROFILE_ID,Y.MAP_PROFILE_NAME FROM SV_SURV_MAP_MATCH_ASSOC X INNER JOIN SV_SURV_MAP_PROFILE Y ON X.MAPPING_ID = Y.MAPPING_ID) A, (SELECT GRP.GROUP_ID,GRP.GROUP_NM,JG.JOB_ID,JM.JOB_NM,JG.SEQUENCE_ID FROM M_GROUP GRP INNER JOIN M_JOB_GROUP JG ON GRP.GROUP_ID=JG.GROUP_ID AND GRP.GROUP_NM='{$thisParam/GROUP_NAME/@Value}' INNER JOIN M_JOB_MASTER JM ON JM.JOB_ID=JG.JOB_ID) B WHERE A.MAP_PROFILE_NAME=B.JOB_NM  ORDER BY B.SEQUENCE_ID;"/>
+        <EXECUTE_SQL_QUERY Value="{$query1}" AssignToVar="result" ReturnRowCount="yes"/>
+        <SET DocVar="thisReturn" FromDocVar="result"/>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="execSurvivorshipsStage1">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="execSurvivorshipsStage1">
+          <GROUP_NAME Value="{$thisParam/GROUP_NAME/@Value}"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <FOR_EACH SelectList="$thisParam/Profiles/SQL_RESULT" CurrentElement="element">
+          <!-- do transaction per profile to reduce locking time on idgen table -->
+          <DO_TRANSACTION>
+            <SET Var="matchProfileId" FromValue="{$element/MATCH_PROFILE_ID/@Value}"/>
+            <SET Var="survProfileId" FromValue="{$element/SURV_PROFILE_ID/@Value}"/>
+            <!--<REQUEST Name="matchingAddHistory" ServiceName="BCM_MASTER" AssignToVar="result">
+			<Profile_Id Value="{$matchProfileId}"/>
+			</REQUEST>-->
+            <REQUEST Name="executeSurvivorshipPreMaster" ServiceName="MDMServices" AssignToVar="result">
+              <SurvMappingId Value="{$survProfileId}"/>
+              <MatchProfileId Value="{$matchProfileId}"/>
+              <SurvActionType Value="ALL"/>
+              <SurvExecuteCondition Value=""/>
+              <UserName Value="Data Steward"/>
+            </REQUEST>
+          </DO_TRANSACTION>
+        </FOR_EACH>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="execSurvivorshipsStage2">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="execSurvivorshipsStage2">
+          <Profiles/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <SET Var="isRealTime" FromValue="{$thisParam/Is_Real_Time/@Value}"/>
+        <FOR_EACH SelectList="$thisParam/Profiles/SQL_RESULT" CurrentElement="element">
+          <SET Var="matchProfileId" FromValue="{$element/MATCH_PROFILE_ID/@Value}"/>
+          <SET Var="survProfileId" FromValue="{$element/SURV_PROFILE_ID/@Value}"/>
+          <REQUEST Name="executeSurvivorshipMaster" ServiceName="MDMServices" AssignToVar="result">
+            <SurvMappingId Value="{$survProfileId}"/>
+            <MatchProfileId Value="{$matchProfileId}"/>
+            <SurvActionType Value="ALL"/>
+            <SurvExecuteCondition Value=""/>
+            <UserName Value="Data Steward"/>
+            <IsRealTime Value="{$isRealTime}"/>
+          </REQUEST>
+        </FOR_EACH>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="execCRDMSurvProfiles">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="execCRDMSurvProfiles">
+          <GROUP_NAME Value="CHNL_PRE_SURV"/>
+          <EXEC_MODE Value="Premaster"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="strlen($thisParam/GROUP_NAME/@Value) > 0">
+          <THEN>
+            <REQUEST Name="getCRDMSurvProfiles" ServiceName="BCM_MASTER" AssignToVar="result">
+              <GROUP_NAME Value="{$thisParam/GROUP_NAME/@Value}"/>
+            </REQUEST>
+            <SET Var="profileResult" FromVar="result"/>
+          </THEN>
+          <ELSE>
+            <TO_DOCVAR AssignToVar="profileResult">
+              <RESPONSE>
+                <TO_XML SelectList="$thisParam/SQL_RESULT"/>
+              </RESPONSE>
+            </TO_DOCVAR>
+          </ELSE>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/EXEC_MODE/@Value = 'Premaster' or $thisParam/EXEC_MODE/@Value = 'Master'">
+          <THEN>
+            <SET Var="stepName" FromValue="execSurvivorshipsStage1"/>
+            <REQUEST Name="execSurvivorshipsStage1" ServiceName="BCM_MASTER" AssignToVar="result">
+              <Profiles>
+                <TO_XML SelectList="$profileResult/*"/>
+              </Profiles>
+            </REQUEST>
+          </THEN>
+        </IF_TEST>
+        <IF_TEST Test="$thisParam/EXEC_MODE/@Value = 'PostPremaster' or $thisParam/EXEC_MODE/@Value = 'Master'">
+          <THEN>
+            <DO_TRANSACTION>
+              <SET Var="stepName" FromValue="execSurvivorshipsStage2"/>
+              <REQUEST Name="execSurvivorshipsStage2" ServiceName="BCM_MASTER" AssignToVar="result">
+                <Is_Real_Time Value="{$isRealTime}"/>
+                <Profiles>
+                  <TO_XML SelectList="$profileResult/*"/>
+                </Profiles>
+              </REQUEST>
+            </DO_TRANSACTION>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="updateStageTableTargetAddrIds">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="updateStageTableTargetAddrIds">
+          <GROUP_NAME Value="CHNL_PRE_SURV"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="$thisParam/GROUP_NAME/@Value = 'CHNL_PRE_SURV'">
+          <THEN>
+            <EXECUTE_SHELL_COMMAND Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\batch\CRDM\scripts\bat\updateStgTableAddrIds.bat" AssignToVar="updateStageTargetAddrIds"/>
+            <!--<SET Var="queryString1" FromValue="UPDATE TRG FROM MDM41_STG.PRSNA_ADDR_STG TRG, (SELECT TRGT_ADDR_ID, PRSNA_ID, STREET_ADDR_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.STREET_ADDR_XREF_FWD UNION SELECT TRGT_ADDR_ID, PRSNA_ID, TEL_NUM_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.TEL_NUM_XREF_FWD UNION SELECT TRGT_ADDR_ID, PRSNA_ID, ELEC_ADDR_RQST_ID as ADDR_RQST_ID, INSERT_UPDATE_FLAG, ADDR_TYPE_CD FROM MDM41_STG.ELEC_ADDR_XREF_FWD) SRC SET TGT_ADDR_ID = SRC.TRGT_ADDR_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG WHERE TRG.PRSNA_ID = SRC.PRSNA_ID AND TRG.ADDR_RQST_ID = SRC.ADDR_RQST_ID AND TRG.ADDR_TYPE_CD = SRC.ADDR_TYPE_CD;"/>
+            <EXECUTE_SQL_QUERY AssignToVar="updateStageTargetAddrIds" Value="{$queryString1}"/>-->
+            <SET FromDocVar="updateStageTargetAddrIds" DocVar="thisReturn"/>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="identifyGoldenCustIds">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="identifyGoldenCustIds">
+          <GROUP_NAME Value="IDENTIFY_GOLDEN_CUST"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="$thisParam/GROUP_NAME/@Value = 'IDENTIFY_GOLDEN_CUST'">
+          <THEN>
+            <EXECUTE_SHELL_COMMAND Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\batch\CRDM\scripts\bat\identifyGoldenCustIds.bat" AssignToVar="identifyGoldenCustIdsRes"/>
+            <!--<SET Var="queryString1" FromValue="UPDATE TRG from MDM41_STG.PRSNA_STG TRG,(SELECT	TRGT_CUST_ID, PRSNA_ID,INSERT_UPDATE_FLAG FROM	MDM41_STG.CUST_NAME_XREF_FWD) SRC SET TGT_CUST_ID = SRC.TRGT_CUST_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG WHERE	TRG.PRSNA_ID = SRC.PRSNA_ID;"/>
+<EXECUTE_SQL_QUERY AssignToVar="updateStageTargetCustIds" Value="{$queryString1}"/>-->
+            <SET FromDocVar="identifyGoldenCustIdsRes" DocVar="thisReturn"/>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="updateStageTableTargetCustIds">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="updateStageTableTargetCustIds">
+          <GROUP_NAME Value="CUST_ID_STG_UPDATE"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="$thisParam/GROUP_NAME/@Value = 'CUST_ID_STG_UPDATE'">
+          <THEN>
+            <EXECUTE_SHELL_COMMAND Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\batch\CRDM\scripts\bat\updateStgTableCustIds.bat" AssignToVar="updateStageTargetCustIds"/>
+            <!--<SET Var="queryString1" FromValue="UPDATE TRG from MDM41_STG.PRSNA_STG TRG,(SELECT	TRGT_CUST_ID, PRSNA_ID,INSERT_UPDATE_FLAG FROM	MDM41_STG.CUST_NAME_XREF_FWD) SRC SET TGT_CUST_ID = SRC.TRGT_CUST_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG WHERE	TRG.PRSNA_ID = SRC.PRSNA_ID;"/>
+			<EXECUTE_SQL_QUERY AssignToVar="updateStageTargetCustIds" Value="{$queryString1}"/>-->
+            <SET FromDocVar="updateStageTargetCustIds" DocVar="thisReturn"/>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+  <DEFINE_METHOD Name="populateCustomerAddressAssoc">
+    <API_DOC>
+      <INPUT>
+        <REQUEST Name="populateCustomerAddressAssoc">
+          <GROUP_NAME Value="POPULATE_CUST_ADDR"/>
+        </REQUEST>
+      </INPUT>
+      <OUTPUT>
+        <RESPONSES Status="Success">
+          <RESPONSE Status="Success">
+          </RESPONSE>
+        </RESPONSES>
+      </OUTPUT>
+    </API_DOC>
+    <RULE>
+      <ACTION>
+        <IF_TEST Test="$thisParam/GROUP_NAME/@Value = 'POPULATE_CUST_ADDR'">
+          <THEN>
+            <EXECUTE_SHELL_COMMAND Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI\batch\CRDM\scripts\bat\populateCustomerAddressAssoc.bat" AssignToVar="populateCustAddrAssocRes"/>
+            <!--<SET Var="queryString1" FromValue="UPDATE TRG from MDM41_STG.PRSNA_STG TRG,(SELECT	TRGT_CUST_ID, PRSNA_ID,INSERT_UPDATE_FLAG FROM	MDM41_STG.CUST_NAME_XREF_FWD) SRC SET TGT_CUST_ID = SRC.TRGT_CUST_ID, INSERT_UPDATE_FLAG=SRC.INSERT_UPDATE_FLAG WHERE	TRG.PRSNA_ID = SRC.PRSNA_ID;"/>
+			<EXECUTE_SQL_QUERY AssignToVar="updateStageTargetCustIds" Value="{$queryString1}"/>-->
+            <SET FromDocVar="populateCustAddrAssocRes" DocVar="thisReturn"/>
+          </THEN>
+        </IF_TEST>
+      </ACTION>
+    </RULE>
+  </DEFINE_METHOD>
+</DOCUMENTS>

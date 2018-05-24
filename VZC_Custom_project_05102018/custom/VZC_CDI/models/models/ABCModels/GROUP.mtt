@@ -1,0 +1,28 @@
+<document>
+  <properties>
+    <property Name="GROUP_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="GROUP_ID" />
+    </property>
+    <property Name="GROUP_NM">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="GROUP_NM" />
+    </property>
+    <property Name="PARENT_GROUP_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="PARENT_GROUP_ID" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="GROUP_ID_PI_8732851" PhysicalName="GROUP_ID_PI_8732851" Kind="PRIMARY">
+      <property Name="GROUP_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_GROUP" MasterTable="M_GROUP" />
+    <miscFacet PhysicalName="GROUP" DisplayName="GROUP" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

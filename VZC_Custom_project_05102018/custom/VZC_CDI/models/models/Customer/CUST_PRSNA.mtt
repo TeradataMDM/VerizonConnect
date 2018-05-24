@@ -1,0 +1,45 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CUST_PRSNA_ROLE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_PRSNA_ROLE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_PRSNA_ROLE_CD" />
+    </property>
+    <property Name="CUST_PRSNA_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_PRSNA_STRT_DT" />
+    </property>
+    <property Name="CUST_PRSNA_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_PRSNA_END_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="PRSNA_ID_PI_1166545" PhysicalName="PRSNA_ID_PI_1166545" Kind="NUPI">
+      <property Name="PRSNA_ID" />
+    </key>
+    <key Active="true" Name="XPKCUSTOMER_PRSNA" PhysicalName="XPKCUSTOMER_PRSNA" Kind="PRIMARY">
+      <property Name="PRSNA_ID" />
+      <property Name="CUST_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_PRSNA" MasterTable="M_CUST_PRSNA" />
+    <miscFacet PhysicalName="CUST_PRSNA" DisplayName="Customer Persona" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

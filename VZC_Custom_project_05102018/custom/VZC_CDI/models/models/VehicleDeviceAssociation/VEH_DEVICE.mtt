@@ -1,0 +1,47 @@
+<document>
+  <properties>
+    <property Name="DEVICE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_ID" />
+    </property>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="INSTLTN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INSTLTN_DT" />
+    </property>
+    <property Name="VEH_EFF_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_EFF_STRT_DT" />
+    </property>
+    <property Name="SCRAP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SCRAP_DT" />
+    </property>
+    <property Name="CURR_PREV_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_PREV_IND" />
+    </property>
+    <property Name="CNTL_EFF_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EFF_DT" />
+    </property>
+    <property Name="CNTL_EXP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTL_EXP_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKVEHICLE_DEVICE" PhysicalName="XPKVEHICLE_DEVICE" Kind="PRIMARY">
+      <property Name="DEVICE_ID" />
+      <property Name="VEH_ID" />
+    </key>
+    <key Active="true" Name="INSTLTN_DT_PI_7815463" PhysicalName="INSTLTN_DT_PI_7815463" Kind="NUPI">
+      <property Name="INSTLTN_DT" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_VEH_DEVICE" MasterTable="M_VEH_DEVICE" />
+    <miscFacet PhysicalName="VEH_DEVICE" DisplayName="Vehicle Device" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

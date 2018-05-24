@@ -1,0 +1,70 @@
+<document>
+  <properties>
+    <property Name="CNTCT_PREFRC_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_ID" />
+    </property>
+    <property Name="CUST_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="ADDR_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="LOB_NUM">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>LOB_NUM</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CNTCT_PREFRC_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_STRT_DT" />
+    </property>
+    <property Name="CNTCT_PREFRC_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_END_DT" />
+    </property>
+    <property Name="CNTCT_PREFRC_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_NAME" />
+    </property>
+    <property Name="CHNL_TYPE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CHNL_TYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHNL_TYPE_CD" />
+    </property>
+    <property Name="CNTCT_PREFRC_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CNTCT_PREFRC_CD" />
+    </property>
+    <property Name="CUST_ADDR_USG_type_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_ADDR_USG_type_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ADDR_USG_type_CD" />
+    </property>
+    <property Name="CUST_ADDR_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ADDR_STRT_DT" />
+    </property>
+    <property Name="SMS_ALLWD_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SMS_ALLWD_IND" />
+    </property>
+    <property Name="MKTG_PRG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MKTG_PRG_ID" />
+    </property>
+    <property Name="UNVRSL_AUTHZTN_LANG_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="UNVRSL_AUTHZTN_LANG_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCONTACT_PREFERENCE" PhysicalName="XPKCONTACT_PREFERENCE" Kind="PRIMARY">
+      <property Name="CNTCT_PREFRC_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CNTCT_PREFRC" MasterTable="M_CNTCT_PREFRC" />
+    <miscFacet PhysicalName="CNTCT_PREFRC" DisplayName="Contact Preference" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

@@ -1,0 +1,88 @@
+<document IsDocView="true">
+  <properties>
+    <property Name="TEL_NUM_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_NUM_ID" />
+    </property>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_SUBTYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_SUBTYPE_CD" />
+    </property>
+    <property Name="TEL_CTRY_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_CTRY_CD_NUM" />
+    </property>
+    <property Name="TEL_AREA_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_AREA_CD_NUM" />
+    </property>
+    <property Name="TEL_EXCH_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXCH_NUM" />
+    </property>
+    <property Name="TEL_LINE_NUM" PhysicalName="TEL_LINE_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_LINE_NUM" />
+    </property>
+    <property Name="TEL_EXTN_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXTN_NUM" />
+    </property>
+    <property Name="TEL_E164_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_E164_NUM" />
+    </property>
+    <property Name="TEL_SRC_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SRC_NUM" />
+    </property>
+    <property Name="TEL_SUB_TYPE_CD" PhysicalName="TEL_SUB_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SUB_TYPE_CD" />
+    </property>
+    <property Name="SMS_CPBL_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SMS_CPBL_IND" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKTEL_NUM" PhysicalName="XPKTEL_NUM" Kind="PRIMARY">
+      <property Name="ADDR_TYPE_CD" />
+      <property Name="TEL_NUM_ID" />
+      <property Name="ADDR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <miscFacet PhysicalName="REF_TEL_NUM_V" Active="true" />
+    <mdmConfigFacet SchemaGen="false" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql OnMDMTables="true" IsSimpleView="true">REPLACE VIEW MDM41.REF_TEL_NUM_V &#xD;
+AS&#xD;
+LOCKING ROW FOR ACCESS SELECT	&#xD;
+TEL_NUM.TEL_NUM_ID, &#xD;
+ADDR.ADDR_ID, &#xD;
+ADDR.ADDR_TYPE_CD, &#xD;
+ADDR.ADDR_SUBTYPE_CD, &#xD;
+TEL_NUM.TEL_CTRY_CD_NUM, &#xD;
+TEL_NUM.TEL_AREA_CD_NUM, &#xD;
+TEL_NUM.TEL_EXCH_NUM,&#xD;
+TEL_NUM.TEL_LINE_NUM,&#xD;
+TEL_NUM.TEL_EXTN_NUM,&#xD;
+TEL_NUM.TEL_E164_NUM,&#xD;
+TEL_NUM.TEL_SRC_NUM,&#xD;
+TEL_NUM.TEL_SUB_TYPE_CD,&#xD;
+TEL_NUM.SMS_CPBL_IND,&#xD;
+TEL_NUM.SYS_TARGET_ID,&#xD;
+TEL_NUM.SYS_AUTH_ID,&#xD;
+TEL_NUM.SYS_SOURCE,&#xD;
+TEL_NUM.SYS_CREATED_BY,&#xD;
+TEL_NUM.SYS_CREATION_DATE,&#xD;
+TEL_NUM.SYS_ENT_STATE,&#xD;
+TEL_NUM.SYS_LAST_MODIFIED_BY,&#xD;
+TEL_NUM.SYS_LAST_MODIFIED_DATE,&#xD;
+TEL_NUM.SYS_NC_TYPE,&#xD;
+TEL_NUM.SYS_ERR_CODE,&#xD;
+TEL_NUM.SYS_ERR_SVRTY&#xD;
+FROM	MDM41_MST.M_TEL_NUM TEL_NUM&#xD;
+INNER JOIN MDM41_MST.M_ADDR ADDR&#xD;
+ON TEL_NUM.TEL_NUM_ID = ADDR.ADDR_ID&#xD;
+WHERE TEL_NUM.SYS_ENT_STATE='ACTIVE';</viewsql>
+</document>
+

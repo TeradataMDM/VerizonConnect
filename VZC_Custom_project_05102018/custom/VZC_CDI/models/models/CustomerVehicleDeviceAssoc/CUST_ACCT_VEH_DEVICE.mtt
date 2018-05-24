@@ -1,0 +1,63 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="ACCT_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_ID" />
+    </property>
+    <property Name="VEH_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_ID" />
+    </property>
+    <property Name="DEVICE_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="DEVICE_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="ACCT_VEH_EFF_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ACCT_VEH_EFF_STRT_DT" />
+    </property>
+    <property Name="INSTLTN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="INSTLTN_DT" />
+    </property>
+    <property Name="RGSTRN_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="RGSTRN_DT" />
+    </property>
+    <property Name="VEH_EFF_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="VEH_EFF_STRT_DT" />
+    </property>
+    <property Name="SCRAP_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SCRAP_DT" />
+    </property>
+    <property Name="ENTLMT_STRT_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENTLMT_STRT_DT" />
+    </property>
+    <property Name="ENTLMT_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ENTLMT_END_DT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XIE1CUSTOMER_ACCOUNT_VEHICLE_DEVICE" PhysicalName="XIE1CUSTOMER_ACCOUNT_VEHICLE_DEVICE" Kind="NUPI">
+      <property Name="CUST_ID" />
+    </key>
+    <key Active="true" Name="XPKCUSTOMER_ACCOUNT_VEHICLE_DEVICE" PhysicalName="XPKCUSTOMER_ACCOUNT_VEHICLE_DEVICE" Kind="PRIMARY">
+      <property Name="ACCT_VEH_EFF_STRT_DT" />
+      <property Name="VEH_ID" />
+      <property Name="ACCT_ID" />
+      <property Name="CUST_ID" />
+      <property Name="LOB" />
+      <property Name="DEVICE_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_ACCT_VEH_DEVICE" MasterTable="M_CUST_ACCT_VEH_DEVICE" />
+    <miscFacet PhysicalName="CUST_ACCT_VEH_DEVICE" DisplayName="Customer Account Vehicle Device" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

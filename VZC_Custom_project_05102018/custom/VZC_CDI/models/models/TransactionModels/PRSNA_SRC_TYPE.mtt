@@ -1,0 +1,37 @@
+<document>
+  <properties>
+    <property Name="PRSNA_SRC_type_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_SRC_type_CD" />
+    </property>
+    <property Name="PRSNA_SRC_type_DESC">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_SRC_type_DESC" />
+    </property>
+    <property Name="PRSNA_SRC_type_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_SRC_type_NAME" />
+    </property>
+    <property Name="SRC_PRVDR_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_PRVDR_CD" />
+    </property>
+    <property Name="SRC_FLDR_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SRC_FLDR_TXT" />
+    </property>
+    <property Name="SFTP_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="SFTP_FLG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKPRSNA_SOURCE_TYPE" PhysicalName="XPKPRSNA_SOURCE_TYPE" Kind="PRIMARY">
+      <property Name="PRSNA_SRC_type_CD" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_SRC_TYPE" MasterTable="PRSNA_SRC_TYPE" />
+    <miscFacet PhysicalName="PRSNA_SRC_TYPE" DisplayName="Persona Source Type" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

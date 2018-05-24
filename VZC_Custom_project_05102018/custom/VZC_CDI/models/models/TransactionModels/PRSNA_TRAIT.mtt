@@ -1,0 +1,55 @@
+<document>
+  <properties>
+    <property Name="PRSNA_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="TRAIT_CD" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TRAIT_CD" />
+    </property>
+    <property Name="TRAIT_VAL" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TRAIT_VAL" />
+    </property>
+    <property Name="MKTG_PRG_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MKTG_PRG_ID" />
+    </property>
+    <property Name="PRSNA_TRAIT_STRT_DT" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_TRAIT_STRT_DT" />
+    </property>
+    <property Name="PRSNA_TRAIT_END_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_TRAIT_END_DT" />
+    </property>
+    <property Name="CHNL_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CHNL_ID" />
+    </property>
+    <property Name="TRAIT_SEQ_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TRAIT_SEQ_ID" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="TRAIT_CD_PI_5801467" PhysicalName="TRAIT_CD_PI_5801467" Kind="NUPI">
+      <property Name="TRAIT_CD" />
+    </key>
+    <key Active="true" Name="XPKPRSNA_TRAIT" PhysicalName="XPKPRSNA_TRAIT" Kind="PRIMARY">
+      <property Name="TRAIT_CD" />
+      <property Name="PRSNA_ID" />
+      <property Name="TRAIT_SEQ_ID" />
+      <property Name="LOB_NUM" />
+    </key>
+    <key Active="true" Name="XIE1PRSNA_TRAIT" PhysicalName="XIE1PRSNA_TRAIT" Kind="INDEX">
+      <property Name="PRSNA_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_PRSNA_TRAIT" MasterTable="PRSNA_TRAIT" />
+    <miscFacet PhysicalName="PRSNA_TRAIT" DisplayName="Persona Trait" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

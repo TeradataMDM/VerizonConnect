@@ -1,0 +1,37 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="ORG_NAME" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORG_NAME" />
+    </property>
+    <property Name="PARNT_ORG_CUST_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PARNT_ORG_CUST_ID" />
+    </property>
+    <property Name="ORG_ESTBLD_DTTM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ORG_ESTBLD_DTTM" />
+    </property>
+    <property Name="LEGL_CLASFCN_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LEGL_CLASFCN_CD" />
+    </property>
+    <property Name="OWNRSHP_type_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="OWNRSHP_type_CD" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKORGANIZATION_CUSTOMER" PhysicalName="XPKORGANIZATION_CUSTOMER" Kind="PRIMARY">
+      <property Name="CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_ORG_CUST" MasterTable="M_ORG_CUST" />
+    <miscFacet PhysicalName="ORG_CUST" DisplayName="Organization Customer" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

@@ -1,0 +1,25 @@
+<document>
+  <properties>
+    <property Name="MFGR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MFGR_ID" />
+    </property>
+    <property Name="Manufucturer_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="Manufucturer_NAME" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKDEVICE_MANUFACTURER" PhysicalName="XPKDEVICE_MANUFACTURER" Kind="PRIMARY">
+      <property Name="MFGR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_DEVICE_MFGR" MasterTable="M_DEVICE_MFGR" />
+    <miscFacet PhysicalName="DEVICE_MFGR" DisplayName="Device Manufacturer" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

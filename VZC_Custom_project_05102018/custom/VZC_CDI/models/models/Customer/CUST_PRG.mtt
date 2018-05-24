@@ -1,0 +1,65 @@
+<document>
+  <properties>
+    <property Name="CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_ID" />
+    </property>
+    <property Name="PRTNR_PRG_CD" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>PRTNR_PRG_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRTNR_PRG_CD" />
+    </property>
+    <property Name="LOB_NUM" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>LOB_NUM</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+    <property Name="CUST_MKTG_ROLE_CD" Required="true">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CUST_MKTG_ROLE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_MKTG_ROLE_CD" />
+    </property>
+    <property Name="CUST_MKTG_ROLE_STRT_DTTM" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_MKTG_ROLE_STRT_DTTM" />
+    </property>
+    <property Name="FRST_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="FRST_NAME" />
+    </property>
+    <property Name="MDL_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="MDL_NAME" />
+    </property>
+    <property Name="LAST_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LAST_NAME" />
+    </property>
+    <property Name="NICK_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="NICK_NAME" />
+    </property>
+    <property Name="CUST_PRG_OPT_OUT_IND">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CUST_PRG_OPT_OUT_IND" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKCUSTOMER_PROGRAM" PhysicalName="XPKCUSTOMER_PROGRAM" Kind="PRIMARY">
+      <property Name="CUST_ID" />
+      <property Name="PRTNR_PRG_CD" />
+      <property Name="LOB_NUM" />
+      <property Name="CUST_MKTG_ROLE_CD" />
+      <property Name="CUST_MKTG_ROLE_STRT_DTTM" />
+    </key>
+    <key Active="true" Name="FRST_NAME_PI_7426384" PhysicalName="FRST_NAME_PI_7426384" Kind="NUPI">
+      <property Name="FRST_NAME" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_CUST_PRG" MasterTable="M_CUST_PRG" />
+    <miscFacet PhysicalName="CUST_PRG" DisplayName="Customer Program" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

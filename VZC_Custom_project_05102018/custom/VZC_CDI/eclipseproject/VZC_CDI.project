@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+  <Property Name="LAST_CONNECTED_DB">
+    <dbInfo userName="MDM41" dbUrl="jdbc:teradata://10.25.132.9/TMODE=TERA" dbDriver="com.teradata.jdbc.TeraDriver"/>
+  </Property>
+  <Property Name="LAST_SELECTED_CLASSPATH" Value="xservice"/>
+  <Property Name="MDM_INSTALL_PATH" Value="E:\Teradata\MDM\MDM4.1.0"/>
+  <Property Name="PRJ_CLASSPATH">
+    <Property Value="."/>
+    <Property Value="..\cfg\properties\"/>
+    <Property Value="..\cfg\"/>
+    <Property Value="..\..\..\bin"/>
+    <Property Value="..\..\..\cfg\properties"/>
+    <Property Value="..\..\..\cfg"/>
+    <Property Value="..\..\..\cfg\xservice\toolkit"/>
+    <Property Value="..\..\..\lib\td-platform-server.jar"/>
+    <Property Value="..\..\..\lib\td-platform-util.jar"/>
+    <Property Value="..\..\..\lib\td-platform-services.jar"/>
+    <Property Value="..\..\..\lib\td-mdm-services.jar"/>
+    <Property Value="..\..\..\lib\td-mdm-upgrade.jar"/>
+    <Property Value="..\..\..\lib\terajdbc4.jar"/>
+    <Property Value="..\..\..\lib\tdgssconfig.jar"/>
+    <Property Value="..\..\..\web\mdmclient\WEB-INF\lib\td-platform-web.jar"/>
+    <Property Value="..\..\..\web\mdmclient\WEB-INF\lib\td-platform-web-x2.jar"/>
+    <Property Value="..\..\..\web\mdmclient\WEB-INF\lib\td-platform-web-ui-laf.jar"/>
+    <Property Value="..\..\..\lib\3plib\bcprov-jdk15on-150.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-codec-1.10.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-dbcp2-2.1.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-fileupload.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-httpclient-3.1.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-logging.jar"/>
+    <Property Value="..\..\..\lib\3plib\commons-pool2-2.3.jar"/>
+    <Property Value="..\..\..\lib\3plib\dom.jar"/>
+    <Property Value="..\..\..\lib\3plib\dom4j.jar"/>
+    <Property Value="..\..\..\lib\3plib\gson-2.2.4.jar"/>
+    <Property Value="..\..\..\lib\3plib\httpclient.jar"/>
+    <Property Value="..\..\..\lib\3plib\httpcore.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxen-1.1.3.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxp-api.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxp.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxr-api.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxr-impl.jar"/>
+    <Property Value="..\..\..\lib\3plib\jaxrpc.jar"/>
+    <Property Value="..\..\..\lib\3plib\jdom.jar"/>
+    <Property Value="..\..\..\lib\3plib\jettison.jar"/>
+    <Property Value="..\..\..\lib\3plib\jgoodies-forms.jar"/>
+    <Property Value="..\..\..\lib\3plib\jms.jar"/>
+    <Property Value="..\..\..\lib\3plib\mail.jar"/>
+    <Property Value="..\..\..\lib\3plib\not-yet-commons-ssl.jar"/>
+    <Property Value="..\..\..\lib\3plib\parser.jar"/>
+    <Property Value="..\..\..\lib\3plib\poi-3.10.1-20140818.jar"/>
+    <Property Value="..\..\..\lib\3plib\poi-ooxml-3.10.1-20140818.jar"/>
+    <Property Value="..\..\..\lib\3plib\poi-excelant-3.10.1-20140818.jar"/>
+    <Property Value="..\..\..\lib\3plib\poi-ooxml-schemas-3.10.1-20140818.jar"/>
+    <Property Value="..\..\..\lib\3plib\poi-scratchpad-3.10.1-20140818.jar"/>
+    <Property Value="..\..\..\lib\3plib\sax.jar"/>
+    <Property Value="..\..\..\lib\3plib\saxpath.jar"/>
+    <Property Value="..\..\..\lib\3plib\serializer.jar"/>
+    <Property Value="..\..\..\lib\3plib\slf4j-api-1.7.7.jar"/>
+    <Property Value="..\..\..\lib\3plib\slf4j-log4j12-1.7.7.jar"/>
+    <Property Value="..\..\..\lib\3plib\soap.jar"/>
+    <Property Value="..\..\..\lib\3plib\Trillium.jar"/>
+    <Property Value="..\..\..\lib\3plib\wsdl4j.jar"/>
+    <Property Value="..\..\..\lib\3plib\wss4j.jar"/>
+    <Property Value="..\..\..\lib\3plib\xalan.jar"/>
+    <Property Value="..\..\..\lib\3plib\xercesImpl.jar"/>
+    <Property Value="..\..\..\lib\3plib\xml-apis.jar"/>
+    <Property Value="..\..\..\lib\3plib\xmlbeans.jar"/>
+    <Property Value="..\..\..\lib\3plib\XmlSchema.jar"/>
+    <Property Value="..\..\..\lib\3plib\xmlsec.jar"/>
+    <Property Value="..\..\..\lib\3plib\servlet.jar"/>
+    <Property Value="..\..\..\lib\3plib\log4j.jar"/>
+    <Property Value="..\..\..\lib\3plib\jsp-api-2.1.jar"/>
+    <Property Value="..\..\..\lib\3plib\fop.jar"/>
+    <Property Value="..\..\..\lib\3plib\ProfilerWebAdapter.jar"/>
+    <Property Value="..\..\..\lib\3plib\mongo-java-driver-3.0.2.jar"/>
+    <Property Value="..\..\..\lib\3plib\quartz-2.2.1.jar"/>
+    <Property Value="..\..\..\lib\3plib\quartz-jobs-2.2.1.jar"/>
+  </Property>
+  <Property Name="PRJ_RESOURCES_CLASSPATH_APPENDED" Value="true"/>
+  <Property Name="projectSourceRoots">
+    <projectSourceRoots>
+      <sourceRoot Name="Model Set">
+        <packageRoot RootPath="..\..\..\models\Toolkit"/>
+        <packageRoot RootPath="..\models"/>
+      </sourceRoot>
+    </projectSourceRoots>
+  </Property>
+  <Property Name="RUN_LAST_SELECTED_SERVICES" Value="PLATFORM@platform.xml"/>
+  <Property Name="SERVER_FILE_PATH" Value="..\..\..\cfg\properties\xserver.xml"/>
+  <Property Name="SERVER_PROJECT_REMOTE" Value="false"/>
+  <Property Name="SERVICE_NATURE">
+    <PropertyMap>
+      <Property Name="platform_xml" Value="RAW"/>
+      <Property Name="mdmservices_xml" Value="RAW"/>
+      <Property Name="VZC_CDI_xml" Value="MDM"/>
+      <Property Name="toolkit_xml" Value="MDM"/>
+    </PropertyMap>
+  </Property>
+  <Property Name="SERVICES">
+    <services>
+      <service Value="platform.xml"/>
+      <service Value="mdmservices.xml"/>
+      <service Value="toolkit.xml">
+        <service Value="..\cfg\properties\VZC_CDI.xml"/>
+      </service>
+    </services>
+  </Property>
+  <Property Name="Services_order">
+    <Property Value="PLATFORM"/>
+    <Property Value="BCM_INPUT_STAGING"/>
+    <Property Value="BCM_INPUT_STAGING"/>
+    <Property Value="BCM_NET_CHANGE"/>
+    <Property Value="BCM_NET_CHANGE"/>
+    <Property Value="MDMServices"/>
+    <Property Value="BCM_MASTER"/>
+    <Property Value="BCM_MASTER"/>
+    <Property Value="BCM_OUTPUT_STAGING"/>
+    <Property Value="BCM_OUTPUT_STAGING"/>
+    <Property Value="BCM_VERSION_STAGING"/>
+    <Property Value="BCM_VERSION_STAGING"/>
+  </Property>
+  <Property Name="ServicesStaticFileData">
+    <ServicesStaticFileData>
+      <FacetDir Value="../cfg/xservice/VZC_CDI/mdm_setup/facets"/>
+      <StaticFiles>
+        <File FileName="xservice/mdmservices/modules/common/staticdata/isg/tk_incr_userActivities.xml" ServiceName="PLATFORM"/>
+        <File FileName="xservice/toolkit/staticdata/outputStagingServiceStaticData.xml" ServiceName="BCM_MASTER"/>
+        <File FileName="xservice/toolkit/staticdata/PopulateSysTableColMap.xml" ServiceName="BCM_MASTER"/>
+        <File FileName="mdm_setup/entity_templates.xml" ServiceName="MDMServices"/>
+        <File FileName="xservice/mdmservices/modules/dataupload/staticdata/LRDM_entity_templates.xml" ServiceName="MDMServices"/>
+        <File FileName="mdm_setup/correlation.xml" ServiceName="MDMServices"/>
+        <File FileName="mdm_setup/docViews.xml" ServiceName="MDMServices"/>
+        <File FileName="mdm_setup/nativeDocuments.xml" ServiceName="MDMServices"/>
+        <File FileName="xservice/platform/modules/common/staticdata/refreshSysDBC.xml" ServiceName="PLATFORM"/>
+        <File FileName="xservice/mdmservices/modules/common/staticdata/isg/populateNCSQLs.xml" ServiceName="MDMServices"/>
+        <File FileName="xservice/mdmservices/modules/common/staticdata/isg/createGTT.xml" ServiceName="MDMServices"/>
+        <File FileName="xservice/platform/modules/common/staticdata/refreshSysDBC.xml" ServiceName="PLATFORM"/>
+        <File FileName="xservice/mdmservices/modules/configurableworkflow/staticdata/configUI_AutoGen_Req.xml" ServiceName="MDMServices"/>
+        <File FileName="xservice/mdmservices/modules/businessrules/staticdata/refreshDefaultRules.xml" ServiceName="MDMServices"/>
+      </StaticFiles>
+    </ServicesStaticFileData>
+  </Property>
+  <Property Name="STAGING_DIR" Value="E:\Teradata\MDM\MDM4.1.0\custom\VZC_CDI"/>
+</Project>

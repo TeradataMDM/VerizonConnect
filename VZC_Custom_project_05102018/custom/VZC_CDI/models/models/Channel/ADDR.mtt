@@ -1,0 +1,61 @@
+<document>
+  <properties>
+    <property Name="ADDR_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ID" />
+    </property>
+    <property Name="ADDR_TYPE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>ADDR_TYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_TYPE_CD" />
+    </property>
+    <property Name="ADDR_SUBTYPE_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>ADDR_SUBTYPE_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_SUBTYPE_CD" />
+    </property>
+    <property Name="CURR_ADDR_STS_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CURR_ADDR_STS_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_ADDR_STS_CD" />
+    </property>
+    <property Name="CURR_ADDR_STS_DT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_ADDR_STS_DT" />
+    </property>
+    <property Name="CURR_ADDR_STS_SRC_CD">
+      <validValues Kind="CODEMASTER">
+        <codeMasterType>CURR_ADDR_STS_SRC_CD</codeMasterType>
+      </validValues>
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CURR_ADDR_STS_SRC_CD" />
+    </property>
+    <property Name="ADDR_STDZD_TXT">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_STDZD_TXT" />
+    </property>
+    <property Name="ADDR_INVLD_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_INVLD_FLG" />
+    </property>
+    <property Name="ADDR_Ignore_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_Ignore_FLG" />
+    </property>
+    <property Name="ADDR_Abused_FLG">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_ABUSED_FLG" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKADDRESS" PhysicalName="XPKADDRESS" Kind="PRIMARY">
+      <property Name="ADDR_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_ADDR" MasterTable="M_ADDR" />
+    <miscFacet PhysicalName="ADDR" DisplayName="ADDRESS" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

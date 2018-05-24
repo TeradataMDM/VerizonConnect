@@ -1,0 +1,22 @@
+<document>
+  <properties>
+    <property Name="Golden_CUST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="GOLDEN_CUST_ID" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKGolden_Customer" PhysicalName="XPKGolden_Customer" Kind="PRIMARY">
+      <property Name="Golden_CUST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="MASTER" ErrorTable="E_GOLDEN_CUST" MasterTable="M_GOLDEN_CUST" />
+    <miscFacet PhysicalName="GOLDEN_CUST" DisplayName="Golden Customer" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

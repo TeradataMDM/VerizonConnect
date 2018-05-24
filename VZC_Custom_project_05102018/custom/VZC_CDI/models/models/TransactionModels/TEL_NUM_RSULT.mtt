@@ -1,0 +1,73 @@
+<document>
+  <properties>
+    <property Name="TEL_NUM_RQST_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_NUM_RQST_ID" />
+    </property>
+    <property Name="PRSNA_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="PRSNA_ID" />
+    </property>
+    <property Name="TEL_CTRY_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_CTRY_CD_NUM" />
+    </property>
+    <property Name="TEL_AREA_CD_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_AREA_CD_NUM" />
+    </property>
+    <property Name="TEL_EXCH_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXCH_NUM" />
+    </property>
+    <property Name="TEL_LINE_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_LINE_NUM" />
+    </property>
+    <property Name="TEL_EXTN_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_EXTN_NUM" />
+    </property>
+    <property Name="TEL_E164_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_E164_NUM" />
+    </property>
+    <property Name="TEL_SRC_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SRC_NUM" />
+    </property>
+    <property Name="TEL_SUB_TYPE_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_SUB_TYPE_CD" />
+    </property>
+    <property Name="ADDR_RSULT_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="ADDR_RSULT_CD" />
+    </property>
+    <property Name="TEL_NATL_FMT_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_NATL_FMT_NUM" />
+    </property>
+    <property Name="TEL_TM_ZN_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_TM_ZN_CD" />
+    </property>
+    <property Name="TEL_OFFLN_GEOCODE_LOC_CD">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_OFFLN_GEOCODE_LOC_CD" />
+    </property>
+    <property Name="TEL_INTRNATL_FMT_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="TEL_INTRNATL_FMT_NUM" />
+    </property>
+    <property Name="US_OUT_OF_CTRY_FMT_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="US_OUT_OF_CTRY_FMT_NUM" />
+    </property>
+    <property Name="CH_OUT_OF_CTRY_FMT_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="CH_OUT_OF_CTRY_FMT_NUM" />
+    </property>
+    <property Name="LOB_NUM">
+      <extends Package="dictionaries/VZC" ModelUnit="VZC.mdt" Name="LOB_NUM" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="XPKTELEPHONE_NUMBER_RESULT" PhysicalName="XPKTELEPHONE_NUMBER_RESULT" Kind="PRIMARY">
+      <property Name="TEL_NUM__RQST_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_TEL_NUM_RSULT" MasterTable="TEL_NUM_RSULT" />
+    <miscFacet PhysicalName="TEL_NUM_RSULT" DisplayName="Telephone Number Result" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+

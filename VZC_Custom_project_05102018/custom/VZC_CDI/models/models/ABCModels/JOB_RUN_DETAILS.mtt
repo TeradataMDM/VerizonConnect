@@ -1,0 +1,74 @@
+<document>
+  <properties>
+    <property Name="JOB_RUN_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_RUN_ID" />
+    </property>
+    <property Name="EXECUTE_TEXT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="EXECUTE_TEXT" />
+    </property>
+    <property Name="LOG_FILE_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="LOG_FILE_NAME" />
+    </property>
+    <property Name="JOB_ERROR_MESSAGE_TEXT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_ERROR_MESSAGE_TEXT" />
+    </property>
+    <property Name="ERROR_TABLE_NAME">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="ERROR_TABLE_NAME" />
+    </property>
+    <property Name="ERROR_RESOLVED_FLAG">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="ERROR_RESOLVED_FLAG" />
+    </property>
+    <property Name="SOURCE_COUNT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="SOURCE_COUNT" />
+    </property>
+    <property Name="TARGET_COUNT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="TARGET_COUNT" />
+    </property>
+    <property Name="ERROR_COUNT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="ERROR_COUNT" />
+    </property>
+    <property Name="JOB_ID" Required="true">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_ID" />
+    </property>
+    <property Name="JOB_GROUP_RUN_ID">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="JOB_GROUP_RUN_ID" />
+    </property>
+    <property Name="STATUS_ID" Required="false">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="STATUS_ID" />
+    </property>
+    <property Name="START_DTTM">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="START_DTTM" />
+    </property>
+    <property Name="END_DTTM">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="END_DTTM" />
+    </property>
+    <property Name="ERROR_PERCENT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="ERROR_PERCENT" />
+    </property>
+    <property Name="WARNING_COUNT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="WARNING_COUNT" />
+    </property>
+    <property Name="ROW_ERROR_FILE">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="ROW_ERROR_FILE" />
+    </property>
+    <property Name="DUP_COUNT">
+      <extends Package="dictionaries/VZC" ModelUnit="ABC.mdt" Name="DUP_COUNT" />
+    </property>
+  </properties>
+  <keys>
+    <key Active="true" Name="JOB_RUN_ID_PI_3213697" PhysicalName="JOB_RUN_ID_PI_3213697" Kind="PRIMARY">
+      <property Name="JOB_ID" />
+      <property Name="JOB_RUN_ID" />
+    </key>
+  </keys>
+  <links />
+  <docFacets>
+    <mdmWebServiceFacet />
+    <mdmSysTableMapFacet TableClass="TRANSACTION" ErrorTable="E_JOB_RUN_DETAILS" MasterTable="M_JOB_RUN_DETAILS" />
+    <miscFacet PhysicalName="JOB_RUN_DETAILS" DisplayName="JobRunDetails" Active="true" />
+    <mdmConfigFacet SchemaGen="true" />
+  </docFacets>
+  <mdmPropsConfigFacet />
+  <viewsql />
+</document>
+
